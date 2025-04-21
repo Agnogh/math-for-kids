@@ -12,12 +12,15 @@
 /* rule for entire body */
 body {
     text-align: center;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     background: url(../images/math_picture.jfif) no-repeat center center/cover;
+    min-height: 100vh;
+}
+
+header {
+
 }
 
 /* rule for h1 element (title) */
@@ -36,8 +39,8 @@ main {
 
 #playing_area_box {
     border-style:double;
-    color: blue;
-    background-color: aquamarine;
+    color: rgb(200, 255, 0);
+    background-color: rgba(18, 31, 26, 0.6);
     padding: 1%;
     width:fit-content;
     text-align: center;
@@ -52,4 +55,9 @@ main {
 
 #display_results_box {
     padding: 5%;
+}
+
+footer {
+    margin-top: 5%;
+    margin-bottom: 0%;
 }
