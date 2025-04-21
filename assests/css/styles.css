@@ -4,26 +4,35 @@
     padding: 0;
     box-sizing: content-box;
     flex-direction: column;
-
+/*    border-style: double;
+    border-color: red;
+    */
 }
 
 /* rule for entire body */
 body {
- /*   min-height: 100vh; */
     text-align: center;
-    border-style: dotted;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: rgb(85, 94, 90);
+    background: url(../images/math_picture.jfif) no-repeat center center/cover;
 }
 
 /* rule for h1 element (title) */
 h1 {
-    background-color: rgb(0, 0, 0);
+    margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 4px 4px 4px rgb(247, 120, 1); 
 }
 
+/* rules for main (containing "play area") */
+main {
+    flex: 1 0 auto;
+    margin-top: 5%;
+
+}
 
 #playing_area_box {
     border-style:double;
@@ -33,22 +42,14 @@ h1 {
     width:fit-content;
     text-align: center;
     margin-top: 1%;
-/*
-    padding-left: 15%;
-    padding-right: 15%;
-    margin-left: 15%;
-    
-*/
-
-    /*
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    */
 }
 
 #buttons {
     border-radius: 50%;
     z-index: 3;
     color: red;    
+}
+
+#display_results_box {
+    padding: 5%;
 }
