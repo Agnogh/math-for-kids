@@ -1,22 +1,49 @@
+/* general rule (allpied to if nothing specific was called out*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    flex-direction: column;
+
+}
+
 /* rule for entire body */
 body {
-    min-height: 100vh;
+ /*   min-height: 100vh; */
+    text-align: center;
+    border-style: dotted;
     display: flex;
-    flex-direction: column;
- /*   background-color: aquamarine; */
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(85, 94, 90);
 }
 
 /* rule for h1 element (title) */
 h1 {
-    background-color: red;
-    flex: center;
-}
+    background-color: rgb(165, 27, 27);
+    text-align: center;}
 
 
 #playing_area_box {
-    flex: center;
+    border-style:double;
     color: blue;
+    background-color: aquamarine;
+    padding: 1%;
+    width:fit-content;
+    text-align: center;
+/*
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+*/
 
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    */
 }
 
 #buttons {
