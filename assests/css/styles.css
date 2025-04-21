@@ -3,10 +3,24 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: aquamarine;
-    font-family:  "Lavishly Yours", "lato", "Oswald";
+ /*   background-color: aquamarine; */
 }
 
+/* rule for h1 element (title) */
 h1 {
     background-color: red;
+    flex: center;
+}
+
+
+#playing_area_box {
+    flex: center;
+    color: blue;
+
+}
+
+#buttons {
+    border-radius: 50%;
+    z-index: 3;
+    color: red;    
 }
