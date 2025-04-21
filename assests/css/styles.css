@@ -56,20 +56,21 @@ main {
 
 }
 
-#numer_selector_box {
+#number_selector_box {
 
 }
 
-btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9 {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+.btn_1, .btn_2, .btn_3, .btn_4, .btn_5, .btn_6, .btn_7, .btn_8, .btn_9 {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
     border-style: double;
     border-radius: 45%;
     width: fit-content;
     height: fit-content;
     justify-content: space-evenly;
+    background-color: yellow;
 }
 
 
