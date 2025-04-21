@@ -1,4 +1,13 @@
-/* function user_selected_number() {
+
+const redButton = document.getElementsByClassName("btn_1");
+
+redButton.AddEventListener("mousedown", clickedTheButton);
+    function clickedTheButton(e) {
+    e.currentTarget.style.backgroundColor = "#e84610";
+    }
+
+/* 
+function user_selected_number() {
     let user_number = 
     
 }
