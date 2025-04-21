@@ -21,8 +21,8 @@ body {
 
 /* rule for h1 element (title) */
 h1 {
-    background-color: rgb(165, 27, 27);
-    text-align: center;}
+    background-color: rgb(0, 0, 0);
+}
 
 
 #playing_area_box {
@@ -32,11 +32,12 @@ h1 {
     padding: 1%;
     width:fit-content;
     text-align: center;
+    margin-top: 1%;
 /*
     padding-left: 15%;
     padding-right: 15%;
     margin-left: 15%;
-    margin-right: 15%;
+    
 */
 
     /*
