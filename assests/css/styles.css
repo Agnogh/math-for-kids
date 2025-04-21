@@ -1,0 +1,8 @@
+/* rule for entire body */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    font-family:  "Lavishly Yours", "lato", "Oswald";
+}
