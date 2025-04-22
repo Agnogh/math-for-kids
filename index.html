@@ -13,9 +13,6 @@
 <title>Quiz/Math/Lottery</title>
 
 <!--Link to css file-->
-<script src="assests\js\script.js" defer></script>
-
-<!--Link to css file-->
 <link rel="stylesheet" href="assests/css/styles.css">
 
 
@@ -34,19 +31,19 @@
         <buttons class="buttons" id="buttons">
             <br>
             <br>
-            <button class="btn_1" onclick="user_selected_number()">1</button>
-            <button class="btn_2" onclick="user_selected_number()">2</button>
-            <button class="btn_3" onclick="user_selected_number()">3</button>
+            <button class="btn_1" id="btn_1" onclick="user_selected_number()">1</button>
+            <button class="btn_2" id="btn_2" onclick="user_selected_number()">2</button>
+            <button class="btn_3" id="btn_3" onclick="user_selected_number()">3</button>
             <br>
             <br>
-            <button class="btn_4" onclick="user_selected_number()">4</button>
-            <button class="btn_5" onclick="user_selected_number()">5</button>
-            <button class="btn_6" onclick="user_selected_number()">6</button>
+            <button class="btn_4" id="btn_4" onclick="user_selected_number()">4</button>
+            <button class="btn_5" id="btn_5" onclick="user_selected_number()">5</button>
+            <button class="btn_6" id="btn_6" onclick="user_selected_number()">6</button>
             <br>
             <br>
-            <button class="btn_7" onclick="user_selected_number()">7</button>
-            <button class="btn_8" onclick="user_selected_number()">8</button>
-            <button class="btn_9" onclick="user_selected_number()">9</button>
+            <button class="btn_7" id="btn_7" onclick="user_selected_number()">7</button>
+            <button class="btn_8" id="btn_8" onclick="user_selected_number()">8</button>
+            <button class="btn_9" id="btn_9" onclick="user_selected_number()">9</button>
             <br>
             <br>
         </buttons>
@@ -54,9 +51,9 @@
     </div>
 
         <div id="random_number_generator">
-            <p id="random_number_entry_box">
+            <button id="random_number_button">
                 random number
-            </p>
+            </button>
         </div>
 
     
@@ -69,6 +66,10 @@
         </p>
 
     </footer>
+
+<!--Link to js file-->
+<script src="assets/js/script.js"></script>
+
 
 </body>
 </html>

@@ -19,9 +19,10 @@ body {
     min-height: 100vh;
 }
 
+/*
 header {
-
 }
+*/
 
 /* rule for h1 element (title) */
 h1 {
@@ -57,9 +58,10 @@ main {
 
 }
 
+/*
 #number_selector_box {
-
 }
+*/
 
 .btn_1, .btn_2, .btn_3, .btn_4, .btn_5, .btn_6, .btn_7, .btn_8, .btn_9 {
     padding-left: 10%;
@@ -88,6 +90,18 @@ main {
     border-style:double;
 }
 
+#random_number_button {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-style: double;
+    border-radius: 25%;
+    width: fit-content;
+    height: fit-content;
+    justify-content: space-evenly;
+    background-color: yellow;
+}
 
 footer {
     margin-top: 15%;
