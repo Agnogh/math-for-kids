@@ -121,8 +121,6 @@ main {
 #selectedNumberBox {
     background-color: rgba(47, 48, 40, 0.6);
     color: aliceblue;
-    width: fit-content;
-    height: fit-content;
     text-align: inherit;
     align-items: inherit;
     padding: 5%;

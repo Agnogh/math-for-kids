@@ -20,8 +20,17 @@ changeColour.AddEventListener("mousedown", user_selected_number);
     }
 */
 
-function user_selected_number(event) {
-    const clickedButton = event.target;
+function user_selected_number(myEvent) {
+    const clickedButton = myEvent.target;
+
+    /* To have buttons reseted */
+    for(let i= 1; i <= 9; i++) {
+        const button = document.getElementById(` btn_${i} `);
+    /* this should reset background colour */    
+        button.style.backgroundColor = "";
+    /*  and this should resent colur of the text */
+        button.style.color = "";
+    }
 
     /* This should change the style of the button*/
     clickedButton.style.backgroundColor = "green";
@@ -44,16 +53,28 @@ document.addEventListener("DomContentLoaded", function() {
 
 
 /* or we do it like this */
-
-const btn_1 = document.getElementById("btn_1")
-btn_1.AddEventListener("click", user_selected_number)
+const btn_any = document.getElementById("btn_$")
+btn_any.AddEventListener("click", user_selected_number)
 
 function user_selected_number() {
-    alert("hello there")
+    alert(`You selected your number`)   
 }
 
-const randomNumber = document.getElementById("random_number_button")
-randomNumber.AddEventListener("click", function(p) {
+/* this should get us the radnom number betwee 1 and 9 and then  */
+const randomNumberButton = document.getElementById("random_number_button");
+const randomLabel = document.getElementById("random_number_label");
+const minimumValueOfRandomNumber = 1;
+const maximumValueOfRandomNumber = 9;
+let randomNumber;
+
+randomNumberButton.onClick = function() {
+    randomNumber = Math.floor(Math.random() * maximumValueOfRandomNumber) + maximumValueOfRandomNumber;
+    randomLabel.textContent = randomNumber;
+    
+}
+
+/*
+randomNuOBJECT_NAMEmber.AddEventListener("click", function(p) {
     if (userSelectedNumber === randomEntry) {
         document.getElementById("display_results_box").textContent = `Congrats, your number ${userSelectedNumber} and drawn number ${randomSelectedNumber} are matching! `
         win = ++win
@@ -67,7 +88,6 @@ randomNumber.AddEventListener("click", function(p) {
 let win = 0;
 let lose = 0;
 
+*/
 
-/* This is for random number generator */
-const randomNumberButton = document.getElementById("random_number_button");
 
