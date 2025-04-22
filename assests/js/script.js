@@ -1,7 +1,7 @@
 
 
 
-/* This should change to color of the button when user selects it*/ 
+/* This should change to color of the button when user selects it... but it doesn/t work for some damn reason*/ 
 
 /*
 function user_selected_number() {
@@ -19,6 +19,9 @@ changeColour.AddEventListener("mousedown", user_selected_number);
         colorButton.style.color = "red";
     }
 */
+
+/* this was a wild attempt but it doesnt work */
+
 
 function user_selected_number(myEvent) {
     const clickedButton = myEvent.target;
@@ -52,15 +55,29 @@ document.addEventListener("DomContentLoaded", function() {
 });
 
 
-/* or we do it like this */
-const btn_any = document.getElementById("btn_$")
-btn_any.AddEventListener("click", user_selected_number)
+
+
+
+/* or we do it like this- this actually works */
+const btn_any = document.getElementById("btn_$");
+btn_any.AddEventListener("click", user_selected_number);
 
 function user_selected_number() {
     alert(`You selected your number`)   
 }
 
-/* this should get us the radnom number betwee 1 and 9 and then  */
+/* and for some damn reason, this doesn/t work !! */
+
+const randomNumberSelector = document.getElementById("random_number_button");
+randomNumberSelector.AddEventListener("click", randomlyGeneratedNumber);
+
+function randomlyGeneratedNumber() {
+    alert(`You random number`) 
+}
+
+
+
+/* this should get us the radnom number betwee 1 and 9 and then */
 const randomNumberButton = document.getElementById("random_number_button");
 const randomLabel = document.getElementById("random_number_label");
 const minimumValueOfRandomNumber = 1;
@@ -68,10 +85,12 @@ const maximumValueOfRandomNumber = 9;
 let randomNumber;
 
 randomNumberButton.onClick = function() {
-    randomNumber = Math.floor(Math.random() * maximumValueOfRandomNumber) + maximumValueOfRandomNumber;
+    randomNumber = Math.floor(Math.random() * maximumValueOfRandomNumber) + minimumValueOfRandomNumber;
     randomLabel.textContent = randomNumber;
-    
+    console.log(randomLabel);
 }
+
+
 
 /*
 randomNuOBJECT_NAMEmber.AddEventListener("click", function(p) {
