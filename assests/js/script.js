@@ -21,12 +21,19 @@ changeColour.AddEventListener("mousedown", user_selected_number);
 */
 
 function user_selected_number(event) {
-    const clickedButton = evvent.target;
+    const clickedButton = event.target;
+
+    /* This should change the style of the button*/
     clickedButton.style.backgroundColor = "green";
     clickedButton.style.color = "red";
+
+    /* this should get the number from whatever user selects */
+    const selectedNumber = clickedButton.textContent;
+
+    /* this part should update the selected "number box" */
+    const selectedNumberBox = document.querySelector("#selectedNumberBox p");
+    selectedNumberBox.textContent = `Value you have semlected is ${selectedNumber} `;
 }
-
-
 
 document.addEventListener("DomContentLoaded", function() {
     for (let i = 1; i <=9; i++) {
@@ -59,4 +66,8 @@ randomNumber.AddEventListener("click", function(p) {
 
 let win = 0;
 let lose = 0;
+
+
+/* This is for random number generator */
+const randomNumberButton = document.getElementById("random_number_button");
 

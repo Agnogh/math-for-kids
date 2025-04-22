@@ -74,6 +74,7 @@ main {
     height: fit-content;
     justify-content: space-evenly;
     background-color: yellow;
+    font-size: 0.8em;
 }
 
 
@@ -86,8 +87,12 @@ main {
 
 #random_number_generator {
     margin-top: 15%;
-    background-color: rgba(18, 31, 26, 0.6);
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: rgba(47, 48, 40, 0.6);
     border-style:double;
+    border-color: rgb(159, 202, 39);
+    margin-bottom: 10%;
 }
 
 #random_number_button {
@@ -101,6 +106,26 @@ main {
     height: fit-content;
     justify-content: space-evenly;
     background-color: yellow;
+    font-size: 1.5em;
+
+}
+
+#random_number_label {
+    background-color: yellowgreen;
+    color: aliceblue;
+    border-radius: 25%;
+    font-size: 1.5em;
+
+}
+
+#selectedNumberBox {
+    background-color: rgba(47, 48, 40, 0.6);
+    color: aliceblue;
+    width: fit-content;
+    height: fit-content;
+    text-align: inherit;
+    align-items: inherit;
+    padding: 5%;
 }
 
 footer {
