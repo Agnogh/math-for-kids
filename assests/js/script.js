@@ -6,6 +6,19 @@ redButton.AddEventListener("mousedown", clickedTheButton);
     e.currentTarget.style.backgroundColor = "#e84610";
     }
 
+
+
+
+/* 
+            <button class="btn_1" onclick="user_selected_number()">1</button>
+*/
+const btn_1 = document.getElementsByClassName("btn_1");
+btn_1.AddEventListener("click", function(e) {
+    const name = prompt("What is your name?");
+
+    document.body.innerHTML = "<h1>Welcome, " + name + "</h1>";
+});
+
 /* 
 function user_selected_number() {
     let user_number = 
