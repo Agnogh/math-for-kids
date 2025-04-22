@@ -1,44 +1,58 @@
 
-const redButton = document.getElementsByClassName("btn_1");
-
-redButton.AddEventListener("mousedown", clickedTheButton);
-    function clickedTheButton(e) {
-    e.currentTarget.style.backgroundColor = "red";
-    }
 
 
-
-
-/* 
-            <button class="btn_1" onclick="user_selected_number()">1</button>
-*/
+/* This should change to color of the button when user selects it*/ 
 
 /*
-const btn_1 = document.getElementsByClassName("btn_1");
-btn_1.AddEventListener("click", function(e) {
-    const name = prompt("What is your name?");
-    alert("test")
-    document.body.innerHTML = "<h1>Welcome, " + name + "</h1>";
-});
+function user_selected_number() {
+    const colorButton = document.getElementById("btn_1");
+    colorButton.style.backgroundColor = "lightblue";
+    colorButton.style.color = "red";
+}
+
+
+
+changeColour.AddEventListener("mousedown", user_selected_number);
+    function user_selected_number() {
+        const colorButton = document.getElementById("btn_1");
+        colorButton.style.backgroundColor = "lightblue";
+        colorButton.style.color = "red";
+    }
 */
+
+function user_selected_number(event) {
+    const clickedButton = evvent.target;
+    clickedButton.style.backgroundColor = "green";
+    clickedButton.style.color = "red";
+}
+
+
+
+document.addEventListener("DomContentLoaded", function() {
+    for (let i = 1; i <=9; i++) {
+        const button = document.getElementById(`btn_${i}`);
+        button.addEventListener("click", user_selected_number);
+    }
+});
 
 
 /* or we do it like this */
-const btn_1 = document.getElementById("btn_1")
-btn_1.AddEventListener("click", testingTheFunction)
 
-function testingTheFunction() {
+const btn_1 = document.getElementById("btn_1")
+btn_1.AddEventListener("click", user_selected_number)
+
+function user_selected_number() {
     alert("hello there")
 }
 
 const randomNumber = document.getElementById("random_number_button")
 randomNumber.AddEventListener("click", function(p) {
-    if (user_entry === randomEntry) {
-        print (`Congrats! You selected ${user_entry} that matches ${randomEntry}`)
-        ++win
+    if (userSelectedNumber === randomEntry) {
+        document.getElementById("display_results_box").textContent = `Congrats, your number ${userSelectedNumber} and drawn number ${randomSelectedNumber} are matching! `
+        win = ++win
     } else {
-        print (`You selected ${user_entry}, while number drawn was ${randomEntry}`)
-        ++lose
+        document.getElementById("display_results_box").textContent = `Your number was ${userSelectedNumber} and drawn number is ${randomSelectedNumber}! Better luck next time. `
+        lose = ++lose 
     }
 })
 
@@ -46,15 +60,3 @@ randomNumber.AddEventListener("click", function(p) {
 let win = 0;
 let lose = 0;
 
-
-/* 
-function user_selected_number() {
-    let user_number = 
-    
-}
-
-function compare_values_between_user_selection_and_random_number() {
-    if (user_selected_number) === radnom_created_number();
-    win++
-}
-    */

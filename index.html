@@ -28,7 +28,7 @@
     <div id="playing_area_box">
         <p id="title_of_playing_area_box">Pick your number</p>
     <div id="number_selector_box">
-        <buttons class="buttons" id="buttons">
+        <div class="buttons" id="buttons">
             <br>
             <br>
             <button class="btn_1" id="btn_1" onclick="user_selected_number()">1</button>
@@ -46,7 +46,7 @@
             <button class="btn_9" id="btn_9" onclick="user_selected_number()">9</button>
             <br>
             <br>
-        </buttons>
+        </div>
     </div>
     </div>
 
@@ -56,6 +56,11 @@
             </button>
         </div>
 
+        <div id="selectedNumberBox">
+            <p>
+                Value selected is ${user_entry}
+            </p>
+        </div>
     
     </main>
 
