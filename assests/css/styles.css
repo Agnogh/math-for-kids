@@ -139,3 +139,28 @@ footer {
 #display_results_box {
     padding: 5%;
 }
+
+
+@media screen and (min-height: 400px) {
+    body {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (min-height: 600px) {
+    body {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    body {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-height: 1200px) {
+    body {
+        font-size: 2em;
+        }
+}
