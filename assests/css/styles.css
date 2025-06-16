@@ -141,26 +141,26 @@ footer {
 }
 
 
-@media screen and (min-height: 400px) {
+@media screen and (min-width: 400px) {
     body {
-        font-size: 0.7em;
+        font-size: 120%;
     }
 }
 
-@media screen and (min-height: 600px) {
+@media screen and (min-width: 600px) {
     body {
-        font-size: 1em;
+        font-size: 140%;
     }
 }
 
-@media screen and (min-height: 1000px) {
+@media screen and (min-width: 1000px) {
     body {
-        font-size: 1.5em;
+        font-size: 170%;
     }
 }
 
-@media screen and (min-height: 1200px) {
+@media screen and (min-width: 1200px) {
     body {
-        font-size: 2em;
+        font-size: 220%;
         }
 }
