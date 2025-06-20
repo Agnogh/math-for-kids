@@ -44,12 +44,16 @@ main {
     color: rgb(200, 255, 0);
     background-color: rgba(18, 31, 26, 0.6);
     padding: 10%;
-    padding-left: 17%;
-    width: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
     height: auto;
     text-align: center;
     margin-top: 1%;
     font-size: 180%;
+    max-width: 90vw;
+    margin: 0 auto;
+    margin-right: 5%;
 }
 
 
@@ -63,6 +67,9 @@ main {
 #number_selector_box {
     width: fit-content;
     height: fit-content;
+    display: flex; 
+    justify-content: center;
+    margin: 0 auto; 
 }
 
 
@@ -98,7 +105,8 @@ main {
     z-index: 3;
     color: red;
 
-    gap: 1rem 3rem; /* adding spacing as buttons are overlapping each other */
+    gap: 1rem 2rem; /* adding spacing as buttons are overlapping each other */
+    margin: 2rem
  
 }
 
