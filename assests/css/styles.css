@@ -40,7 +40,7 @@ main {
 }
 
 #playing_area_box {
-    border-style:double;
+    border-style: double;
     color: rgb(200, 255, 0);
     background-color: rgba(18, 31, 26, 0.6);
     padding: 10%;
@@ -53,7 +53,6 @@ main {
     font-size: 180%;
     max-width: 90vw;
     margin: 0 auto;
-    margin-right: 5%;
 }
 
 
@@ -81,19 +80,23 @@ main {
     border-style: double;
     border-radius: 45%;
     background-color: yellow;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 15%;
-    padding-bottom: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     border-radius: 50%;
     width: fit-content;
     height: fit-content;
     justify-content: space-evenly;
 
-    
+    text-align: center;
     font-size: 0.8em;
+
 }
 
+.empty_button_to_trick_ui {
+    visibility: hidden;     /* need to hide it as I do not need it for functional purposes, just for better alignment */
+}
 
 
 #buttons {
@@ -106,9 +109,10 @@ main {
     color: red;
 
     gap: 1rem 2rem; /* adding spacing as buttons are overlapping each other */
-    margin: 2rem
+    margin: 3rem 0; /* adding spacing top and bottom */
  
 }
+
 
 #random_number_generator {
     margin-top: 15%;
