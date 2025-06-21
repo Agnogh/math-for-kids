@@ -122,6 +122,9 @@ main {
     border-style:double;
     border-color: rgb(159, 202, 39);
     margin-bottom: 10%;
+    justify-content: center;  
+    padding-top: 1rem;
+
 }
 
 #random_number_button {
