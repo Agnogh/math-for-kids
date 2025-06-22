@@ -78,11 +78,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /* or we do it like this- this actually works */
+/*
 const btn_any = document.getElementById("btn_$");
 btn_any.addEventListener("click", user_selected_number);
 
 function user_selected_number() {
-    alert(`You selected your number`)   
+    alert(`You selected your number ${selectedNumber}`)   
 }
 
 /* and for some damn reason, this doesn/t work !! */
