@@ -12,7 +12,7 @@ function user_selected_number() {
 
 
 
-changeColour.AddEventListener("mousedown", user_selected_number);
+changeColour.addEventListener("mousedown", user_selected_number);
     function user_selected_number() {
         const colorButton = document.getElementById("btn_1");
         colorButton.style.backgroundColor = "lightblue";
@@ -28,7 +28,7 @@ function user_selected_number(myEvent) {
 
     /* To have buttons reseted */
     for(let i= 1; i <= 9; i++) {
-        const button = document.getElementById(` btn_${i} `);
+        const button = document.getElementById(`btn_${i}`);
     /* this should reset background colour */    
         button.style.backgroundColor = "";
     /*  and this should resent colur of the text */
@@ -47,7 +47,7 @@ function user_selected_number(myEvent) {
     selectedNumberBox.textContent = `Value you have semlected is ${selectedNumber} `;
 }
 
-document.addEventListener("DomContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     for (let i = 1; i <=9; i++) {
         const button = document.getElementById(`btn_${i}`);
         button.addEventListener("click", user_selected_number);
@@ -60,7 +60,7 @@ document.addEventListener("DomContentLoaded", function() {
 
 /* or we do it like this- this actually works */
 const btn_any = document.getElementById("btn_$");
-btn_any.AddEventListener("click", user_selected_number);
+btn_any.addEventListener("click", user_selected_number);
 
 function user_selected_number() {
     alert(`You selected your number`)   
@@ -69,7 +69,7 @@ function user_selected_number() {
 /* and for some damn reason, this doesn/t work !! */
 
 const randomNumberSelector = document.getElementById("random_number_button");
-randomNumberSelector.AddEventListener("click", randomlyGeneratedNumber);
+randomNumberSelector.addEventListener("click", randomlyGeneratedNumber);
 
 function randomlyGeneratedNumber() {
     alert(`You random number`) 
@@ -93,7 +93,7 @@ randomNumberButton.onClick = function() {
 
 
 /*
-randomNuOBJECT_NAMEmber.AddEventListener("click", function(p) {
+randomNuOBJECT_NAMEmber.addEventListener("click", function(p) {
     if (userSelectedNumber === randomEntry) {
         document.getElementById("display_results_box").textContent = `Congrats, your number ${userSelectedNumber} and drawn number ${randomSelectedNumber} are matching! `
         win = ++win
