@@ -30,17 +30,17 @@ document.addEventListener("DOMContentLoaded", function() {
 /* rule for alert when user selects number */
     const numberButtons = document.querySelectorAll("#buttons button");     // defining constant 'numberButtons' and assigning value from elements (inside element with KeyID 'buttons')
     numberButtons.forEach((button) => {     // Loop through each button in 'numberButtons' and for each 'button' run this block
-    button.addEventListener("click", function (event) {     // attach 'click' event lsitener to 'button' when 'clicked', run callback function which recieves 'event' object
-        const selectedNumber = event.target.textContent;       // defining constant variable 'selectNumber' and assigning text content of clicked buton 
-        userSelectedNumber = selectedNumber; // store globally
-        alert(`You selected number ${selectedNumber}`);     // calling 'alert' with text and variable containing user selected 'selectedNumber'
+    button.addEventListener("click", function () {     // attach 'click' event lsitener to 'button' when 'clicked', run callback function
+        userSelectedNumber = button.textContent;       // assagning variable "userSelectedNumber" value button with TextContent 
+        selectedNumberBox.textContent = `You selected number ${userSelectedNumber}`;  // store globally
+        alert(`You selected number ${userSelectedNumber}`);     // calling 'alert' with text and variable containing user selected 'UserSelectedNumber'
     });
 });
 
 /* creatig function for randomly generated number */
 function randomlyGeneratedNumber() {        // defining function "randomlyGeneratedNumber"
-    const randomNumber = Math.floor(Math.random() * 9) + 1; // gives 1–9 based on math.random multiples by 9, floor removes decimal, and +1
-    alert(`Your random number is ${randomNumber}`);     // triggers the alert showing text + randomNumber variable defined earlier
+    const randomNumber = Math.floor(Math.random() * 9) + 1; // defining constant and assigning value 1–9 based on math.random multiples by 9, floor removes decimal, and +1
+    selectedNumberBox.textContent = `You selected number ${userSelectedNumber}. Randomly selected number is ${randomNumber}.`;     // displays textContent with default text and variables "user selected number" and "randomly selected number"
 }
 
 
@@ -49,7 +49,7 @@ function randomlyGeneratedNumber() {        // defining function "randomlyGenera
 const randomNumberButton = document.getElementById("random_number_button"); // defining constant and assign it DOm element with ID "random_number_button"
 const randomLabel = document.getElementById("random_number_label"); // defining constant and assigning it a element with ID "random_number_label"
 randomNumberButton.addEventListener("click", function () {      // adding event listener to 'click' to randomNumberButton and triggering callback function 
-    randomNumber = Math.floor(Math.random() * 9) + 1;       // assagning variable "randomNumber" value of random number multiplz by 9 and then floor it by removing decimal points, then adding +1
+    const randomNumber = Math.floor(Math.random() * 9) + 1;       // assagning variable "randomNumber" value of random number multiplz by 9 and then floor it by removing decimal points, then adding +1
     randomLabel.textContent = randomNumber;     // display generated number inside label with ID "random_number_label"
 
     console.log("User selected:", userSelectedNumber);      // prints out text + variable "userSelectedNumber" 
