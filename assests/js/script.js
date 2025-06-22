@@ -22,37 +22,56 @@ changeColour.addEventListener("mousedown", user_selected_number);
 
 /* this was a wild attempt but it doesnt work */
 
-
+/*
 function user_selected_number(myEvent) {
     const clickedButton = myEvent.target;
 
-    /* To have buttons reseted */
+    /* To have buttons reseted 
     for(let i= 1; i <= 9; i++) {
         const button = document.getElementById(`btn_${i}`);
-    /* this should reset background colour */    
+    /* this should reset background colour     
         button.style.backgroundColor = "";
-    /*  and this should resent colur of the text */
+    /*  and this should resent colur of the text 
         button.style.color = "";
     }
 
-    /* This should change the style of the button*/
+    /* This should change the style of the button
     clickedButton.style.backgroundColor = "green";
     clickedButton.style.color = "red";
 
-    /* this should get the number from whatever user selects */
+    /* this should get the number from whatever user selects 
     const selectedNumber = clickedButton.textContent;
 
-    /* this part should update the selected "number box" */
+    /* this part should update the selected "number box" 
     const selectedNumberBox = document.querySelector("#selectedNumberBox p");
     selectedNumberBox.textContent = `Value you have semlected is ${selectedNumber} `;
 }
+*/
+
 
 document.addEventListener("DOMContentLoaded", function() {
-    for (let i = 1; i <=9; i++) {
-        const button = document.getElementById(`btn_${i}`);
-        button.addEventListener("click", user_selected_number);
-    }
+    const numberButtons = document.querySelectorAll("#buttons button");     // creating constant variable, looking inside all elements with IDs button
+    const selectedNumberBox = document.querySelector("#selectedNumberBox p");
+
+    numberButtons.forEach((button) => {     // for each eleemnt inside 'numberButtons' run
+        button.addEventListener("click", function () {      // add event listener to button when "clicked" call / run callback function
+        // This should reset all buttons
+            numberButtons.forEach((btn) => {
+                btn.style.backgroundColor = "";     // resets color style for background to defoult 
+                btn.style.color = "";       // resets to default colour of the button
+            });
+        // this is for marking the selected button
+    button.style.backgroundColor = "green";     // using properties backgroundColor to change when selected
+    button.style.color = "red";     // using properties color to change the style fo button to red
+    
+        // Message to the user what was selcted 
+    const selectedNumber = button.textContent;
+    selectedNumberBox.textContent = `You selected number ${selectedNumber}`;
+        });
+    });
 });
+
+
 
 
 
