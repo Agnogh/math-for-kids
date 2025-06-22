@@ -63,20 +63,7 @@ randomNumberButton.addEventListener("click", function () {      // adding event 
         }
     });
 
-
-
 /*
-randomNuOBJECT_NAMEmber.addEventListener("click", function(p) {
-    if (userSelectedNumber === randomEntry) {
-        document.getElementById("display_results_box").textContent = `Congrats, your number ${userSelectedNumber} and drawn number ${randomSelectedNumber} are matching! `
-        win = ++win
-    } else {
-        document.getElementById("display_results_box").textContent = `Your number was ${userSelectedNumber} and drawn number is ${randomSelectedNumber}! Better luck next time. `
-        lose = ++lose 
-    }
-})
-
-
 let win = 0;
 let lose = 0;
 
