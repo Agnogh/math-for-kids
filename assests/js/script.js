@@ -86,15 +86,21 @@ function user_selected_number() {
     alert(`You selected your number ${selectedNumber}`)   
 }
 
-/* and for some damn reason, this doesn/t work !! */
 
-const randomNumberSelector = document.getElementById("random_number_button");
-randomNumberSelector.addEventListener("click", randomlyGeneratedNumber);
+/* rule for alert when user selects number */
+    const numberButtons = document.querySelectorAll("#buttons button");     // defining constant 'numberButtons' and assigning value from elements (inside element with KeyID 'buttons')
+    numberButtons.forEach((button) => {     // Loop through each button in 'numberButtons' and for each 'button' run this block
+    button.addEventListener("click", function (event) {     // attach 'click' event lsitener to 'button' when 'clicked', run callback function which recieves 'event' object
+        const selectedNumber = event.target.textContent;       // defining constant variable 'selectNumber' and assigning text content of clicked buton 
+        alert(`You selected number ${selectedNumber}`);     // calling 'alert' with text and variable containing user selected 'selectedNumber'
+    });
+});
 
-function randomlyGeneratedNumber() {
-    alert(`You random number`) 
+/* creatig function for randomly generated number */
+function randomlyGeneratedNumber() {        // defining function "randomlyGeneratedNumber"
+    const randomNumber = Math.floor(Math.random() * 9) + 1; // gives 1–9 based on math.random multiples by 9, floor removes decimal, and +1
+    alert(`Your random number is ${randomNumber}`);     // triggers the alert showing text + randomNumber variable defined earlier
 }
-
 
 
 /* this should get us the radnom number betwee 1 and 9 and then */
