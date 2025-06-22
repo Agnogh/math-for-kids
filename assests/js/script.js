@@ -1,52 +1,6 @@
 
-
-
-/* This should change to color of the button when user selects it... but it doesn/t work for some damn reason*/ 
-
-/*
-function user_selected_number() {
-    const colorButton = document.getElementById("btn_1");
-    colorButton.style.backgroundColor = "lightblue";
-    colorButton.style.color = "red";
-}
-
-
-
-changeColour.addEventListener("mousedown", user_selected_number);
-    function user_selected_number() {
-        const colorButton = document.getElementById("btn_1");
-        colorButton.style.backgroundColor = "lightblue";
-        colorButton.style.color = "red";
-    }
-*/
-
-/* this was a wild attempt but it doesnt work */
-
-/*
-function user_selected_number(myEvent) {
-    const clickedButton = myEvent.target;
-
-    /* To have buttons reseted 
-    for(let i= 1; i <= 9; i++) {
-        const button = document.getElementById(`btn_${i}`);
-    /* this should reset background colour     
-        button.style.backgroundColor = "";
-    /*  and this should resent colur of the text 
-        button.style.color = "";
-    }
-
-    /* This should change the style of the button
-    clickedButton.style.backgroundColor = "green";
-    clickedButton.style.color = "red";
-
-    /* this should get the number from whatever user selects 
-    const selectedNumber = clickedButton.textContent;
-
-    /* this part should update the selected "number box" 
-    const selectedNumberBox = document.querySelector("#selectedNumberBox p");
-    selectedNumberBox.textContent = `Value you have semlected is ${selectedNumber} `;
-}
-*/
+let userSelectedNumber = null; // will store clicked number
+let randomNumber = null;       // will store random number
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -73,25 +27,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
-
-
-/* or we do it like this- this actually works */
-/*
-const btn_any = document.getElementById("btn_$");
-btn_any.addEventListener("click", user_selected_number);
-
-function user_selected_number() {
-    alert(`You selected your number ${selectedNumber}`)   
-}
-
-
 /* rule for alert when user selects number */
     const numberButtons = document.querySelectorAll("#buttons button");     // defining constant 'numberButtons' and assigning value from elements (inside element with KeyID 'buttons')
     numberButtons.forEach((button) => {     // Loop through each button in 'numberButtons' and for each 'button' run this block
     button.addEventListener("click", function (event) {     // attach 'click' event lsitener to 'button' when 'clicked', run callback function which recieves 'event' object
         const selectedNumber = event.target.textContent;       // defining constant variable 'selectNumber' and assigning text content of clicked buton 
+        userSelectedNumber = selectedNumber; // store globally
         alert(`You selected number ${selectedNumber}`);     // calling 'alert' with text and variable containing user selected 'selectedNumber'
     });
 });
@@ -103,18 +44,24 @@ function randomlyGeneratedNumber() {        // defining function "randomlyGenera
 }
 
 
-/* this should get us the radnom number betwee 1 and 9 and then */
-const randomNumberButton = document.getElementById("random_number_button");
-const randomLabel = document.getElementById("random_number_label");
-const minimumValueOfRandomNumber = 1;
-const maximumValueOfRandomNumber = 9;
-let randomNumber;
 
-randomNumberButton.onClick = function() {
-    randomNumber = Math.floor(Math.random() * maximumValueOfRandomNumber) + minimumValueOfRandomNumber;
-    randomLabel.textContent = randomNumber;
-    console.log(randomLabel);
-}
+/* this should get us the radnom number betwee 1 and 9 and then compare it with random number */
+const randomNumberButton = document.getElementById("random_number_button"); // defining constant and assign it DOm element with ID "random_number_button"
+const randomLabel = document.getElementById("random_number_label"); // defining constant and assigning it a element with ID "random_number_label"
+randomNumberButton.addEventListener("click", function () {      // adding event listener to 'click' to randomNumberButton and triggering callback function 
+    randomNumber = Math.floor(Math.random() * 9) + 1;       // assagning variable "randomNumber" value of random number multiplz by 9 and then floor it by removing decimal points, then adding +1
+    randomLabel.textContent = randomNumber;     // display generated number inside label with ID "random_number_label"
+
+    console.log("User selected:", userSelectedNumber);      // prints out text + variable "userSelectedNumber" 
+    console.log("Randomly selected:", randomNumber);        // prints out text + variable "randomNumber" 
+
+    const resultBox = document.getElementById("display_results_box");       // defining constant and assigned it elements with ID 'display_results_box'
+        if (userSelectedNumber == randomNumber) {       // if numbers match execture following
+            resultBox.textContent = `🎉 Congrats! You picked ${userSelectedNumber} and that matches random number ${randomNumber}.`;        // callout constant with defoult text + random and user selected numbers as variables
+        } else {        // if upper condition is not met, the exectue following
+            resultBox.textContent = `😔 Sorry! You picked ${userSelectedNumber}, but the random number was ${randomNumber}. Try again!`;    // callout constatn that has default text + user selected number and random number 
+        }
+    });
 
 
 
