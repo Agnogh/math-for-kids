@@ -1,7 +1,45 @@
 "# math-for-kids" 
 
 # Guessing number game
+!["Guess the number game"](../math-for-kids/assests/images/Responsivnes.jpg)
 
+## Table of content
+- [Project goal](#project-goal)
+  - [User goal](#user-goal)
+  - [Site owner goal](#site-owner-goal)
+  - [User Experience](#user-experience)
+    - [Targeted group](#targeted-group)
+  - [User expectation](#user-expectation)
+  - [User Stories](#user-stories)
+- [Design of webpage](#design-of-webpage)
+  - [Design choices](#design-choices)
+    - [Color](#color)
+    - [Structure](#structure)
+    - [Background Image](#background-image)
+- [Techology and Tools used](#techology-and-tools-used)
+  - [Languages](#languages)
+  - [Tools](#tools)
+  - [Additional help](#additional-help)
+- [Gameplay](#gameplay)
+  - [User interactions](#user-interactions)
+- [Validation](#validation)
+  - [Validation Tools](#validation-tools)
+    - [Responsivnes](#responsivnes)
+    - [HTML Checker](#html-checker)
+    - [CSS Validator](#css-validator)
+    - [Accessibility Validator](#accessibility-validator)
+    - [Accessibility Review](#accessibility-review)
+    - [Performance Review](#performance-review)
+    - [Best Practice Examples Review](#best-practice-examples-review)
+    - [SEO Review](#seo-review)
+  - [QA & Bugfixes](#qa-&-bugfixes)
+    - [Devices used](#devices-used)
+    - [Browsers used](#browsers-used)
+    - [Bugs](#bugs)
+- [Support and Help](#support-and-help)
+  - [Links](#links)
+  - [Deployment](#deployment)
+- [Thanks](#thanks)
 
 
 
