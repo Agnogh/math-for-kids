@@ -1,4 +1,4 @@
-/* general rule (allpied to if nothing specific was called out*/
+/* general rule (aplpied to if nothing specific was called out*/
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(../images/math_picture.jfif) repeat center center/cover;
+    background: url(../images/numbers\ background\ -2-.jfif) repeat center center/cover;
     min-height: 100vh;
 }
 
@@ -124,6 +124,7 @@ main {
     margin-bottom: 10%;
     justify-content: center;  
     padding-top: 1rem;
+    border-radius: 15%;
 
 }
 
@@ -156,6 +157,9 @@ main {
     text-align: inherit;
     align-items: inherit;
     padding: 5%;
+    border-radius: 15%;
+    border-color: rgb(159, 202, 39);
+    border-style:double;
 }
 
 footer {
