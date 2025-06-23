@@ -42,12 +42,26 @@
 - [Thanks](#thanks)
 
 
+## **Gameplay**
 
+The idea is that the user has a simple-to-follow UI with a clear description.
+- Numbers presented are described with section title "Pick Your Number"
+- Numbers are easy to see/detect and selectable
+- User is prompted with an Alert message after each selected number
+- Under that number section box is the button that if not clear enough has in brackets description 'Click me' by which a random number is generated
+- Description text explains what is selected and what random number was "pulled". Also followed by the result of each gamble round with a win-or-lose message
+- user can keep playing and see the overall lucky score but no further interaction is needed
+
+### **User interactions**
+User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled" " That way user can play his/her favourite number several rounds in a row.
+Another interaction is that each round requires the user to click on the "I feel lucky" button creates a random number which will be compared with number user selected for him/herself.
+
+No other interaction is needed as text shows up based on either user selection or outcome if the numbers match or not. The calculated success rate (luck factor) is also automatically done and doesn't require input from the user.
 
 ## Validation
 -------------------------------------------
 ### **Validation Tools**
-To validate html, css, accessibiliy, responsivnes, performance... following links were used
+To validate HTML, CSS, accessibility, responsivnes, and performance... following links were used
 - https://validator.w3.org/
 - https://jigsaw.w3.org/css-validator/
 - https://wave.webaim.org/
@@ -107,16 +121,17 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 **Safari**
 
 ### *Bugs*
-- typos in user added text
-- unnecesary styling that looked "too much" for header
-- unnecesarry and unused labels just below command button that generates random numbers
-- removing syles that were not used and could have inherit rules frm parent elements
-- fixing the issue where user could click only 2 times and button stopped unresponsive
+- typos in user-added text
+- unnecessary styling that looked "too much" for header
+- unnecessary and unused labels just below the command button that generate random numbers
+- removing syles that were not used and could have inherited rules from parent elements
+- fixing the issue where the user could click only 2 times and button stopped unresponsive
 - fixing the issue that button was unresponsive as event listener 'click' was calling on wrong keyID
-- removing that every random number generated calls out Alert window as it would hinder user experience and slow down the game pace by making user click on "OK" to dismiss that window
-- adding ratio to calculate percentage of win and lose
-- displacing unnecesary text from label element below comman button and keeping only text on the footer
+- removing that every random number generated calls out the Alert window as it would hinder user experience and slow down the game pace by making the user click on "OK" to dismiss that window
+- adding ratio to calculate percentage of wins and lose
+- displacing unnecessary text from the label element below command button and keeping only text on the footer
 - correcting formula to calculate percentage of 'luck success rate'
+- removing default text in footer with something more meaningful
 
 
 ## Support and Help
