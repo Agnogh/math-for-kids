@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
             userSelectedNumber = button.textContent;
 
         // Show alert for selčected number by user
-            alert(`You selected number ${userSelectedNumber}`);
+            alert(`You selected number ${userSelectedNumber}. Lady Luck will be with you !`);
 
         });
     });
@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Check if user added numer and randomly selected number match and also adds + 1 to eithe win or lose count
         if (userSelectedNumber == randomNumber) {   // if user selected number is equal to random number execute following 
-            resultBox.textContent = `🎉 Congrats! You picked ${userSelectedNumber} and that matches random number ${randomNumber}.`;    // call out constant with text content containing default text + variables holding variables for user and random number
+            resultBox.textContent = `🎉 Congrats! Your lucky number ${userSelectedNumber} matches Lotto number ${randomNumber}.`;    // call out constant with text content containing default text + variables holding variables for user and random number
             inGameWinCount++;
         } else {        // othervise execute following line of code
-            resultBox.textContent = `😔 Sorry! You picked ${userSelectedNumber}, but the random number was ${randomNumber}. Try again!`;    // calls constant with default text + variables for 'user selected number' & 'random number'
+            resultBox.textContent = `😔 Lady Luck looked away. Your picked ${userSelectedNumber} is not matching ${randomNumber}. Try your luck again!`;    // calls constant with default text + variables for 'user selected number' & 'random number'
             inGameLoseCount++;
         }
 
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const luckFactorIndicator = ((inGameWinCount / inGameLoseCount) * 100 ).toFixed(1);     // new constant that is assigned calculated value so percentage of win is shown/displayed
 
         // Update selectedNumberBox with full message and addon now ratio of wins and loses
-        selectedNumberBox.innerHTML = `selected number ${userSelectedNumber} VS Random number ${randomNumber}. <br> Luck: ${luckFactorIndicator}`;
+        selectedNumberBox.innerHTML = `Selected number ${userSelectedNumber} VS Random number ${randomNumber}. <br> Your Luck index: ${luckFactorIndicator}%`;
     });
 });
 
