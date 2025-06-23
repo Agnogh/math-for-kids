@@ -37,8 +37,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // rule for randomly created number with 'I feel lucky number' button clicked
     randomNumberButton.addEventListener("click", function () {
     // Generate random number from 1 to 9
-        randomNumber = Math.floor(Math.random() * 9) + 1;
+        const randomNumber = Math.floor(Math.random() * 9) + 1;
 
+        const resultBox = document.getElementById("display_results_box");
+        const selectedNumberBox = document.querySelector("selectedNumberBox p")
 
     // Update selectedNumberBox with full message
         selectedNumberBox.textContent = `You selected number ${userSelectedNumber}. Randomly selected number is ${randomNumber}.`;
