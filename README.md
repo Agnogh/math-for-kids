@@ -19,8 +19,7 @@ https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fagnogh.github.io
 
 ### *Accessibility Validator*
 
-*Accessibility shows 2 errors, but in fact they do now really cause accessibiliy issues as one is blank button to help alignment when user has top and bottom button where top buttons are 1-5 and bottom 6-9 where unequal alignemtn would show*
+*Accessibility shows 1 error, but in fact they do now really cause accessibiliy issues as it is blank button to help alignment when user has top and bottom button where top buttons are 1-5 and bottom 6-9 where unequal alignemtn would show*
 https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 ![Accessibility Validator for "Guess the number game"](../math-for-kids/assests/images/Accessibility%20Validator%20-1-.jpg)
 
-![Accessibility Validator for "Guess the number game"](../math-for-kids/assests/images/Accessibility%20Validator%20-2-.jpg)

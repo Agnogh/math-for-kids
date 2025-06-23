@@ -145,15 +145,7 @@ main {
     font-size: 1.5em;
 
 }
-/*
-#random_number_label {
-    background-color: yellowgreen;
-    color: aliceblue;
-    border-radius: 25%;
-    font-size: 1.5em;
 
-}
-*/
 #selectedNumberBox {
     background-color: rgba(47, 48, 40, 0.6);
     color: aliceblue;
