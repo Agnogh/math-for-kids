@@ -43,6 +43,19 @@
 
 
 
+
+## Validation
+-------------------------------------------
+### **Validation Tools**
+To validate html, css, accessibiliy, responsivnes, performance... following links were used
+- https://validator.w3.org/
+- https://jigsaw.w3.org/css-validator/
+- https://wave.webaim.org/
+- https://ui.dev/amiresponsive?url=https://
+- https://developer.chrome.com/docs/lighthouse/overview/
+
+-------------------------------------------
+
 ### *Responsivnes* 
 
 https://ui.dev/amiresponsive?url=https://agnogh.github.io/math-for-kids/
@@ -75,3 +88,70 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 
 ### *SEO Review*
 ![SEO Review for "Guess the number game - 100%"](../math-for-kids/assests/images/SEO%20review.jpg)
+
+
+## QA & Bugfixes
+-------------------------------------------
+### *Devices used*
+- Huawei P smart
+- Samsung A15
+- iPad 15
+- iPad Pro
+- iPhone 16
+- MacBook Pro
+- MacBook Air
+- Nitro 5, Ryzan 7
+
+### *Browsers used*
+**Chrome**
+**Safari**
+
+### *Bugs*
+- typos in user added text
+- unnecesary styling that looked "too much" for header
+- unnecesarry and unused labels just below command button that generates random numbers
+- removing syles that were not used and could have inherit rules frm parent elements
+- fixing the issue where user could click only 2 times and button stopped unresponsive
+- fixing the issue that button was unresponsive as event listener 'click' was calling on wrong keyID
+- removing that every random number generated calls out Alert window as it would hinder user experience and slow down the game pace by making user click on "OK" to dismiss that window
+- adding ratio to calculate percentage of win and lose
+- displacing unnecesary text from label element below comman button and keeping only text on the footer
+- correcting formula to calculate percentage of 'luck success rate'
+
+
+## Support and Help
+
+### **Links**
+*Validation related*
+
+- https://validator.w3.org/
+- https://jigsaw.w3.org/css-validator/
+- https://developer.chrome.com/docs/lighthouse/overview/
+- https://wave.webaim.org/
+- https://ui.dev/amiresponsive?url=https://
+
+*Training, tips & tricks*
+-https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf#syntax
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#instance_methods
+- https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML
+- https://pythontutor.com/render.html#mode=edit
+- https://learn.codeinstitute.net/sandbox/api/challenges/658052c609aa64a4c9719c60/files/index.html
+- https://learn.codeinstitute.net/courses
+
+*Various*
+- https://github.com/
+- YouTube
+- https://stackoverflow.com
+
+
+### **Deployment**
+- https://agnogh.github.io/math-for-kids/
+- https://github.com/Agnogh/math-for-kids/settings/pages
+
+
+## Thanks
+NA
