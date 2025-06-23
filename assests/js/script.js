@@ -40,10 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const randomNumber = Math.floor(Math.random() * 9) + 1;
 
         const resultBox = document.getElementById("display_results_box");
-        const selectedNumberBox = document.querySelector("selectedNumberBox p")
-
-    // Update selectedNumberBox with full message
-        selectedNumberBox.textContent = `You selected number ${userSelectedNumber}. Randomly selected number is ${randomNumber}.`;
+        const selectedNumberBox = document.querySelector("selectedNumberBox p");
 
     // Check if user added numer and randomly selected number match
         if (userSelectedNumber == randomNumber) {   // if user selected number is equal to random number execute following 
@@ -53,7 +50,12 @@ document.addEventListener("DOMContentLoaded", function() {
             resultBox.textContent = `😔 Sorry! You picked ${userSelectedNumber}, but the random number was ${randomNumber}. Try again!`;    // calls constant with default text + variables for 'user selected number' & 'random number'
             inGameLoseCount++;
         }
+
+        const totalGamesPlayed = inGameWinCount + inGameLoseCount;
+        const luckFactorIndicator = ((inGameWinCount / inGameLoseCount) * 100 ).toFixed(1);
     });
+        // Update selectedNumberBox with full message and addon now ratio of wins and loses
+        selectedNumberBox.innerHTML = `selected number ${userSelectedNumber} VS Random number ${randomNumber}. <br> Luck: ${luckFactorIndicator}`;
 });
 
 
