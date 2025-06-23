@@ -2,6 +2,9 @@
 let userSelectedNumber = null; // will store clicked number
 let randomNumber = null;       // will store random number
 
+/* this is for win and lose count */
+let inGameWinCount = 0;
+let inGameLoseCount = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
     const numberButtons = document.querySelectorAll("#buttons button");     // creating constant variable, looking inside all elements with IDs button
@@ -31,9 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    /* this is for win and lose count */
-let inGameWinCount = 0;
-let inGameLoseCount = 0;
+
 
     // rule for randomly created number with 'I feel lucky number' button clicked
     randomNumberButton.addEventListener("click", function () {
@@ -53,9 +54,10 @@ let inGameLoseCount = 0;
 
         const totalGamesPlayed = inGameWinCount + inGameLoseCount;
         const luckFactorIndicator = ((inGameWinCount / inGameLoseCount) * 100 ).toFixed(1);
-    });
+
         // Update selectedNumberBox with full message and addon now ratio of wins and loses
         selectedNumberBox.innerHTML = `selected number ${userSelectedNumber} VS Random number ${randomNumber}. <br> Luck: ${luckFactorIndicator}`;
+    });
 });
 
 
