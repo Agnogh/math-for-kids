@@ -2,8 +2,6 @@
 let userSelectedNumber = null; // will store clicked number
 let randomNumber = null;       // will store random number
 
-let inGameWinCount = 0;
-let inGameLoseCount = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
     const numberButtons = document.querySelectorAll("#buttons button");     // creating constant variable, looking inside all elements with IDs button
@@ -29,10 +27,13 @@ document.addEventListener("DOMContentLoaded", function() {
             alert(`You selected number ${userSelectedNumber}`);
 
         // Update text box (will be replaced when random number is picked)
-            selectedNumberBox.textContent = `You selected number ${userSelectedNumber}`;
+        /*    selectedNumberBox.textContent = `You selected number ${userSelectedNumber}`; */
         });
     });
 
+    /* this is for win and lose count */
+let inGameWinCount = 0;
+let inGameLoseCount = 0;
 
     // rule for randomly created number with 'I feel lucky number' button clicked
     randomNumberButton.addEventListener("click", function () {
@@ -40,9 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const randomNumber = Math.floor(Math.random() * 9) + 1;
 
         const resultBox = document.getElementById("display_results_box");
-        const selectedNumberBox = document.querySelector("selectedNumberBox p");
 
-    // Check if user added numer and randomly selected number match
+    // Check if user added numer and randomly selected number match and also adds + 1 to eithe win or lose count
         if (userSelectedNumber == randomNumber) {   // if user selected number is equal to random number execute following 
             resultBox.textContent = `🎉 Congrats! You picked ${userSelectedNumber} and that matches random number ${randomNumber}.`;    // call out constant with text content containing default text + variables holding variables for user and random number
             inGameWinCount++;
