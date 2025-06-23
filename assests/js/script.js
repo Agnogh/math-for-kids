@@ -2,6 +2,8 @@
 let userSelectedNumber = null; // will store clicked number
 let randomNumber = null;       // will store random number
 
+let inGameWinCount = 0;
+let inGameLoseCount = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
     const numberButtons = document.querySelectorAll("#buttons button");     // creating constant variable, looking inside all elements with IDs button
@@ -44,17 +46,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Check if user added numer and randomly selected number match
         if (userSelectedNumber == randomNumber) {   // if user selected number is equal to random number execute following 
             resultBox.textContent = `🎉 Congrats! You picked ${userSelectedNumber} and that matches random number ${randomNumber}.`;    // call out constant with text content containing default text + variables holding variables for user and random number
+            inGameWinCount++;
         } else {        // othervise execute following line of code
             resultBox.textContent = `😔 Sorry! You picked ${userSelectedNumber}, but the random number was ${randomNumber}. Try again!`;    // calls constant with default text + variables for 'user selected number' & 'random number'
+            inGameLoseCount++;
         }
     });
 });
 
 
-/*
-let win = 0;
-let lose = 0;
-
-*/
 
 
