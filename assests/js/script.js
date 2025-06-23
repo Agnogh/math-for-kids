@@ -8,7 +8,7 @@ let inGameLoseCount = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
     const numberButtons = document.querySelectorAll("#buttons button");     // creating constant variable, looking inside all elements with IDs button
-    const selectedNumberBox = document.querySelector("#selectedNumberBox p");
+    const selectedNumberBox = document.querySelector("#selectedNumberBox p");       // constant checking all elements with keyID "selectedBumberBox"
     const resultBox = document.getElementById("display_results_box");
     const randomNumberButton = document.getElementById("random_number_button");
 
@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // Show alert for selčected number by user
             alert(`You selected number ${userSelectedNumber}`);
 
-        // Update text box (will be replaced when random number is picked)
-        /*    selectedNumberBox.textContent = `You selected number ${userSelectedNumber}`; */
         });
     });
 
@@ -52,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
             inGameLoseCount++;
         }
 
-        const totalGamesPlayed = inGameWinCount + inGameLoseCount;
-        const luckFactorIndicator = ((inGameWinCount / inGameLoseCount) * 100 ).toFixed(1);
+        const totalGamesPlayed = inGameWinCount + inGameLoseCount;      // new constant variable that is assigned sum of both win and loses
+        const luckFactorIndicator = ((inGameWinCount / inGameLoseCount) * 100 ).toFixed(1);     // new constant that is assigned calculated value so percentage of win is shown/displayed
 
         // Update selectedNumberBox with full message and addon now ratio of wins and loses
         selectedNumberBox.innerHTML = `selected number ${userSelectedNumber} VS Random number ${randomNumber}. <br> Luck: ${luckFactorIndicator}`;

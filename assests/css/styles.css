@@ -21,17 +21,15 @@ body {
 
 
 header {
-    color: rgb(37, 255, 8);
-    background-color: rgb(23, 24, 23);
-    box-shadow: 4px 2px 6px 4px rgb(140, 247, 1); 
     border-radius: 20%;
+    background-color: rgb(64, 233, 13, 0.4);
 }
 
 
 /* rule for h1 element (title) */
 h1 {
     margin-top: 5%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 4px 2px 6px 4px rgb(247, 1, 1); 
     border-radius: 20%;
     background-color: yellow;
