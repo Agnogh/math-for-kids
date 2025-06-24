@@ -42,8 +42,88 @@
 - [Thanks](#thanks)
 
 
-## **Gameplay**
 
+## Design of webpage
+-------------------------------------------
+### **Design choices**
+Design is wrapped around the idea of having a simple, straightforward, approachable, design with few windows, highly visible buttons to choose from, and clear instructions in both design and text placement and size so there is no confusion about what needs to be selected.
+
+A black background is selected so that Yellow, and red-orange stand out so that black letters are more visible.
+
+The decision was to go with more round shapes instead of crude and sharp edges that would make UI a bit 'old'
+
+Shadows are also included for visual effects with mostly green and orange colours to match and contrast at the same time buttons, and background colours.
+
+
+### *Color*
+The black background is a good fit for yellow and red with green borders. Green border is perfect for a light transition between the contrast of yellow and orange against black.
+
+Slightly transparent boxes cause that transition in colours to be more distinguished while still slightly transiting from red or yellow to black.
+
+
+### *Structure*
+
+*Structure* is simple with the title on top holding the game name
+
+*Body* contains 
+1. 'playing area' where numbers are displayed where user can interact with them
+2. 'command button' names 'I feel lucky' that generates a random number 
+3. 'diagnose area' where user gets info on what was selected, what was "pulled", are the numbers match and what is success rate is - displays info for the user
+
+*footer* contains win or lose outcome in the form of text
+
+I didn't want to go with any additional links to social media as the page is designed to serve the purpose of the lotto game and not have several links that are more relevant for HTML design.
+
+Top part of the UI
+
+![Structure "Guess the number game"](../math-for-kids/assests/images/Structure%20-1-.jpg)
+
+Bottom part of the UI
+
+![Structure "Guess the number game"](../math-for-kids/assests/images/Structure%20-2-.jpg)
+
+
+### *Background Image*
+
+The background image was picked based on theme, colour and simplicity.
+Black to increase visibility with saturated simple images of digits that do not stand out or interfere with user's focus.
+
+Picture is High Res to avoid cropping and blurry images on larger devices.
+
+
+## Techology and Tools used
+-------------------------------------------
+### **Languages**
+- HTML
+- CSS
+- JavaScript
+
+
+### **Tools**
+- Git
+- GitHub
+- Gitpod
+- Freeform
+- TextEdit
+- BBEdit
+- Word
+- Paint
+- Font Awesome
+- Favicon
+- Diff Checker
+- Grammarly
+- Pen and paper (as it is faster in some instances)
+
+
+### **Additional help**
+- YouTube 
+- Stack Overflow 
+- Slack Community
+- No tutor help was requested as I wanted to pull this as independently as possible
+
+
+## Gameplay
+-------------------------------------------
 The idea is that the user has a simple-to-follow UI with a clear description.
 - Numbers presented are described with section title "Pick Your Number"
 - Numbers are easy to see/detect and selectable
@@ -56,7 +136,11 @@ The idea is that the user has a simple-to-follow UI with a clear description.
 User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled" " That way user can play his/her favourite number several rounds in a row.
 Another interaction is that each round requires the user to click on the "I feel lucky" button creates a random number which will be compared with number user selected for him/herself.
 
+![User interaction on "Guess the number game"](../math-for-kids/assests/images/User%20Interaction.jpg)
+
 No other interaction is needed as text shows up based on either user selection or outcome if the numbers match or not. The calculated success rate (luck factor) is also automatically done and doesn't require input from the user.
+
+
 
 ## Validation
 -------------------------------------------
@@ -132,10 +216,11 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 - displacing unnecessary text from the label element below command button and keeping only text on the footer
 - correcting formula to calculate percentage of 'luck success rate'
 - removing default text in footer with something more meaningful
+- changing name of the webpage from "Math/Quiy/Lottery" to "Lottery Game" due to theme used
 
 
 ## Support and Help
-
+-------------------------------------------
 ### **Links**
 *Validation related*
 
