@@ -66,7 +66,7 @@ Give people something to play around with to pass the time while seeing how math
 
 ### **User Experience**
 
-#### Targeted group
+#### *Targeted group*
 Anyone who wants to try their luck. There are no age limitations/restrictions. Most likely group will be very small kinds or older people as everyone in between will set their sights on far more advanced entertainment.  
 
 ### **User expectation**
@@ -225,7 +225,7 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 ![SEO Review for "Guess the number game - 100%"](../math-for-kids/assests/images/SEO%20review.jpg)
 
 
-## QA & Bugfixes
+### **QA & Bugfixes**
 -------------------------------------------
 ### *Devices used*
 - Huawei P smart
