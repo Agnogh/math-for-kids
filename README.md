@@ -43,6 +43,43 @@
 
 
 
+## Project goal
+
+The idea behind this project is to 
+- create a small simple guessing game that will interact with the user based on the outcome
+- give the user the ability to keep track of overall score (called luck index)
+- get users an idea about the probability of guessing the number from 1st go
+- make people understand the probability of winning the lottery and returning invested money 
+- give the user some entertainment 
+
+
+### **User goal**
+
+Try out their luck
+Have fun
+Make a competition among friends who will have a better score after a certain number of rounds.
+Help users make more analytical decision is it worth buy lottery ticket
+
+### **Site owner goal**
+
+Give people something to play around with to pass the time while seeing how mathematical probability works and what are the chances they could get rich playing the lottery.
+
+### **User Experience**
+
+#### Targeted group
+Anyone who wants to try their luck. There are no age limitations/restrictions. Most likely group will be very small kinds or older people as everyone in between will set their sights on far more advanced entertainment.  
+
+### **User expectation**
+Expectations are limited. It serves more as a tryout before buying a lottery ticket and hoping to become a millionaire who spends hours playing the game.
+With a random element involved (the number is randomly generated), the user will not have any real power over the outcome of the game and get a better score (it is just pure luck)
+
+
+### **User Stories**
+Since the idea is simple to try out your luck and used just for fun with no big expectations, there is no big replayability.
+Users will come over to try out their luck, see what is success rate, maybe try out a challenge to get 2 or 3 in a row or competition among people who will have a better success rate among a certain number of rounds.
+
+
+
 ## Design of webpage
 -------------------------------------------
 ### **Design choices**
