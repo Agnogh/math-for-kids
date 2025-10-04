@@ -1,7 +1,7 @@
 "# math-for-kids" 
 
 # Guessing number game
-!["Guess the number game"](../math-for-kids/assests/images/Responsivnes.jpg)
+!["Guess the number game"](/assests/images/Responsivnes.jpg)
 
 ## Table of content
 - [Project goal](#project-goal)
@@ -113,11 +113,11 @@ I didn't want to go with any additional links to social media as the page is des
 
 Top part of the UI
 
-![Structure "Guess the number game"](../math-for-kids/assests/images/Structure%20-1-.jpg)
+![Structure "Guess the number game"](/assests/images/Structure%20-1-.jpg)
 
 Bottom part of the UI
 
-![Structure "Guess the number game"](../math-for-kids/assests/images/Structure%20-2-.jpg)
+![Structure "Guess the number game"](/assests/images/Structure%20-2-.jpg)
 
 
 ### *Background Image*
@@ -173,7 +173,7 @@ The idea is that the user has a simple-to-follow UI with a clear description.
 User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled" " That way user can play his/her favourite number several rounds in a row.
 Another interaction is that each round requires the user to click on the "I feel lucky" button creates a random number which will be compared with number user selected for him/herself.
 
-![User interaction on "Guess the number game"](../math-for-kids/assests/images/User%20Interaction.jpg)
+![User interaction on "Guess the number game"](/assests/images/User%20Interaction.jpg)
 
 No other interaction is needed as text shows up based on either user selection or outcome if the numbers match or not. The calculated success rate (luck factor) is also automatically done and doesn't require input from the user.
 
@@ -194,35 +194,35 @@ To validate HTML, CSS, accessibility, responsivnes, and performance... following
 ### *Responsivnes* 
 
 https://ui.dev/amiresponsive?url=https://agnogh.github.io/math-for-kids/
-![Responsivnes of "Guess the number game"](../math-for-kids/assests/images/Responsivnes.jpg)
+![Responsivnes of "Guess the number game"](/assests/images/Responsivnes.jpg)
 
 ### *HTML Checker*
 
 https://validator.w3.org/nu/?doc=https%3A%2F%2Fagnogh.github.io%2Fmath-for-kids%2F
-![HTML Checker for "Guess the number game"](../math-for-kids/assests/images/HTML%20Checker.jpg)
+![HTML Checker for "Guess the number game"](/assests/images/HTML%20Checker.jpg)
 
 ### *CSS Validator*
 
 https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fagnogh.github.io%2Fmath-for-kids%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
-![CSS Validator for "Guess the number game"](../math-for-kids/assests/images/CSS%20Checker.jpg)
+![CSS Validator for "Guess the number game"](/assests/images/CSS%20Checker.jpg)
 
 ### *Accessibility Validator*
 
 *Accessibility shows 1 error, but in fact they do now really cause accessibiliy issues as it is blank button to help alignment when user has top and bottom button where top buttons are 1-5 and bottom 6-9 where unequal alignemtn would show*
 https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
-![Accessibility Validator for "Guess the number game"](../math-for-kids/assests/images/Accessibility%20Validator%20-1-.jpg)
+![Accessibility Validator for "Guess the number game"](/assests/images/Accessibility%20Validator%20-1-.jpg)
 
 ### *Accessibility Review*
-![Performance Review for "Guess the number game" - 100%](../math-for-kids/assests/images/Accessibility%20performance.jpg)
+![Performance Review for "Guess the number game" - 100%](/assests/images/Accessibility%20performance.jpg)
 
 ### *Performance Review*
-![Performance Review for "Guess the number game - 96%"](../math-for-kids/assests/images/Performance%20review.jpg)
+![Performance Review for "Guess the number game - 96%"](/assests/images/Performance%20review.jpg)
 
 ### *Best Practice Examples Review*
-![Best Practice Examples Review for "Guess the number game - 100%"](../math-for-kids/assests/images/Best%20Practice%20examples%20review.jpg)
+![Best Practice Examples Review for "Guess the number game - 100%"](/assests/images/Best%20Practice%20examples%20review.jpg)
 
 ### *SEO Review*
-![SEO Review for "Guess the number game - 100%"](../math-for-kids/assests/images/SEO%20review.jpg)
+![SEO Review for "Guess the number game - 100%"](/assests/images/SEO%20review.jpg)
 
 
 ### **QA & Bugfixes**
