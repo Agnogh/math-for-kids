@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const totalGamesPlayed = inGameWinCount + inGameLoseCount;      // new constant variable that is assigned sum of both win and loses
-        const luckFactorIndicator = ((inGameWinCount / inGameLoseCount) * 100 ).toFixed(1);     // new constant that is assigned calculated value so percentage of win is shown/displayed
+        const luckFactorIndicator = ((inGameWinCount / totalGamesPlayed) * 100 ).toFixed(1);     // new constant that is assigned calculated value so percentage of win is shown/displayed
 
         // Update selectedNumberBox with full message and addon now ratio of wins and loses
         selectedNumberBox.innerHTML = `Selected number ${userSelectedNumber} VS Random number ${randomNumber}. <br> Your Luck index: ${luckFactorIndicator}%`;
