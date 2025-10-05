@@ -44,7 +44,7 @@
 
 
 
-## Project goal
+## **1. Project goal**
 
 The idea behind this project is to 
 - create a small simple guessing game that will interact with the user based on the outcome
@@ -54,36 +54,36 @@ The idea behind this project is to
 - give the user some entertainment 
 
 
-### **User goal**
+### **1.1. User goal**
 
 Try out their luck
 Have fun
 Make a competition among friends who will have a better score after a certain number of rounds.
 Help users make more analytical decision is it worth buy lottery ticket
 
-### **Site owner goal**
+### **1.2. Site owner goal**
 
 Give people something to play around with to pass the time while seeing how mathematical probability works and what are the chances they could get rich playing the lottery.
 
-### **User Experience**
+### **1.3 User Experience**
 
-#### *Targeted group*
+#### *1.3.1. Targeted group*
 Anyone who wants to try their luck. There are no age limitations/restrictions. Most likely group will be very small kinds or older people as everyone in between will set their sights on far more advanced entertainment.  
 
-### **User expectation**
+### **1.4. User expectation**
 Expectations are limited. It serves more as a tryout before buying a lottery ticket and hoping to become a millionaire who spends hours playing the game.
 With a random element involved (the number is randomly generated), the user will not have any real power over the outcome of the game and get a better score (it is just pure luck)
 
 
-### **User Stories**
+### **1.5. User Stories**
 Since the idea is simple to try out your luck and used just for fun with no big expectations, there is no big replayability.
 Users will come over to try out their luck, see what is success rate, maybe try out a challenge to get 2 or 3 in a row or competition among people who will have a better success rate among a certain number of rounds.
 
 
 
-## Design of webpage
+## **2. Design of webpage**
 -------------------------------------------
-### **Design choices**
+### **2.1 Design choices**
 Design is wrapped around the idea of having a simple, straightforward, approachable, design with few windows, highly visible buttons to choose from, and clear instructions in both design and text placement and size so there is no confusion about what needs to be selected.
 
 A black background is selected so that Yellow, and red-orange stand out so that black letters are more visible.
@@ -93,13 +93,13 @@ The decision was to go with more round shapes instead of crude and sharp edges t
 Shadows are also included for visual effects with mostly green and orange colours to match and contrast at the same time buttons, and background colours.
 
 
-### *Color*
+### *2.1.1. Color*
 The black background is a good fit for yellow and red with green borders. Green border is perfect for a light transition between the contrast of yellow and orange against black.
 
 Slightly transparent boxes cause that transition in colours to be more distinguished while still slightly transiting from red or yellow to black.
 
 
-### *Structure*
+### *2.1.2. Structure*
 
 *Structure* is simple with the title on top holding the game name
 
@@ -121,7 +121,7 @@ Bottom part of the UI
 ![Structure "Guess the number game"](/assests/images/Structure%20-2-.jpg)
 
 
-### *Background Image*
+### *2.1.3. Background Image*
 
 The background image was picked based on theme, colour and simplicity.
 Black to increase visibility with saturated simple images of digits that do not stand out or interfere with user's focus.
@@ -129,15 +129,15 @@ Black to increase visibility with saturated simple images of digits that do not 
 Picture is High Res to avoid cropping and blurry images on larger devices.
 
 
-## Techology and Tools used
+## **3. Techology and Tools used**
 -------------------------------------------
-### **Languages**
+### **3.1. Languages**
 - HTML
 - CSS
 - JavaScript
 
 
-### **Tools**
+### **3.2. Tools**
 - Git
 - GitHub
 - Gitpod
@@ -153,14 +153,14 @@ Picture is High Res to avoid cropping and blurry images on larger devices.
 - Pen and paper (as it is faster in some instances)
 
 
-### **Additional help**
+### **3.3. Additional help**
 - YouTube 
 - Stack Overflow 
 - Slack Community
 - No tutor help was requested as I wanted to pull this as independently as possible
 
 
-## Gameplay
+## **4. Gameplay**
 -------------------------------------------
 The idea is that the user has a simple-to-follow UI with a clear description.
 - Numbers presented are described with section title "Pick Your Number"
@@ -170,7 +170,7 @@ The idea is that the user has a simple-to-follow UI with a clear description.
 - Description text explains what is selected and what random number was "pulled". Also followed by the result of each gamble round with a win-or-lose message
 - user can keep playing and see the overall lucky score but no further interaction is needed
 
-### **User interactions**
+### **4.1. User interactions**
 User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled" " That way user can play his/her favourite number several rounds in a row.
 Another interaction is that each round requires the user to click on the "I feel lucky" button creates a random number which will be compared with number user selected for him/herself.
 
@@ -180,9 +180,9 @@ No other interaction is needed as text shows up based on either user selection o
 
 
 
-## Validation
+## **5. Validation**
 -------------------------------------------
-### **Validation Tools**
+### **5.1. Validation Tools**
 To validate HTML, CSS, accessibility, responsivnes, and performance... following links were used
 - https://validator.w3.org/
 - https://jigsaw.w3.org/css-validator/
@@ -192,43 +192,43 @@ To validate HTML, CSS, accessibility, responsivnes, and performance... following
 
 -------------------------------------------
 
-### *Responsivnes* 
+### *5.1.1. Responsivnes* 
 
 https://ui.dev/amiresponsive?url=https://agnogh.github.io/math-for-kids/
 ![Responsivnes of "Guess the number game"](/assests/images/Responsivnes.jpg)
 
-### *HTML Checker*
+### *5.1.2. HTML Checker*
 
 https://validator.w3.org/nu/?doc=https%3A%2F%2Fagnogh.github.io%2Fmath-for-kids%2F
 ![HTML Checker for "Guess the number game"](/assests/images/HTML%20Checker.jpg)
 
-### *CSS Validator*
+### *5.1.3. CSS Validator*
 
 https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fagnogh.github.io%2Fmath-for-kids%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
 ![CSS Validator for "Guess the number game"](/assests/images/CSS%20Checker.jpg)
 
-### *Accessibility Validator*
+### *5.1.4. Accessibility Validator*
 
 *Accessibility shows 1 error, but in fact they do now really cause accessibiliy issues as it is blank button to help alignment when user has top and bottom button where top buttons are 1-5 and bottom 6-9 where unequal alignemtn would show*
 https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 ![Accessibility Validator for "Guess the number game"](/assests/images/Accessibility%20Validator%20-1-.jpg)
 
-### *Accessibility Review*
+### *5.1.5. Accessibility Review*
 ![Performance Review for "Guess the number game" - 100%](/assests/images/Accessibility%20performance.jpg)
 
-### *Performance Review*
+### *5.1.6. Performance Review*
 ![Performance Review for "Guess the number game - 96%"](/assests/images/Performance%20review.jpg)
 
-### *Best Practice Examples Review*
+### *5.1.7. Best Practice Examples Review*
 ![Best Practice Examples Review for "Guess the number game - 100%"](/assests/images/Best%20Practice%20examples%20review.jpg)
 
-### *SEO Review*
+### *5.1.8. SEO Review*
 ![SEO Review for "Guess the number game - 100%"](/assests/images/SEO%20review.jpg)
 
 
-### **QA & Bugfixes**
+### **5.2. QA & Bugfixes**
 -------------------------------------------
-### *Devices used*
+### *5.2.1. Devices used*
 - Huawei P smart
 - Samsung A15
 - iPad 15
@@ -238,11 +238,11 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 - MacBook Air
 - Nitro 5, Ryzan 7
 
-### *Browsers used*
+### *5.2.2. Browsers used*
 **Chrome**
 **Safari**
 
-### *Bugs*
+### *5.2.3. Bugs*
 - typos in user-added text
 - unnecessary styling that looked "too much" for header
 - unnecessary and unused labels just below the command button that generate random numbers
@@ -257,9 +257,9 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 - changing name of the webpage from "Math/Quiy/Lottery" to "Lottery Game" due to theme used
 
 
-### **Testing**
+### **5.3 Testing**
 -------------------------------------------
-### Test environment ###
+### *5.3.1. Test environment*
 *Browsers*
 Chrome, Firefo, Edge, Safari
 
@@ -269,7 +269,7 @@ MacBook Pro
 Samsung Galaxy 15, Huawei P30
 iPhone SE, iPhones 15 Pro, iPad 15
 
-### Test run ###
+### *5.3.2. Test run*
 *On live website*
 https://agnogh.github.io/math-for-kids/
 
@@ -277,9 +277,9 @@ https://agnogh.github.io/math-for-kids/
 3 -m http.server --bind 127.0.0.1
 --> More > More tools > Developer tools > Console and Network
 
-## Support and Help
+## **6. Support and Help**
 -------------------------------------------
-### **Links**
+### **6.1. Links**
 *Validation related*
 
 - https://validator.w3.org/
@@ -306,7 +306,7 @@ https://agnogh.github.io/math-for-kids/
 - https://stackoverflow.com
 
 
-### **Deployment**
+### **6.2. Deployment**
 
 1. Create a GitHUb repo
 - 1a Create new reposotory on GitHub (math-for-kids)
@@ -339,5 +339,5 @@ https://agnogh.github.io/math-for-kids/
 https://github.com/Agnogh/math-for-kids
 
 
-## Thanks
+## **7. Thanks**
 NA
