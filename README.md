@@ -286,8 +286,36 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 
 
 ### **Deployment**
-- https://agnogh.github.io/math-for-kids/
-- https://github.com/Agnogh/math-for-kids/settings/pages
+
+1. Create a GitHUb repo
+- 1a Create new reposotory on GitHub (math-for-kids)
+- 1b in VSCode
+
+--> a git init
+--> git add .
+--> git commit -m "Initial commit"
+--> git branch -M main
+--> git remote add origin https://github.com/Agnogh/math-for-kids.git
+--> git push -u origin main
+ 
+2. Enable GitHub Pages
+- 2a GitHub > Going to my Repo > Selecting 'math-for-kids' reposotory
+
+--> Settings (far right)
+--> Pages (last item under ?code and automation' section)
+--> Build and Deployment section (top)
+--> Source > Select drop down menu 
+--> Deploy from a branch
+--> Select 'main' 
+--> Select root
+--> Click on Save
+
+
+- Deployed page
+https://agnogh.github.io/math-for-kids/
+
+- GitHub
+https://github.com/Agnogh/math-for-kids
 
 
 ## Thanks
