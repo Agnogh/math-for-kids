@@ -1,49 +1,49 @@
 "# math-for-kids" 
 
 # Guessing number game
-!["Guess the number game"](/assests/images/Responsivnes.jpg)
+!["Guess the number game"](/assests/images/Responsiveness.jpg)
 
 ## Table of content
-- [1. Project goal](#project-goal)
-  - [1.1. User goal](#user-goal)
-  - [1.2. Site owner goal](#site-owner-goal)
-  - [1.3. User Experience](#user-experience)
-    - [1.3.1. Targeted group](#targeted-group)
-  - [1.4. User expectation](#user-expectation)
-  - [1.5. User Stories](#user-stories)
-- [2. Design of webpage](#design-of-webpage)
-  - [2.1. Design choices](#design-choices)
-    - [2.1.1. Color](#color)
-    - [2.1.2. Structure](#structure)
-    - [2.1.3. Background Image](#background-image)
-- [3. Techology and Tools used](#techology-and-tools-used)
-  - [3.1. Languages](#languages)
-  - [3.2. Tools](#tools)
-  - [3.3. Additional help](#additional-help)
-- [4. Gameplay](#gameplay)
-  - [4.1. User interactions](#user-interactions)
-- [5. Validation](#validation)
-  - [5.1. Validation Tools](#validation-tools)
-    - [5.1.1. Responsivnes](#responsivnes)
-    - [5.1.2. HTML Checker](#html-checker)
-    - [5.1.3. CSS Validator](#css-validator)
-    - [5.1.4. Accessibility Validator](#accessibility-validator)
-    - [5.1.5. Accessibility Review](#accessibility-review)
-    - [5.1.6. Performance Review](#performance-review)
-    - [5.1.7. Best Practice Examples Review](#best-practice-examples-review)
-    - [5.1.8. SEO Review](#seo-review)
-  - [5.2. QA & Bugfixes](#qa-&-bugfixes)
-    - [5.2.1. Devices used](#devices-used)
-    - [5.2.2. Browsers used](#browsers-used)
-    - [5.2.3. Bugs](#bugs)
-  - [5.3. Testing](#testing)
-    - [5.3.1. Test environment](#5.3.1.-test-environment)
-    - [5.3.2. Test run](#5.3.2.-test-run)
-    - [5.3.3. Test run](#5-3-3-manual-testing)
-- [6. Support and Help](#support-and-help)
-  - [6.1. Links](#links)
-  - [6.2. Deployment](#deployment)
-- [7. Thanks](#thanks)
+- [1. Project goal](#1-project-goal)
+  - [1.1. User goal](#11-user-goal)
+  - [1.2. Site owner goal](#12-site-owner-goal)
+  - [1.3. User Experience](#13-user-experience)
+    - [1.3.1. Targeted group](#131-targeted-group)
+  - [1.4. User expectation](#14-user-expectation)
+  - [1.5. User Stories](#15-user-stories)
+- [2. Design of webpage](#2-design-of-webpage)
+  - [2.1. Design choices](#21-design-choices)
+    - [2.1.1. Color](#211-color)
+    - [2.1.2. Structure](#212-structure)
+    - [2.1.3. Background Image](#213-background-image)
+- [3. Technology and Tools used](#3-Technology-and-tools-used)
+  - [3.1. Languages](#31-languages)
+  - [3.2. Tools](#32-tools)
+  - [3.3. Additional help](#33-additional-help)
+- [4. Gameplay](#4-gameplay)
+  - [4.1. User interactions](#41-user-interactions)
+- [5. Validation](#5-validation)
+  - [5.1. Validation Tools](#51-validation-tools)
+    - [5.1.1. Responsiveness](#511-Responsiveness)
+    - [5.1.2. HTML Checker](#512-html-checker)
+    - [5.1.3. CSS Validator](#513-css-validator)
+    - [5.1.4. Accessibility Validator](#514-accessibility-validator)
+    - [5.1.5. Accessibility Review](#515-accessibility-review)
+    - [5.1.6. Performance Review](#516-performance-review)
+    - [5.1.7. Best Practice Examples Review](#517-best-practice-examples-review)
+    - [5.1.8. SEO Review](#518-seo-review)
+  - [5.2. QA & Bugfixes](#52-qa--bugfixes)
+    - [5.2.1. Devices used](#521-devices-used)
+    - [5.2.2. Browsers used](#522-browsers-used)
+    - [5.2.3. Bugs](#523-bugs)
+  - [5.3. Testing](#53-testing)
+    - [5.3.1. Test environment](#531-test-environment)
+    - [5.3.2. Test run](#532-test-run)
+    - [5.3.3. Test run](#533-manual-testing)
+- [6. Support and Help](#6-support-and-help)
+  - [6.1. Links](#61-links)
+  - [6.2. Deployment](#62-deployment)
+- [7. Thanks](#7-thanks)
 
 
 
@@ -132,7 +132,7 @@ Black to increase visibility with saturated simple images of digits that do not 
 Picture is High Res to avoid cropping and blurry images on larger devices.
 
 
-## **3. Techology and Tools used**
+## **3. Technology and Tools used**
 -------------------------------------------
 ### **3.1. Languages**
 - HTML
@@ -186,7 +186,7 @@ No other interaction is needed as text shows up based on either user selection o
 ## **5. Validation**
 -------------------------------------------
 ### **5.1. Validation Tools**
-To validate HTML, CSS, accessibility, responsivnes, and performance... following links were used
+To validate HTML, CSS, accessibility, Responsiveness, and performance... following links were used
 - https://validator.w3.org/
 - https://jigsaw.w3.org/css-validator/
 - https://wave.webaim.org/
@@ -195,10 +195,10 @@ To validate HTML, CSS, accessibility, responsivnes, and performance... following
 
 -------------------------------------------
 
-### *5.1.1. Responsivnes* 
+### *5.1.1. Responsiveness* 
 
 https://ui.dev/amiresponsive?url=https://agnogh.github.io/math-for-kids/
-![Responsivnes of "Guess the number game"](/assests/images/Responsivnes.jpg)
+![Responsiveness of "Guess the number game"](/assests/images/Responsiveness.jpg)
 
 ### *5.1.2. HTML Checker*
 
@@ -285,7 +285,7 @@ https://agnogh.github.io/math-for-kids/
 Test cases includede
 --> loading of the webpage
 
---> responsivnes of the webpage
+--> Responsiveness of the webpage
 
 --> checking for errors during the QA (from the console)
 
