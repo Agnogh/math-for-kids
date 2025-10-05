@@ -36,6 +36,7 @@
     - [5.2.1. Devices used](#devices-used)
     - [5.2.2. Browsers used](#browsers-used)
     - [5.2.3. Bugs](#bugs)
+  - [5.3. Testing](#testing)
 - [6. Support and Help](#support-and-help)
   - [6.1. Links](#links)
   - [6.2. Deployment](#deployment)
@@ -255,6 +256,26 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 - removing default text in footer with something more meaningful
 - changing name of the webpage from "Math/Quiy/Lottery" to "Lottery Game" due to theme used
 
+
+### **Testing**
+-------------------------------------------
+### Test environment ###
+*Browsers*
+Chrome, Firefo, Edge, Safari
+
+*HW (devices)*
+Desktop (Windows OS)
+MacBook Pro
+Samsung Galaxy 15, Huawei P30
+iPhone SE, iPhones 15 Pro, iPad 15
+
+### Test run ###
+*On live website*
+https://agnogh.github.io/math-for-kids/
+
+*On server*
+3 -m http.server --bind 127.0.0.1
+--> More > More tools > Developer tools > Console and Network
 
 ## Support and Help
 -------------------------------------------
