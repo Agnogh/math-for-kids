@@ -39,6 +39,7 @@
   - [5.3. Testing](#testing)
     - [5.3.1. Test environment](#5.3.1.-test-environment)
     - [5.3.2. Test run](#5.3.2.-test-run)
+    - [5.3.3. Test run](#5-3-3-manual-testing)
 - [6. Support and Help](#support-and-help)
   - [6.1. Links](#links)
   - [6.2. Deployment](#deployment)
@@ -278,6 +279,29 @@ https://agnogh.github.io/math-for-kids/
 *On server*
 3 -m http.server --bind 127.0.0.1
 --> More > More tools > Developer tools > Console and Network
+
+### *5.3.3. manual testing*
+
+Test cases includede
+--> loading of the webpage
+
+--> responsivnes of the webpage
+
+--> checking for errors during the QA (from the console)
+
+--> selection of the number
+
+--> changing selection of the number is reflected in both highlights and functionality
+
+--> trying to "spin the wheel" ("I feel lucky" button) while same number is selected
+
+--> trying to "spin the wheel" ("I feel lucky" button) with changin numbers every time 
+
+--> clicking on "I feel Lucky" once or multiple times in a row is responsive
+
+--> refreshing the page doesn't keep old data (cache is reseted)
+
+
 
 ## **6. Support and Help**
 -------------------------------------------
