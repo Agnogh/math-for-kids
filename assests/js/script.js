@@ -2,6 +2,18 @@
 /* adding game state (for normal for now)*/
 state = { mode: 'normal', rolls: 0, wins: 0, selected: null, modeLocked: false }
 
+/* game modes */
+const modeInputs = document.querySelectorAll('#modes input[name="game_mode"]');
+
+/*  */
+const mode_types = { 'normal': 'normal', 'easy': 'easy', 'super easy': 'easiest' };
+
+// auto set state to active (radio is checked)
+function setActiveGameMode(newMode) {
+  state.mode = newMode; // 'normal' | 'easy' | 'easiest'
+  };
+
+
 let userSelectedNumber = null; // will store clicked number
 let randomNumber = null;       // will store random number
 
