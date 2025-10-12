@@ -1,4 +1,7 @@
 
+/* adding game state (for normal for now)*/
+state = { mode: 'normal', rolls: 0, wins: 0, selected: null, modeLocked: false }
+
 let userSelectedNumber = null; // will store clicked number
 let randomNumber = null;       // will store random number
 
