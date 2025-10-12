@@ -1,18 +1,4 @@
 
-/* adding game state (for normal for now)*/
-state = { mode: 'normal', rolls: 0, wins: 0, selected: null, modeLocked: false }
-
-/* game modes */
-const modeInputs = document.querySelectorAll('#modes input[name="game_mode"]');
-
-/*  */
-const mode_types = { 'normal': 'normal', 'easy': 'easy', 'super easy': 'easiest' };
-
-// auto set state to active (radio is checked)
-function setActiveGameMode(newMode) {
-  state.mode = newMode; // 'normal' | 'easy' | 'easiest'
-  };
-
 
 let userSelectedNumber = null; // will store clicked number
 let randomNumber = null;       // will store random number
@@ -26,6 +12,42 @@ document.addEventListener("DOMContentLoaded", function() {
     const selectedNumberBox = document.querySelector("#selectedNumberBox p");       // constant checking all elements with keyID "selectedBumberBox"
     const resultBox = document.getElementById("display_results_box");
     const randomNumberButton = document.getElementById("random_number_button");
+
+/* adding game state (for normal for now)*/
+state = { mode: 'normal', rolls: 0, wins: 0, selected: null, modeLocked: false }
+
+/* game modes */
+const modeInputs = document.querySelectorAll('#modes input[name="game_mode"]');
+
+/*  */
+const mode_types = { 'normal': 'normal', 'easy': 'easy', 'easiest': 'easiest' };
+const locked_mode_types = { 'normal': 'normal', 'easy': 'easy', 'easiest': 'easiest' };
+
+// auto set state to active (radio is checked)
+function setActiveGameMode(newGameMode) {
+  state.mode = newGameMode; // 'normal' | 'easy' | 'easiest'
+    modeInputs.forEach(input => {
+    input.checked = (input.value === locked_mode_types[newGameMode]);
+  });
+}
+
+// this is when 1st roll happens to block chagne + revert radio btn
+modeInputs.forEach(input => {
+  input.addEventListener('change', () => {
+    if (state.rolls > 0) {
+      // Locked- revert UI back to the current mode
+      const currentRadioValue = locked_mode_types[state.mode];
+      modeInputs.forEach(radioBTN => { radioBTN.checked = (radioBTN.value === currentRadioValue); });
+      // tell the user inline alert)
+      resultBox.textContent = 'Mode is lockd after first roll.';
+      return;
+    }
+
+    // ok to switch
+    const mapped = mode_types[input.value]; // 'normal' | 'easy' | 'easiest'
+    setActiveGameMode(mapped);
+  });
+});
 
     /* rule for user selecting number */ 
     numberButtons.forEach((button) => {     // for each eleemnt inside 'numberButtons' run
@@ -72,7 +94,3 @@ document.addEventListener("DOMContentLoaded", function() {
         selectedNumberBox.innerHTML = `Selected number ${userSelectedNumber} VS Random number ${randomNumber}. <br> Your Luck index: ${luckFactorIndicator}%`;
     });
 });
-
-
-
-
