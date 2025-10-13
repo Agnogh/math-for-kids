@@ -85,8 +85,6 @@ modeInputs.forEach(input => {
     // Generate random number from 1 to 9
         const randomNumber = Math.floor(Math.random() * 9) + 1;
 
-        const resultBox = document.getElementById("display_results_box");
-
     // Check if user added numer and randomly selected number match and also adds + 1 to eithe win or lose count
         if (userSelectedNumber === randomNumber) {   // if user selected number is equal to random number execute following 
             resultBox.textContent = `🎉 Congrats! Your lucky number ${userSelectedNumber} matches Lotto number ${randomNumber}.`;    // call out constant with text content containing default text + variables holding variables for user and random number
