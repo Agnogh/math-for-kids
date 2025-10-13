@@ -64,7 +64,8 @@ modeInputs.forEach(input => {
             button.style.backgroundColor = "green";     // using properties backgroundColor to change when selected
             button.style.color = "red";     // using properties color to change the style fo button to red
     
-            userSelectedNumber = button.textContent;
+            // storing picked number as number (numeric9)
+            userSelectedNumber = Number(button.textContent);
 
         // Show alert for selčected number by user
             alert(`You selected number ${userSelectedNumber}. Lady Luck will be with you !`);
@@ -76,13 +77,18 @@ modeInputs.forEach(input => {
 
     // rule for randomly created number with 'I feel lucky number' button clicked
     randomNumberButton.addEventListener("click", function () {
+        // adding heads up when user doesn't follow game instructions
+        if (userSelectedNumber === null) {  // if user didn't make selection
+            resultBox.textContent = "Pick number first";  // populate textbox with explanations
+            return;  // then stop
+        }
     // Generate random number from 1 to 9
         const randomNumber = Math.floor(Math.random() * 9) + 1;
 
         const resultBox = document.getElementById("display_results_box");
 
     // Check if user added numer and randomly selected number match and also adds + 1 to eithe win or lose count
-        if (userSelectedNumber == randomNumber) {   // if user selected number is equal to random number execute following 
+        if (userSelectedNumber === randomNumber) {   // if user selected number is equal to random number execute following 
             resultBox.textContent = `🎉 Congrats! Your lucky number ${userSelectedNumber} matches Lotto number ${randomNumber}.`;    // call out constant with text content containing default text + variables holding variables for user and random number
             inGameWinCount++;
         } else {        // othervise execute following line of code
