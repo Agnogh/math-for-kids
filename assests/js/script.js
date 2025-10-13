@@ -49,6 +49,9 @@ modeInputs.forEach(input => {
   });
 });
 
+    // Start mode when loaded 
+    setActiveGameMode(state.mode);
+
     /* rule for user selecting number */ 
     numberButtons.forEach((button) => {     // for each eleemnt inside 'numberButtons' run
         button.addEventListener("click", function () {      // add event listener to button when "clicked" call / run callback function
