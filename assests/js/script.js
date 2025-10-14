@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // number of 'chances' per game mode
     const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
 
+    const resetButton = document.getElementById('reset_button');  // for reset buttonafter 10 rounds
+    const leaderboardLink = document.getElementById('leaderboard_link');  // leaderboard
+
+    if (resetButton) resetButton.disabled = true;  // set button to not-clickable
+    if (leaderboardLink) leaderboardLink.hidden = true;  // do not show link to eladerboard by default
+
     // returns 'ranNumPulled' random numbers 1..9
     function getRandomNumberPulls(ranNumPulled) {
         const arrayCollector = [];
