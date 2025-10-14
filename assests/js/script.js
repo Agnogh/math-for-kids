@@ -18,8 +18,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const resetButton = document.getElementById('reset_button');  // for reset buttonafter 10 rounds
     const leaderboardLink = document.getElementById('leaderboard_link');  // leaderboard
 
+    const counterLine = document.getElementById('counter_line');  // 
+
     if (resetButton) resetButton.disabled = true;  // set button to not-clickable
     if (leaderboardLink) leaderboardLink.hidden = true;  // do not show link to eladerboard by default
+    if (counterLine) counterLine.textContent = '0/0 • 0.0%';
 
     // returns 'ranNumPulled' random numbers 1..9
     function getRandomNumberPulls(ranNumPulled) {
@@ -135,7 +138,7 @@ modeInputs.forEach(input => {
 
         const totalGamesPlayed = inGameWinCount + inGameLoseCount;      // new constant variable that is assigned sum of both win and loses
         const luckFactorIndicator = ((inGameWinCount / totalGamesPlayed) * 100 ).toFixed(1);     // new constant that is assigned calculated value so percentage of win is shown/displayed
-        const counterLine = document.getElementById('counter_line');  // 
+                
         if (counterLine) {
             counterLine.textContent = `${inGameWinCount}/${totalGamesPlayed} • ${luckFactorIndicator}%`;
             }   
@@ -153,7 +156,32 @@ modeInputs.forEach(input => {
         selectedNumberBox.innerHTML = (ranNumPulled === 1)
             ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}. <br> Your Luck index: ${luckFactorIndicator}%`
             : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]. <br> Your Luck index: ${luckFactorIndicator}%`;
+        });
 
- 
+  // Reset listener  
+  if (resetButton) {
+    resetButton.addEventListener("click", () => {
+        // setting rules `normal` game mode, no wins or any rolls, nothing selected
+        state.mode = "normal";
+        state.rolls = 0;
+        state.wins = 0;
+        state.selected = null;
+
+        inGameWinCount = 0;
+        inGameLoseCount = 0;
+        userSelectedNumber = null;
+
+        numberButtons.forEach(btn => { btn.style.backgroundColor = ""; btn.style.color = ""; });
+
+        resultBox.textContent = "New game started — pick number and click `I feel lucky`!";
+        selectedNumberBox.innerHTML = "";
+        if (counterLine) counterLine.textContent = "0/0 • 0.0%";
+
+        randomNumberButton.disabled = false;
+        resetButton.disabled = true;
+        if (leaderboardLink) leaderboardLink.hidden = true;
+
+        setActiveGameMode("normal");        
     });
+  }
 });
