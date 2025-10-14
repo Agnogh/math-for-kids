@@ -92,6 +92,11 @@ modeInputs.forEach(input => {
 
     // rule for randomly created number with 'I feel lucky number' button clicked
     randomNumberButton.addEventListener("click", function () {
+        // limit to 10 rolls
+        if (state.rolls >= 10) {
+            resultBox.textContent = "Game over, 10 rolls used up.'";
+            return;
+        }
         // adding heads up when user doesn't follow game instructions
         if (userSelectedNumber === null) {  // if user didn't make selection
             resultBox.textContent = "Pick number first";  // populate textbox with explanations
@@ -130,11 +135,25 @@ modeInputs.forEach(input => {
 
         const totalGamesPlayed = inGameWinCount + inGameLoseCount;      // new constant variable that is assigned sum of both win and loses
         const luckFactorIndicator = ((inGameWinCount / totalGamesPlayed) * 100 ).toFixed(1);     // new constant that is assigned calculated value so percentage of win is shown/displayed
+        const counterLine = document.getElementById('counter_line');  // 
+        if (counterLine) {
+            counterLine.textContent = `${inGameWinCount}/${totalGamesPlayed} • ${luckFactorIndicator}%`;
+            }   
+
+        if (state.rolls === 10) {
+        // freeze UI until 10 rounds are up
+            if (randomNumberButton) randomNumberButton.disabled = true;
+            if (resetButton) resetButton.disabled = false;
+            if (leaderboardLink) leaderboardLink.hidden = false;
+
+            resultBox.textContent += `Final socre after 10 rounds: ${inGameWinCount}/10.`;
+            }    
 
         // Update selectedNumberBox with full message and addon now ratio of wins and loses
         selectedNumberBox.innerHTML = (ranNumPulled === 1)
             ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}. <br> Your Luck index: ${luckFactorIndicator}%`
             : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]. <br> Your Luck index: ${luckFactorIndicator}%`;
 
+ 
     });
 });
