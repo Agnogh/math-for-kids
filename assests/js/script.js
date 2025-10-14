@@ -12,9 +12,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const selectedNumberBox = document.querySelector("#selectedNumberBox p");       // constant checking all elements with keyID "selectedBumberBox"
     const resultBox = document.getElementById("display_results_box");
     const randomNumberButton = document.getElementById("random_number_button");
+    // number of 'chances' per game mode
+    const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
+
+    // returns 'ranNumPulled' random numbers 1..9
+    function getRandomNumberPulls(ranNumPulled) {
+        const arrayCollector = [];
+        for (let i = 0; i < ranNumPulled; i++) arrayCollector.push(Math.floor(Math.random() * 9) + 1);
+        return arrayCollector;
+    }
 
 /* adding game state (for normal for now)*/
-state = { mode: 'normal', rolls: 0, wins: 0, selected: null, modeLocked: false }
+const state = { mode: 'normal', rolls: 0, wins: 0, selected: null, modeLocked: false }
 
 /* game modes */
 const modeInputs = document.querySelectorAll('#modes input[name="game_mode"]');
@@ -83,8 +92,26 @@ modeInputs.forEach(input => {
             return;  // then stop
         }
     // Generate random number from 1 to 9
-        const randomNumber = Math.floor(Math.random() * 9) + 1;
+        const ranNumPulled = randomNumbersByMode[state.mode] || 1;  // number of randoms for this level of game
+        const pulls = getRandomNumberPulls(ranNumPulled);  // [2, 5] in easy or [1, 3, 7] is easiest
+        const hit = pulls.includes(userSelectedNumber);  // for 'hit'
 
+    // lock mode after first roll by incrementing rolls
+        state.rolls += 1;
+    // new if statement for selected vs random number
+        if (hit) {
+            inGameWinCount++;
+            resultBox.textContent = (ranNumPulled === 1)
+            ? `🎉 Congrats! Your number ${userSelectedNumber} matches Lotto number ${pulls[0]}.`  // for 1 number
+            : `🎉 Hit! Your ${userSelectedNumber} matched one of the draws [${pulls.join(', ')}].`;  // for multiple numbers
+        } else {
+            inGameLoseCount++;
+            resultBox.textContent = (ranNumPulled === 1)
+            ? `😔 No match. Your picked ${userSelectedNumber} vs ${pulls[0]}.`  // for 1 random number
+            : `😔 No match. Your picked ${userSelectedNumber} vs draws [${pulls.join(', ')}].`;  // for few random numbers
+        }
+
+        /*
     // Check if user added numer and randomly selected number match and also adds + 1 to eithe win or lose count
         if (userSelectedNumber === randomNumber) {   // if user selected number is equal to random number execute following 
             resultBox.textContent = `🎉 Congrats! Your lucky number ${userSelectedNumber} matches Lotto number ${randomNumber}.`;    // call out constant with text content containing default text + variables holding variables for user and random number
@@ -93,11 +120,15 @@ modeInputs.forEach(input => {
             resultBox.textContent = `😔 Lady Luck looked away. Your picked ${userSelectedNumber} is not matching ${randomNumber}. Try your luck again!`;    // calls constant with default text + variables for 'user selected number' & 'random number'
             inGameLoseCount++;
         }
+        */
 
         const totalGamesPlayed = inGameWinCount + inGameLoseCount;      // new constant variable that is assigned sum of both win and loses
         const luckFactorIndicator = ((inGameWinCount / totalGamesPlayed) * 100 ).toFixed(1);     // new constant that is assigned calculated value so percentage of win is shown/displayed
 
         // Update selectedNumberBox with full message and addon now ratio of wins and loses
-        selectedNumberBox.innerHTML = `Selected number ${userSelectedNumber} VS Random number ${randomNumber}. <br> Your Luck index: ${luckFactorIndicator}%`;
+        selectedNumberBox.innerHTML = (ranNumPulled === 1)
+            ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}. <br> Your Luck index: ${luckFactorIndicator}%`
+            : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]. <br> Your Luck index: ${luckFactorIndicator}%`;
+
     });
 });
