@@ -143,6 +143,13 @@ modeInputs.forEach(input => {
             counterLine.textContent = `${inGameWinCount}/${totalGamesPlayed} • ${luckFactorIndicator}%`;
             }   
 
+        // Update selectedNumberBox with full message and addon now ratio of wins and loses
+        selectedNumberBox.innerHTML = (ranNumPulled === 1)
+            ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}. <br> Your Luck index: ${luckFactorIndicator}%`
+            : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]. <br> Your Luck index: ${luckFactorIndicator}%`;
+        
+
+
         if (state.rolls === 10) {
         // freeze UI until 10 rounds are up
             if (randomNumberButton) randomNumberButton.disabled = true;
@@ -151,11 +158,6 @@ modeInputs.forEach(input => {
 
             resultBox.textContent += `Final score after 10 rounds: ${inGameWinCount}/10.`;
             }    
-
-        // Update selectedNumberBox with full message and addon now ratio of wins and loses
-        selectedNumberBox.innerHTML = (ranNumPulled === 1)
-            ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}. <br> Your Luck index: ${luckFactorIndicator}%`
-            : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]. <br> Your Luck index: ${luckFactorIndicator}%`;
         });
 
   // Reset listener  
