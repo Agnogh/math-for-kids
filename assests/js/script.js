@@ -24,11 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
     if (leaderboardLink) leaderboardLink.hidden = true;  // do not show link to eladerboard by default
     if (counterLine) counterLine.textContent = '0/0 • 0.0%';
 
-    // returns 'ranNumPulled' random numbers 1..9
+    // returns 'ranNumPulled' random numbers 1..9 (now no dupes)
     function getRandomNumberPulls(ranNumPulled) {
-        const arrayCollector = [];
-        for (let i = 0; i < ranNumPulled; i++) arrayCollector.push(Math.floor(Math.random() * 9) + 1);
-        return arrayCollector;
+        const pulls = [];
+        while (pulls.length < ranNumPulled) {
+            const n = Math.floor(Math.random() * 9) + 1;
+            if (!pulls.includes(n)) pulls.push(n);
+        }
+        return pulls;
     }
 
 /* adding game state (for normal for now)*/
