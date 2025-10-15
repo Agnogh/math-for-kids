@@ -1,7 +1,7 @@
 
 
 let userSelectedNumber = null; // will store clicked number
-let randomNumber = null;       // will store random number
+
 
 /* this is for win and lose count */
 let inGameWinCount = 0;
