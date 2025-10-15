@@ -57,7 +57,7 @@ modeInputs.forEach(input => {
       const currentRadioValue = locked_mode_types[state.mode];
       modeInputs.forEach(radioBTN => { radioBTN.checked = (radioBTN.value === currentRadioValue); });
       // tell the user inline alert)
-      resultBox.textContent = 'Mode is lockd after first roll.';
+      resultBox.textContent = 'Mode is locked after first roll.';
       return;
     }
 
@@ -149,7 +149,7 @@ modeInputs.forEach(input => {
             if (resetButton) resetButton.disabled = false;
             if (leaderboardLink) leaderboardLink.hidden = false;
 
-            resultBox.textContent += `Final socre after 10 rounds: ${inGameWinCount}/10.`;
+            resultBox.textContent += `Final score after 10 rounds: ${inGameWinCount}/10.`;
             }    
 
         // Update selectedNumberBox with full message and addon now ratio of wins and loses
