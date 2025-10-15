@@ -159,13 +159,24 @@ modeInputs.forEach(input => {
             if (resetButton) resetButton.disabled = false;
             if (leaderboardLink) leaderboardLink.hidden = false;
 
-            resultBox.textContent += `Final score after 10 rounds: ${inGameWinCount}/10.`;
-            }    
+        resultBox.textContent += `Final score after 10 rounds: ${inGameWinCount}/10.`;
+
+        const entry = {
+            wins: inGameWinCount,  // number of wins in game
+            rolls: 10,  // rolls need to be 10 (rule is 10 rounds)
+            mode: state.mode,  // mode needs to be set (normal, easy, easiest)
+            date: new Date().toISOString()  // record for finished game
+        };
+        const localStorageGame = 'guessGame.scores';  // storing game score
+        const list = JSON.parse(localStorage.getItem(localStorageGame) || '[]');  // read saved scor
+        list.push(entry);
+        localStorage.setItem(localStorageGame, JSON.stringify(list));  // JSON.stringfy from local save back to string 
+    }
         });
 
-  // Reset listener  
-  if (resetButton) {
-    resetButton.addEventListener("click", () => {
+    // Reset listener  
+    if (resetButton) {
+        resetButton.addEventListener("click", () => {
         // setting rules `normal` game mode, no wins or any rolls, nothing selected
         state.mode = "normal";
         state.rolls = 0;
