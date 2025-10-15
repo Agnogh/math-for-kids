@@ -175,7 +175,7 @@ modeInputs.forEach(input => {
 
         numberButtons.forEach(btn => { btn.style.backgroundColor = ""; btn.style.color = ""; });
 
-        resultBox.textContent = "New game started — pick number and click `I feel lucky`!";
+        resultBox.textContent = "New game started — pick number and select `I feel lucky`!";
         selectedNumberBox.innerHTML = "";
         if (counterLine) counterLine.textContent = "0/0 • 0.0%";
 
