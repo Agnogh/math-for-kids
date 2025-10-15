@@ -128,17 +128,6 @@ modeInputs.forEach(input => {
             : `😔 No match. Your picked ${userSelectedNumber} vs draws [${pulls.join(', ')}].`;  // for few random numbers
         }
 
-        /*
-    // Check if user added numer and randomly selected number match and also adds + 1 to eithe win or lose count
-        if (userSelectedNumber === randomNumber) {   // if user selected number is equal to random number execute following 
-            resultBox.textContent = `🎉 Congrats! Your lucky number ${userSelectedNumber} matches Lotto number ${randomNumber}.`;    // call out constant with text content containing default text + variables holding variables for user and random number
-            inGameWinCount++;
-        } else {        // othervise execute following line of code
-            resultBox.textContent = `😔 Lady Luck looked away. Your picked ${userSelectedNumber} is not matching ${randomNumber}. Try your luck again!`;    // calls constant with default text + variables for 'user selected number' & 'random number'
-            inGameLoseCount++;
-        }
-        */
-
         const totalGamesPlayed = inGameWinCount + inGameLoseCount;      // new constant variable that is assigned sum of both win and loses
         const luckFactorIndicator = ((inGameWinCount / totalGamesPlayed) * 100 ).toFixed(1);     // new constant that is assigned calculated value so percentage of win is shown/displayed
                 
