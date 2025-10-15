@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 /* adding game state (for normal for now)*/
-const state = { mode: 'normal', rolls: 0, wins: 0, selected: null, modeLocked: false }
+const state = { mode: 'normal', rolls: 0, wins: 0, selected: null, modeLocked: false };
 
 /* game modes */
 const modeInputs = document.querySelectorAll('#modes input[name="game_mode"]');
@@ -97,7 +97,7 @@ modeInputs.forEach(input => {
     randomNumberButton.addEventListener("click", function () {
         // limit to 10 rolls
         if (state.rolls >= 10) {
-            resultBox.textContent = "Game over, 10 rolls used up.'";
+            resultBox.textContent = "Game over, 10 rolls used up.";
             return;
         }
         // adding heads up when user doesn't follow game instructions
