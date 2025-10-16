@@ -8,26 +8,26 @@
         const empty = document.getElementById('empty_state');
         const clearBtn = document.getElementById('clear_btn');
         const note = document.getElementById('last_saved_note');
-    })();
 
-    // reads scores and returns text in array
-    function loadScores() {
-        try {
-        const list = JSON.parse(localStorage.getItem(localStorageGame) || '[]');
-        return Array.isArray(list) ? list : [];
-        } catch {
-        // if nothing is there (no text) return empty
-        return [];
+
+    // reads scores and returns array
+        function loadScores() {
+            try {
+            const list = JSON.parse(localStorage.getItem(localStorageGame) || '[]');
+            return Array.isArray(list) ? list : [];
+            } catch {
+            // if nothing is there (no text) return empty
+            return [];
+            }
         }
-    }
 
-        // save scores to localStorage
+            // save scores to localStorage
         function saveScores(list) {
             // convert array into text (wit 'JSON.stringify')
             localStorage.setItem(localStorageGame, JSON.stringify(list));
         }
 
-        // calulate score/ratio
+            // calulate score/ratio
         function ratio(entry) {
             // need to have this so we do not divide bz 0
             const rollRatio = (entry.wins || 0) / (entry.rolls || 1);
@@ -42,23 +42,29 @@
         // to convert into format that can be read (ISO standards)
         function formatDate(iso) {
             try {
-            const date_and_time = new Date(iso);
-            return date_and_time.toLocaleString(undefined, { year:'numeric', month:'short', day:'2-digit', hour:'2-digit', minute:'2-digit' });
-            } catch {
-            return iso || '';
+                const date_and_time = new Date(iso);
+                return date_and_time.toLocaleString(undefined, {
+                    year:'numeric',
+                    month:'short',
+                    day:'2-digit',
+                    hour:'2-digit',
+                    minute:'2-digit'
+                    });
+                } catch {
+                return iso || '';
             }
         }
 
-        
+            
         function render() {
             const data = loadScores();
 
             if (!data.length) {
-            table.hidden = true;
-            empty.hidden = false;
-            note.textContent = '';
-            tbody.innerHTML = '';
-            return;
+                table.hidden = true;
+                empty.hidden = false;
+                note.textContent = '';
+                tbody.innerHTML = '';
+                return;
             }
 
             // Sorting order (best first then recent)
@@ -67,7 +73,7 @@
                 if (Math.abs(diff) > 1e-9) return diff;
                 return new Date(b.date).getTime() - new Date(a.date).getTime();
             });
-            
+                
             // storing scoring
             tbody.innerHTML = '';  // clear out, add new row for score
             data.forEach((row, i) => {  // go throug each score in data
@@ -99,3 +105,14 @@
             const last_collected_data = data[0];  // ceating last data collection (last game)
             note.textContent = last_collected_data ? `Most recent: ${last_collected_data.wins}/${last_collected_data.rolls} • ${formatPct(last_collected_data)}% • ${last_collected_data.mode} • ${formatDate(last_collected_data.date)}` : '';
         }
+
+        // 4) Event listener for "reset leaderboard score
+        clearBtn.addEventListener('click', () => {  // "listen for +clcik'"
+            if (!confirm('Clear all saved scores on this computer?')) return;  // user message
+            saveScores([]);  // return empty (clear)
+            render();
+        });
+
+        // 5) Init
+        render();
+    })();
