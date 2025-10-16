@@ -1,6 +1,6 @@
 
 (function () {
-  const KEY = 'guessGame.scores';
+  const localStorageGame = 'guessGame.scores';
   const table = document.getElementById('board');
   const tbody = document.getElementById('leaderboard_rows');
   const empty = document.getElementById('empty_state');
