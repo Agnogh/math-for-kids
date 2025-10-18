@@ -16,11 +16,13 @@ html, body { height: 100%; margin: 0; }
 
 /* rule for entire body */
 body {
-    min-height: 100dvh;  /* for mobile address bar */
+    padding-top: 56px;
+    min-height: 100vh;  /* for mobile address bar */
     text-align: center;
     display: flex;
-    /* justify-content: center;  -> needed for now */ 
-    justify-content: colum;
+    /* justify-content: center;  -> needed for now */
+    flex-direction: column;
+    /* justify-content: column; -> just for moving main up */
     align-items: center;
     background: url(../images/numbers\ background\ -2-.jfif) repeat center center/cover;
     min-height: 100vh;
@@ -36,11 +38,16 @@ header {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  padding: 10px 12px;
+  place-items: center;
+  display: grid;
+  padding: 0 12px;
   background: rgba(60,63,66,0.8);
   backdrop-filter: blur(4px);
   color: #adf309;
-  box-shadow: 4px 4px 8px rgb(165, 227, 6);
+  box-shadow: 4px 4px 8px #f06502;
+  border-style: double;
+  padding-top: 3%;
+  height: 56px;
 }
 
 #header_for_welcome_page a {
@@ -58,25 +65,27 @@ h1 {
 
 /* rules for main (containing "play area") */
 main {
-    flex: 1 0 auto;
+    /* flex: 1; need to drop this as it is messing with UI */
     margin-top: 5%;
-
+    margin: 0 auto;
+    display: grid;
+    gap: 16px;   
+    padding-bottom: 88px;
 }
 
 #welcome_pane_main_section {
     border-style: double;
     color: rgb(200, 255, 0);
     background-color: rgba(18, 31, 26, 0.6);
-    padding: 10%;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding: clamp(42px, 2.2vw, 24px) clamp(56px, 4vw, 32px);
     width: 100%;
     height: auto;
     text-align: center;
-    margin-top: 20%;
     font-size: 100%;
     max-width: 90vw;
-    margin: 10% auto;
+    margin: 16% auto 12px;
+/*    margin: 10% auto; */
+    box-shadow: 4px 4px 8px #f06502;
 
 }
 
@@ -200,22 +209,26 @@ main {
   display: flex;
   justify-content: center;
   margin: 8px 0 16px;
-  border-radius: 15%;
+  border-radius: 15%;  
 }
 
 
 /* Make the link look like a button (still need to find background colour match) */
-.action_button_on_welcome_pane a {
+#action_button_on_welcome_pane a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 180px;
+  font-size: 1rem; 
   padding: 10px 16px;
   border-radius: 12px;
   background-color: rgba(18, 31, 26, 0.6);
   color: rgb(165, 227, 6);
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 4px 4px 8px rgb(165, 227, 6);
+  box-shadow: 4px 4px 8px #f06502;
+  border-style: double;
+  max-height: 50px;
 }
 
 p {
@@ -227,17 +240,17 @@ p {
 }
 
 footer {
-    margin-top: 15%;
-    margin-bottom: 5%;
+    margin-top: auto;
+    margin-bottom: 3%;
     border-style: solid;
     border-radius: 10%;
-    border-color: rgb(0, 0, 0);
+    border-color: rgb(165, 227, 6);
     background-color: rgba(60, 63, 66, 0.6);
-    box-shadow: 3px 3px 8px 2px rgb(165, 227, 6); 
+    box-shadow: 4px 4px 8px #f06502;
 }
 
 #footer_on_welcome_pane {
-    margin-top: auto;
+    margin-top: 24px;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
@@ -245,6 +258,11 @@ footer {
     list-style-type: none;
     position: fixed;
     left: 0; right: 0; bottom: 0;
+    box-shadow: 4px 4px 8px #f06502;
+    height: 64px;
+    align-items: center;
+    left: 0; right: 0; bottom: 0;
+    
 }
 
 #display_results_box {
@@ -257,11 +275,9 @@ footer {
     justify-content: space-evenly;
     padding: 5px 5px;
     list-style-type: none;
-    color:pink;
     font-size: 100%;
-    padding: 5%;
-    /* box-shadow: 4px 4px 8px rgb(165, 227, 6); need to remove this from main
-    box and palce it to individual icons */
+    padding: 0%;
+    box-shadow: 4px 4px 8px #f06502;
 }
 
 #social_media_section a {
@@ -272,10 +288,11 @@ footer {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #adf309;
+  color: rgb(165, 227, 6);
   background: rgba(0,0,0,0.35);
   backdrop-filter: blur(3px);
-  box-shadow: 4px 4px 8px rgb(165, 227, 6);
+  box-shadow: 4px 4px 8px #b77314;
+  border-style: double;
 }
 
 @media screen and (min-width: 400px) {
