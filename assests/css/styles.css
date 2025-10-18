@@ -256,7 +256,7 @@ footer {
     justify-content: space-evenly;
     padding: 5px 5px;
     list-style-type: none;
-    position: fixed;
+
     left: 0; right: 0; bottom: 0;
     box-shadow: 4px 4px 8px #f06502;
     height: 64px;
