@@ -89,6 +89,15 @@ main {
 
 }
 
+/* Leaderboard title */
+
+#title_header_for_leaderboard {
+    color: rgb(243, 2, 2);
+    border: greenyellow;
+    background-color: #adf309;
+}
+
+
 #playing_area_box {
     border-style: double;
     color: rgb(200, 255, 0);

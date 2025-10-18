@@ -3,28 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>leaderboard page</title>
+    <title>Leaderboard page</title>
+
+    <!--This is code for fav icons-->
+    <link rel="icon" sizes="180x180" href="/assests/favicon/lotto-360.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assests/favicon/lotto-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assests/favicon/lotto-32.png">
+    <link rel="icon" type="image/png" sizes="57x57" href="/assests/favicon/lotto-57.png">
+    <link rel="icon" type="image/png" sizes="70x70" href="/assests/favicon/lotto-70.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="/assests/favicon/lotto-72.png">
+    <link rel="icon" type="image/png" sizes="76x76" href="/assests/favicon/lotto-76.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assests/favicon/lotto-96.png">
+
     <!--Link to css-->
     <link rel="stylesheet" href="assests/css/styles.css" />
 </head>
 <body>
-   <a href="index.html">LInk to game page</a> 
-   <h3>
-    This will be place where leaderboard will show up
-   </h3>
-   <header>
-    <h1>Leaderboard</h1>
-    <nav class="actions">
-      <a href="index.html">← Back to Game</a>
-      <button id="clear_btn" title="Remove saved scores">Clear leaderboard</button>
-    </nav>
-  </header>
+    <header id="leaderboard_header_section">
+        <h2 id="title_header_for_leaderboard">
+            <a href="leaderboard.html">Leaderboard</a> 
+        </h2>
+    </header>
 
-    <main>
+  <main id="leaderboard_main_section">
+
+    <h2 id="leaderboard_explanation">
+    This will be place where leaderboard will show up
+    </h2>
+
+    <h3 id="leaderboard_title">Ranking</h3>
+        <nav class="action_button_on_leaderboard">
+            <a href="welcome.html">Welcome Page</a>
+            <a href="index.html">Game Page</a>
+            <button id="clear_btn" type="button" title="Remove saved scores">Clear leaderboard</button>
+        </nav>
+
         <p id="empty_state" class="empty" hidden>No scores yet. Play a 10-roll game and come back!</p>
 
         <table id="board" aria-describedby="last_saved_note" hidden>
-        <thead>
+        <thead id="head_of_the_table">
             <tr>
             <th>#</th>
             <th>Score</th>
@@ -37,15 +54,11 @@
         </table>
 
     <p id="last_saved_note" class="slightly_muted"></p>
-  </main>
+    </main>
 
     <footer class="slightly_muted">
         <small>Scores stored locally in browser (just this device).</small>
     </footer>
-
-  
-<!--Link to js file-->
-<script src="assests/js/script.js"></script>
 
 <!-- I might need to go with seperate js file to keep things tidy-->
 <script src="assests/js/leaderboard.js"></script>
