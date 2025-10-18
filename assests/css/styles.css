@@ -8,7 +8,7 @@ html, body { height: 100%; margin: 0; }
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    flex-direction: column;
+    /* flex-direction: column;
 /*    border-style: double;
     border-color: red;
     */
@@ -16,9 +16,11 @@ html, body { height: 100%; margin: 0; }
 
 /* rule for entire body */
 body {
+    min-height: 100dvh;  /* for mobile address bar */
     text-align: center;
     display: flex;
-    justify-content: center;
+    /* justify-content: center;  -> needed for now */ 
+    justify-content: colum;
     align-items: center;
     background: url(../images/numbers\ background\ -2-.jfif) repeat center center/cover;
     min-height: 100vh;
@@ -28,6 +30,15 @@ body {
 header {
     border-radius: 20%;
 
+}
+
+#header_for_welcome_page {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 10px 12px;
+  background: rgba(60,63,66,0.8);
+  backdrop-filter: blur(4px);
 }
 
 
@@ -45,6 +56,22 @@ main {
     flex: 1 0 auto;
     margin-top: 5%;
 
+}
+
+#welcome_pane_main_section {
+    border-style: double;
+    color: rgb(200, 255, 0);
+    background-color: rgba(18, 31, 26, 0.6);
+    padding: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 20%;
+    font-size: 100%;
+    max-width: 90vw;
+    margin: 10% auto;
 }
 
 #playing_area_box {
@@ -180,10 +207,45 @@ footer {
     box-shadow: 3px 3px 8px 2px rgb(247, 120, 1); 
 }
 
+#footer_on_welcome_pane {
+    margin-top: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px 5px;
+    list-style-type: none;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+}
+
 #display_results_box {
     padding: 5%;
 }
 
+#social_media_section {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px 5px;
+    list-style-type: none;
+    color:pink;
+    font-size: 150%;
+    padding: 30%;
+    box-shadow: 4px 4px 8px rgb(165, 227, 6);
+}
+
+#social_media_section a {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(3px);
+}
 
 @media screen and (min-width: 400px) {
     body {
