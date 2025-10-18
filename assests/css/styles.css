@@ -189,6 +189,29 @@ main {
     border-style:double;
 }
 
+.action_button_on_welcome_pane {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 8px 0 16px;
+  box-shadow: 4px 4px 8px rgb(165, 227, 6);
+  border-radius: 15%;
+}
+
+/* Make the link look like a button (tweak to taste) */
+.action_button_on_welcome_pane a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #ffd24d;
+  color: #231a00;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 4px 4px 8px rgb(165, 227, 6);
+}
+
 p {
     background-color: yellow;
     color: black;
@@ -230,8 +253,9 @@ footer {
     list-style-type: none;
     color:pink;
     font-size: 150%;
-    padding: 30%;
-    box-shadow: 4px 4px 8px rgb(165, 227, 6);
+    padding: 10%;
+    /* box-shadow: 4px 4px 8px rgb(165, 227, 6); need to remove this from main
+    box and palce it to individual icons */
 }
 
 #social_media_section a {
@@ -245,6 +269,7 @@ footer {
   color: #fff;
   background: rgba(0,0,0,0.35);
   backdrop-filter: blur(3px);
+  box-shadow: 4px 4px 8px rgb(165, 227, 6);
 }
 
 @media screen and (min-width: 400px) {
