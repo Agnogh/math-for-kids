@@ -3,14 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome page</title>
+    <title>Welcome to "Guess the number" game</title>
+
+    <!--This is code for fav icons-->
+    <link rel="icon" sizes="180x180" href="/assests/favicon/lotto-360.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assests/favicon/lotto-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assests/favicon/lotto-32.png">
+    <link rel="icon" type="image/png" sizes="57x57" href="/assests/favicon/lotto-57.png">
+    <link rel="icon" type="image/png" sizes="70x70" href="/assests/favicon/lotto-70.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="/assests/favicon/lotto-72.png">
+    <link rel="icon" type="image/png" sizes="76x76" href="/assests/favicon/lotto-76.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assests/favicon/lotto-96.png">
+
+    <!--Link to css file-->
+    <link rel="stylesheet" href="assests/css/styles.css">
+
 </head>
 <body>
-    <a href="index.html">LInk to game page from Welcom page</a>
-    <h3>
-        This will be where we will explain rules fo the game,
-        tips, tricks, gameflow 
-    </h3>
+    <header>
+    <a href="index.html">Link to game page from Welcom page</a>
+    </header>
+    
+    <main>
+        <section id="weclome_pane_main_section">
+            <h3>
+                Rules of the game 
+            </h3>
+
+            <h4>
+                <ul>
+                <li>
+                        Select your game mode (normal, easy, easiest)
+                </li>
+                <li>
+                        Pick your lucky number (1-9)
+                </li>
+
+                <li>
+                        Click on the Spin (I feel Lucky)
+                </li>
+
+                <li>
+                        Check your luck in outcome pane 
+                </li>
+
+                <li>
+                        Keep your lucky number selected or select new one for your next spin 
+                </li>
+                
+                <li>
+                        After 10 spins see final outcome 
+                </li>
+
+                <li>
+                        Click on the link to leaderboard to see your "Luck rank" 
+                </li>
+
+                </ul>
+            </h4>
+        </section>
+    </main>
+
+    <nav class="actions">
+      <a href="index.html">← Back to Game</a>
+      <button id="clear_btn" title="Remove saved scores">Clear leaderboard</button>
+    </nav>
+
+        <footer>
+        <ul id="social_media">
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" 
+                aria-label="Link to our Facebook page (will open facebook in a new tab)"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" 
+                aria-label="Link to our Instagram page (will open instagram in a new tab)"><i class="fa-brands fa-square-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" 
+                aria-label="Link to our TikTok page (will open tiktok in a new tab)"><i class="fa-brands fa-tiktok"></i></a></li>
+            <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener" 
+                aria-label="Link to our Pinterest page (will open pinterest in a new tab)"><i class="fa-brands fa-pinterest"></i></a></li>
+            <li><a href="https://www.twitter.com/" target="_blank" rel="noopener" 
+                aria-label="Link to our x (former Twitter) page (will open x in a new tab)"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" 
+                aria-label="Link to our YouTube channel (will open YouTube in a new tab)"><i class="fa-brands fa-square-youtube"></i></a></li>
+            <li><a href="https://web.telegram.org/k/" target="_blank" rel="noopener" 
+                aria-label="Link to our Telegram channel (will open Telegram in a new tab)"><i class="fa-brands fa-telegram"></i></a></li>
+        </ul>
+    </footer>
+
 </body>
 
 <!--Link to js file-->
