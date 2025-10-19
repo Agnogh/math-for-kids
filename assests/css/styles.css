@@ -229,7 +229,7 @@ main {
 
 
 #leaderboard_rows tr:nth-child(even){
-  background: rgba(0,0,0,0.18);  /* zebra rows (improves readbility, maybe remove it) */
+  background: rgba(0,0,0,0.18);  /* zebra rows (improves readbility, maybe REMOVE it) */
 }
 
 /* for last game */
@@ -237,7 +237,7 @@ main {
   margin-top: 8px;  /* Increase spacing for better visual (% instead of px) */
   padding: 6px 10px;  /* more space around button text */ 
   background: rgba(0,0,0,0.75);
-  color: #adf309;
+  color: #adf309;  /* I might decide to go with RED */
   border-radius: 20px; /* experimantly added to have best visual IMO */
   display: inline-block;
   box-shadow: 4px 4px 8px #f06502;  /* to 'overpower' red shadow from 'p' element */
@@ -383,9 +383,26 @@ footer {
     
 }
 
+/* Footer on leaderboard (non-fixed so long tables can scroll naturally) 
+   I might CHANGE FROM DESCRIPTION TO SOCIAL MEDIA */
+footer.slightly_muted{
+  margin: 16px auto 12px;  /* adjsuted to match */
+  padding: 2% 5% 5%;  /* to improve spacing */
+  text-align: center;
+  background: rgba(60,63,66,0.6);  /* not needed but overpowering it just in case */
+  border-style: double;
+  box-shadow: 4px 4px 8px #f06502;
+  border-radius: 20px;  /* to have more round edges (style) */
+  color: #adf309;
+  max-width: 900px;
+  font: weight 700px;  /* to stand out a bit more */
+}
+
 #display_results_box {
     padding: 5%;
 }
+
+
 
 #social_media_section {
     text-align: center;
