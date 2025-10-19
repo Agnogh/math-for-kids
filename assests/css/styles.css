@@ -173,32 +173,63 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 12px;
-  border-radius: 10px;
+  padding: 8px 12px;  /* to have some spacing between text and borders */
+  border-radius: 10px;  /* pretty round edges */
   background: rgba(18,31,26,0.6);
   color: #adf309;
-  font-weight: 700;
-  text-decoration: none;
+  font-weight: 700;  /* to have text more 'saturated' (looks weak a bit) */
+  text-decoration: none;  /* not to have lines under the link */
   border-style: double;
   box-shadow: 4px 4px 8px #f06502;
-  cursor: pointer;
-  border: none;                                /* for the <button> */
+  cursor: pointer;  /* I might add this to all, but placing only here for now */
+  border: none; /* for the <button> - might be removed later on */
 }
 
 .action_button_on_leaderboard button {
     display: inline-flex;
-    align-items: center;
+    align-items: center;  /* text in button */
     justify-content: center;
-    padding: 8px 12px;
-    border-radius: 10px;
+    padding: 8px 12px;  /* fine tunning to give some room around text */
+    border-radius: 10px;  /* to avoid corners on buttons */
     background: rgba(18,31,26,0.6);
     color: #adf309;
-    font-weight: 700;
-    text-decoration: none;
+    font-weight: 700;  /* just ot stand out a bit more, but not too much */
+    text-decoration: none;  /* no 'lines' under the links */
     border-style: double;
     box-shadow: 4px 4px 8px #f06502;
-    cursor: pointer;
-    border: none;     
+    cursor: pointer;  /* found this on YouTube so I will add it for all elements*/
+    border: none;     /* I might change that later on due to double border */
+}
+
+
+/* Table (for leaderboard results) */
+#board{
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(18,31,26,0.6);
+  color: #adf309;
+  border-style: double;  /* need this part as sections are too clsoe to each other */
+  border-radius: 10px;  /* to make it look more fancy */
+  overflow: hidden;
+  box-shadow: 4px 4px 8px #f06502;
+}
+
+/* headers of the leadeboard table */
+#head_of_the_table th {
+  font-weight: 800;  /* needs to be higher than 700 to stand out more */
+  text-align: left;  /* LTR allignment */
+  padding: 10px 12px;  /* spacing so it is not crammed up */
+  background: rgba(0,0,0,0.35);  /* needs to distunguish heads from the rest fo the table */
+}
+
+#leaderboard_rows td {
+  padding: 10px 12px;  /* better visibility */
+  border-top: 1px solid rgba(173,243,9,0.25);  /* to distinguish beztween games*/
+}
+
+
+#leaderboard_rows tr:nth-child(even){
+  background: rgba(0,0,0,0.18);  /* zebra rows (improves readbility, maybe remove it) */
 }
 
 
