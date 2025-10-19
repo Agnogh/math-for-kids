@@ -169,7 +169,8 @@ main {
     margin: 0 auto; 
 }
 
-.action_button_on_leaderboard a {
+.action_button_on_leaderboard a ,
+.action_button_on_leaderboard button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -185,21 +186,7 @@ main {
   border: none; /* for the <button> - might be removed later on */
 }
 
-.action_button_on_leaderboard button {
-    display: inline-flex;
-    align-items: center;  /* text in button */
-    justify-content: center;
-    padding: 8px 12px;  /* fine tunning to give some room around text */
-    border-radius: 10px;  /* to avoid corners on buttons */
-    background: rgba(18,31,26,0.6);
-    color: #adf309;
-    font-weight: 700;  /* just ot stand out a bit more, but not too much */
-    text-decoration: none;  /* no 'lines' under the links */
-    border-style: double;
-    box-shadow: 4px 4px 8px #f06502;
-    cursor: pointer;  /* found this on YouTube so I will add it for all elements*/
-    border: none;     /* I might change that later on due to double border */
-}
+
 
 
 /* Table (for leaderboard results) */
@@ -234,7 +221,7 @@ main {
 
 /* general rule for dimmed (NOT SURE IF I WANNA KEEP THIS RULE - Decision later) */
 .slightly_muted {
-    opacity: .8; font-size: .9rem;
+    opacity: .8; font-size: .9em;
 }
 
 /* for last game */
@@ -354,6 +341,13 @@ main {
   max-height: 50px;
 }
 
+.action_button_on_leaderboard button {
+  font: inherit;  /* this is for fixing scaling issue */
+  appearance: none;  /* avoids iOS/Android quirks */
+  -webkit-appearance: none;
+  font-weight: 700;  /* need to keep this as it doesn't remain from before*/
+}
+
 p {
     background-color: yellow;
     color: black;
@@ -390,9 +384,9 @@ footer {
 
 /* Footer on leaderboard (non-fixed so long tables can scroll naturally) 
    I might CHANGE FROM DESCRIPTION TO SOCIAL MEDIA */
-footer.slightly_muted{
+footer.slightly_muted {
   margin: 16px auto 12px;  /* adjsuted to match */
-  padding: 2% 5% 5%;  /* to improve spacing */
+  padding: 2% 5% 5%;  /* to improve spacing (I MIGHT NEED TO GO WITh PX % PX)*/
   text-align: center;
   background: rgba(60,63,66,0.6);  /* not needed but overpowering it just in case */
   border-style: double;
@@ -400,7 +394,7 @@ footer.slightly_muted{
   border-radius: 20px;  /* to have more round edges (style) */
   color: #adf309;
   max-width: 900px;
-  font: weight 700px;  /* to stand out a bit more */
+  font-weight: 700;  /* to stand out a bit more */
 }
 
 #display_results_box {
