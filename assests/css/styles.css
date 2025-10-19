@@ -129,6 +129,42 @@ main {
   margin: 0 auto;
 }
 
+/* for description text about leaderbaord purpsoe */
+#leaderboard_explanation {
+  margin: 4px 0 6px;  /* some spacing for better visual */
+  padding: 8px 12px;  /* for breathing room  between text and the text holder */
+  font-size: clamp(0.95rem, 2.6vw, 1.05rem);
+  line-height: 1.35;
+  color: #adf309;
+  background: rgba(0,0,0,0.35);
+  border: 2px double #adf309;
+  border-radius: 12px;  /* nice looking edges */
+  box-shadow: 4px 4px 8px #f06502;
+  text-align: center;  /* text is centered in relation to text holder */
+  max-width: fit-content;  /* to decrease unnecesary large text holder */
+  justify-self: center;  /* to align center text holder */
+}
+
+/* text just before table (will be emojis) */
+#leaderboard_title {
+  margin: 6px 0 8px;  /* spacing between elements (visual) */
+  padding: 6px 12px;  /* gives some spacing betzween text and the box */
+  font-weight: 800;  /* gives 'density' */ 
+  font-size: clamp(1.15rem, 3.2vw, 1.6rem);
+  color: #adf309;
+
+  background: rgba(18,31,26,0.6);
+  border: 2px double #adf309;
+  border-radius: 12px;  /* round edges */
+  box-shadow: 4px 4px 8px #f06502;
+
+  display: inline-block;  /* lets the chip hug the text */
+  text-align: center;  /* text inside box centered */
+  max-width: fit-content;  /* to avoid unnecesarry long text box */
+  justify-self: center;  /* set in center (was aligned left */
+}
+
+
 /* links to both pages and rest button (row leaderboard) */
 .action_button_on_leaderboard {
   display: flex;
