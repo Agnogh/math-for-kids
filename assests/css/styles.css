@@ -90,7 +90,7 @@ main {
 }
 
 /* header just for the leaderboard page */
-#leaderboard_header_section{
+#leaderboard_header_section {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
@@ -107,7 +107,7 @@ main {
 #title_header_for_leaderboard {
     color: rgb(243, 2, 2);
     border: greenyellow;
-    background-color: rgba(18, 31, 26, 0.6);;
+    background-color: rgba(18, 31, 26, 0.6);
 }
 
 
@@ -117,7 +117,25 @@ main {
   text-decoration: none;
 }
 
+/* Main content: padding under fixed header + centered column */
+#leaderboard_main_section {
+  padding-top: 56px;  /* to matches hedaer height */
+  padding-left: clamp(12px, 4vw, 24px);  /* spacing so it is not that close to edges */ 
+  padding-right: clamp(12px, 4vw, 24px);  /* spacing from edges */
+  padding-bottom: 72px;  /* breathing room above footer */
+  display: grid;  /* nice spacing / order */
+  gap: 12px;  /* so it is not so cloughted */
+  max-width: 900px;  /* nice center column (cosmetic) on wide screens */
+  margin: 0 auto;
+}
 
+/* links to both pages and rest button (row leaderboard) */
+.action_button_on_leaderboard{
+  display: flex;
+  gap: 8px;  /* spacing between butons */
+  flex-wrap: wrap;
+  justify-content: center;  /* nicely aligned to center */
+}
 
 #playing_area_box {
     border-style: double;
