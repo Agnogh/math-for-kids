@@ -89,14 +89,6 @@ main {
 
 }
 
-/* Leaderboard title */
-
-#title_header_for_leaderboard {
-    color: rgb(243, 2, 2);
-    border: greenyellow;
-    background-color: #adf309;
-}
-
 /* header just for the leaderboard page */
 #leaderboard_header_section{
   position: fixed;
@@ -110,6 +102,22 @@ main {
   box-shadow: 4px 4px 8px #f06502;
   border-style: double;
 }
+
+/* Leaderboard title */
+#title_header_for_leaderboard {
+    color: rgb(243, 2, 2);
+    border: greenyellow;
+    background-color: rgba(18, 31, 26, 0.6);;
+}
+
+
+/* title (text element) */
+#title_header_for_leaderboard a {
+  color: #adf309;
+  text-decoration: none;
+}
+
+
 
 #playing_area_box {
     border-style: double;
