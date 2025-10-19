@@ -130,7 +130,7 @@ main {
 }
 
 /* links to both pages and rest button (row leaderboard) */
-.action_button_on_leaderboard{
+.action_button_on_leaderboard {
   display: flex;
   gap: 8px;  /* spacing between butons */
   flex-wrap: wrap;
@@ -169,8 +169,37 @@ main {
     margin: 0 auto; 
 }
 
+.action_button_on_leaderboard a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(18,31,26,0.6);
+  color: #adf309;
+  font-weight: 700;
+  text-decoration: none;
+  border-style: double;
+  box-shadow: 4px 4px 8px #f06502;
+  cursor: pointer;
+  border: none;                                /* for the <button> */
+}
 
-
+.action_button_on_leaderboard button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: rgba(18,31,26,0.6);
+    color: #adf309;
+    font-weight: 700;
+    text-decoration: none;
+    border-style: double;
+    box-shadow: 4px 4px 8px #f06502;
+    cursor: pointer;
+    border: none;     
+}
 
 
 .btn_1, .btn_2, .btn_3, .btn_4, .btn_5, .btn_6, .btn_7, .btn_8, .btn_9 {
