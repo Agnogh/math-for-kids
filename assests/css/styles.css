@@ -232,6 +232,16 @@ main {
   background: rgba(0,0,0,0.18);  /* zebra rows (improves readbility, maybe remove it) */
 }
 
+/* for last game */
+#last_saved_note{
+  margin-top: 8px;  /* Increase spacing for better visual (% instead of px) */
+  padding: 6px 10px;  /* more space around button text */ 
+  background: rgba(0,0,0,0.75);
+  color: #adf309;
+  border-radius: 20px; /* experimantly added to have best visual IMO */
+  display: inline-block;
+  box-shadow: 4px 4px 8px #f06502;  /* to 'overpower' red shadow from 'p' element */
+}
 
 .btn_1, .btn_2, .btn_3, .btn_4, .btn_5, .btn_6, .btn_7, .btn_8, .btn_9 {
 
