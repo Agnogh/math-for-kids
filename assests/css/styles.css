@@ -232,6 +232,11 @@ main {
   background: rgba(0,0,0,0.18);  /* zebra rows (improves readbility, maybe REMOVE it) */
 }
 
+/* general rule for dimmed (NOT SURE IF I WANNA KEEP THIS RULE - Decision later) */
+.slightly_muted {
+    opacity: .8; font-size: .9rem;
+}
+
 /* for last game */
 #last_saved_note{
   margin-top: 8px;  /* Increase spacing for better visual (% instead of px) */
