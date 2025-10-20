@@ -69,6 +69,7 @@ header {
   border-style: double;
 }
 
+/* for title element in header of the gamepage */
 #game_page_header a {
     color:#adf309;
     text-decoration:none;
@@ -90,7 +91,9 @@ main {
     margin: 0 auto;
     display: grid;
     gap: 16px;   
-    padding-bottom: 88px;
+    /* padding-bottom: 88px; might need to replace this */
+    max-width: 900px;
+    padding: 8px clamp(12px, 4vw, 24px) 72px;
 }
 
 #welcome_pane_main_section {
