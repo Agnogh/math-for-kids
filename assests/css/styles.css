@@ -54,7 +54,27 @@ header {
   color: #adf309;
 }
 
-/* rule for h1 element (title) */
+/* header for game page*/
+#game_page_header{
+  position: fixed;  /*to keep it on top*/
+  top: 0; left: 0; right: 0;  /* no moving around fixed from all sides */
+  z-index: 1000;
+  display: grid; 
+  place-items: center;  /* to be nicely placed */
+  height: 56px;  /* adjsuted experimentally to look good */
+  padding: 0 12px;
+  background: rgba(60,63,66,0.8);
+  backdrop-filter: blur(4px);
+  box-shadow: 4px 4px 8px #f06502;  /*same shadow as other headers*/
+  border-style: double;
+}
+
+#game_page_header a {
+    color:#adf309;
+    text-decoration:none;
+}
+
+/* rule for h1 element (title) I will not need this anymore as there are no H1 */
 h1 {
     margin-top: 1%;
     background-color: rgba(0, 0, 0, 0.8);
