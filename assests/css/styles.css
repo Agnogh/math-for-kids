@@ -96,6 +96,47 @@ main {
     padding: 8px clamp(12px, 4vw, 24px) 72px;
 }
 
+/* Fieldset container */
+#modes {
+  margin: 6px 0 4px;  /* too clsoe to top */
+  padding: 6px 8px;  /* too close to borders of nearby elements */
+  border: 2px double #adf309;
+  border-radius: 12px;  /* nice round edges */
+  background: rgba(18,31,26,0.6);
+  box-shadow: 4px 4px 8px #f06502;
+  display:flex;  /* nicer UI */
+  gap:8px;  /* STARTING WITH THIS, MIGHT WANT TO CHANGE IT TO HIGHER VASLUE LATER ON */
+  justify-content:center;  /*el centerly alligned */
+}
+
+/* Hide radios */
+#modes input {
+    position:absolute;  /* KEEPING FOR NOW */
+    opacity:0;
+    pointer-events: none;  /* I found this on internet so might be good to have*/
+}
+
+/* area holding buttons for game mode */
+#modes label {
+    display:inline-flex;
+}
+
+/* buttons for game mode  */
+#modes label span {
+  display:inline-flex;
+  align-items:center;  /*  */
+  justify-content:center;  /* to make sure it is aligend correctly */
+  padding: 6px 10px;
+  border-radius: 10px;  /* smooth edges */
+  background: rgba(0,0,0,0.35);
+  color:#adf309;
+  font-weight:700;  /* to make it more 'heavy' */
+  border: 2px double #adf309;
+  box-shadow: 4px 4px 8px #f06502;  /* starndar shawod used everywhere else */
+  cursor:pointer;  /* to change pointer when hovered NEED TO ADD THIS FOR ALL BUTTONS*/
+}
+
+
 #welcome_pane_main_section {
     border-style: double;
     color: rgb(200, 255, 0);
