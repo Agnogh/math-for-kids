@@ -437,20 +437,19 @@ main {
   cursor:pointer;
 }
 
+/* random number generator area */
 #random_number_generator {
-    margin-top: 15%;
-    margin-left: 15%;
-    margin-right: 15%;
-    background-color: rgba(47, 48, 40, 0.6);
-    border-style:double;
-    border-color: rgb(159, 202, 39);
-    margin-bottom: 10%;
-    justify-content: center;  
-    padding-top: 1rem;
-    border-radius: 15%;
+  background: rgba(18,31,26,0.6);
+  border: 2px double #adf309;
+  border-radius: 10%;  /* round shapes for stylistic */
+  box-shadow: 4px 4px 8px #f06502;
+  padding: 10px 12px;  /* keeping 'px' over percentage due to scaling working better for some reason REVIEW LATER */
+  display:grid;  /*keeping grid (despite it makes unequal vertical alignment*/
+  place-items:center;
 
 }
 
+/* this might not be bneeded if new style works
 #random_number_button {
     padding-left: 5%;
     padding-right: 5%;
@@ -464,6 +463,23 @@ main {
     background-color: yellow;
     font-size: 1.5em;
 
+}
+*/
+
+
+#random_number_button{
+  min-width: 200px;  /* I MIGHT REMOVE THIS TO AUTO-WRAP*/
+  padding: 5% 5%;  /* percentages work better that 'px' */
+  border-radius: 25%; /* nice round edges */
+  background: rgb(114, 82, 38, 0.6);  /*leaving transperancy until I DECIDE ON THE COLOUR*/ 
+  color:#adf309;
+  font-weight:800;
+  border: 2px double #adf309;
+  box-shadow: 4px 4px 8px #f06502;
+  cursor:pointer; /* TO CHANGE CURSOR WHILE OVER IT */
+  appearance:none;
+  -webkit-appearance:none; /* found this on internet for webKit browsing for removal of styling specific to platform  */
+  font: inherit;
 }
 
 #selectedNumberBox {
