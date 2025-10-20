@@ -245,10 +245,11 @@ main {
   justify-content: center;  /* nicely aligned to center */
 }
 
+/* keeping this for now until I am sure that new style is operational
 #playing_area_box {
     border-style: double;
-    color: rgb(200, 255, 0);
-    background-color: rgba(18, 31, 26, 0.6);
+    color: rgb(200, 255, 0); might need to go with different due to consistency 
+    background-color: rgba(18, 31, 26, 0.6); 
     padding: 10%;
     padding-left: 5%;
     padding-right: 5%;
@@ -260,12 +261,41 @@ main {
     max-width: 90vw;
     margin: 0 auto;
 }
+*/
+
+/* Section frame */
+#playing_area_box{
+  border-style: double;
+  color:#adf309;
+  background: rgba(18,31,26,0.6);
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px #f06502;
+  padding: 10px 12px;
+  border-style: double;
+  border-color: yellowgreen;
+}
 
 
+
+/* I might need to go back to this if new styling doesn't work
 #title_of_playing_area_box {
     color: black;
     border: greenyellow;
 
+}
+*/
+
+/* Title in the frame */
+#title_of_playing_area_box{
+  margin: 2px 0 10px;
+  color:#adf309;
+  font-weight:800;
+  width: 100%;
+  background: rgba(18,31,26,0.6);
+  box-shadow: 4px 4px 8px #f06502;
+  border-radius: 12px;
+  border-style: double;
+  border-color: yellowgreen;
 }
 
 
@@ -461,7 +491,7 @@ p {
     color: black;
     font: bold;
     border-radius: 15%;
-    box-shadow: 3px 3px 8px 2px rgb(247, 1, 1); 
+    /*box-shadow: 3px 3px 8px 2px rgb(247, 1, 1); need to drop this as it is messing up with me */
 }
 
 footer {
