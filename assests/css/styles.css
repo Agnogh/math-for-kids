@@ -482,6 +482,7 @@ main {
   font: inherit;
 }
 
+/* need to drop this as I decided to go with fotter results showing up
 #selectedNumberBox {
     background-color: rgba(47, 48, 40, 0.6);
     color: aliceblue;
@@ -491,6 +492,12 @@ main {
     border-radius: 15%;
     border-color: rgb(159, 202, 39);
     border-style:double;
+}
+*/
+
+/* to show 'blank' as I am moving to results showing up in fotter */
+#selectedNumberBox {
+    display:none;
 }
 
 #action_button_on_welcome_pane {
