@@ -542,6 +542,8 @@ p {
     /*box-shadow: 3px 3px 8px 2px rgb(247, 1, 1); need to drop this as it is messing up with me */
 }
 
+
+
 footer {
     margin-top: auto;
     margin-bottom: 3%;
@@ -587,7 +589,16 @@ footer.slightly_muted {
     padding: 5%;
 }
 
-
+/*footer for game page (as keyID is suggesing)*/
+#game_page_footer{
+  margin: 6px 0 10px;  /* MIGHT NEED A BIT ADJUSTMENT LATER ON */
+  padding: 8px 12px;  /*for improving UI/spacing */
+  background: rgba(60,63,66,0.8);  /* a bit more dim than ussual */
+  border: 2px double #adf309;  /* standard same as every other element */
+  border-radius: 20%;  /* 20 % for now, MIGHT BE CHANGED LATER ON*/
+  box-shadow: 4px 4px 8px #f06502;
+  color:#adf309;
+}
 
 #social_media_section {
     text-align: center;
