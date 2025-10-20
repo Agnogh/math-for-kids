@@ -535,7 +535,7 @@ main {
 }
 
 p {
-    background-color: yellow;
+    /* background-color: yellow; need to get rid of this as it is messing with my styling*/
     color: black;
     font: bold;
     border-radius: 15%;
@@ -598,6 +598,25 @@ footer.slightly_muted {
   border-radius: 20%;  /* 20 % for now, MIGHT BE CHANGED LATER ON*/
   box-shadow: 4px 4px 8px #f06502;
   color:#adf309;
+}
+
+/* active result box */
+#display_results_box{
+  margin: 0 0 6px;
+  padding: 2px 8px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 10px;
+  font-weight:700;
+  color:#adf309;
+  box-shadow: 4px 4px 8px #f06502;
+}
+
+/* wins/rolls + luck index textholder */
+#counter_line{
+  margin: 0 0 10px;
+  font-weight:800;
+  color:#adf309;
+  box-shadow: 4px 4px 8px #f06502;
 }
 
 #social_media_section {
