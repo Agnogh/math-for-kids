@@ -296,6 +296,7 @@ main {
   border-radius: 12px;
   border-style: double;
   border-color: yellowgreen;
+  /* width: fit-content; */
 }
 
 
@@ -304,7 +305,7 @@ main {
     height: fit-content;
     display: flex; 
     justify-content: center;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .action_button_on_leaderboard a ,
@@ -373,6 +374,7 @@ main {
   box-shadow: 4px 4px 8px #f06502;  /* to 'overpower' red shadow from 'p' element */
 }
 
+/* removing this for now but keeping the code in case new style doesn't adjust
 .btn_1, .btn_2, .btn_3, .btn_4, .btn_5, .btn_6, .btn_7, .btn_8, .btn_9 {
 
     border-style: double;
@@ -391,12 +393,13 @@ main {
     font-size: 1.3em;
 
 }
+*/
 
 .empty_button_to_trick_ui {
     visibility: hidden;     /* need to hide it as I do not need it for functional purposes, just for better alignment */
 }
 
-
+/* thisd needs to be done from scratch
 #buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -406,11 +409,33 @@ main {
     z-index: 3;
     color: red;
 
-    gap: 1rem 2rem; /* adding spacing as buttons are overlapping each other */
-    margin: 3rem 0; /* adding spacing top and bottom */
+    gap: 1rem 2rem;  /* adding spacing as buttons are overlapping each other 
+    margin: 3rem 0;  /* adding spacing top and bottom
  
 }
+*/
 
+/* grid fro number buttons (3×3) */
+#buttons{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 12px;
+  justify-items:center;
+}
+
+/* Style for number buttons (no need for .btn_1 … .btn_9 so commenting them out for now) */
+#buttons button {
+  width: clamp(54px, 21vw, 84px);  /* experimentally addeed until it fits */
+  height: clamp(54px, 21vw, 44px);  /* experimekntally addeed until it fits */
+  border-radius: 50%;  /* some styling */
+  border: 2px double #adf309;
+  background: rgba(140, 238, 3, 0.6);
+  color:#231a00;
+  font-weight:800;
+  font-size: clamp(1rem, 4.8vw, 1.35rem);
+  box-shadow: 4px 4px 8px #f06502;
+  cursor:pointer;
+}
 
 #random_number_generator {
     margin-top: 15%;
