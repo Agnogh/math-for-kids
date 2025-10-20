@@ -124,7 +124,7 @@ main {
 /* buttons for game mode  */
 #modes label span {
   display:inline-flex;
-  align-items:center;  /*  */
+  align-items:center;  /* verticcal alignment / centering */
   justify-content:center;  /* to make sure it is aligend correctly */
   padding: 6px 10px;
   border-radius: 10px;  /* smooth edges */
@@ -134,6 +134,14 @@ main {
   border: 2px double #adf309;
   box-shadow: 4px 4px 8px #f06502;  /* starndar shawod used everywhere else */
   cursor:pointer;  /* to change pointer when hovered NEED TO ADD THIS FOR ALL BUTTONS*/
+}
+
+
+/* elements in 'modes' when the element is checked */
+#modes input:checked + span{
+  background: rgba(5, 5, 5, 0.8);  /*might go with different colour LATER ON*/
+  outline: 2px solid #05d7f3;
+  color: red;  /* will see how it the COLOUR CONTRAST working later on  */
 }
 
 
