@@ -532,6 +532,11 @@ until conditions are met (displays links that were previously on footer */
   cursor: pointer;
 }
 
+/* for 'start new agme' to be disabled when tryong to click it */
+#post_round_actions button:disabled{
+  opacity: .6;
+  cursor: not-allowed;
+}
 
 #action_button_on_welcome_pane {
   width: 100%;
