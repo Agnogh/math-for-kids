@@ -193,6 +193,8 @@ modeInputs.forEach(input => {
         randomNumberButton.disabled = false;
         resetButton.disabled = true;
         if (leaderboardLink) leaderboardLink.hidden = true;
+        // and now hide it again
+        if (postRound) postRound.hidden = true; 
 
         setActiveGameMode("normal");        
     });
