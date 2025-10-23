@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const counterLine = document.getElementById('counter_line');  // 
 
     //  same button for but in new section 
+
     if (postRound) postRound.hidden = true;
     if (resetButton) resetButton.disabled = true;  // set button to not-clickable
     if (leaderboardLink) leaderboardLink.hidden = true;  // do not show link to eladerboard by default
