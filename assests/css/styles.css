@@ -500,6 +500,39 @@ main {
     display:none;
 }
 
+/*even better solution for this section so it does nto show
+until conditions are met (displays links that were previously on footer */
+#post_round_pane_showing_links_and_restart {
+  margin: 6px 0 10px;
+  padding: 8px 12px;
+  background: rgba(18,31,26,0.6);
+  border: 2px double #adf309;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px #f06502;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+
+/* Buttons/links inside this block */
+#post_round_pane_showing_links_and_restart button,
+#post_round_pane_showing_links_and_restart a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.35);
+  color: #adf309;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px double #adf309;
+  box-shadow: 4px 4px 8px #f06502;
+  cursor: pointer;
+}
+
+
 #action_button_on_welcome_pane {
   width: 100%;
   display: flex;
