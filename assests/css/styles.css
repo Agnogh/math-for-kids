@@ -532,6 +532,15 @@ until conditions are met (displays links that were previously on footer */
   cursor: pointer;
 }
 
+
+/* disabled look for buttons / to be 'weak" when not clickable */
+button:disabled {
+  opacity: .45;
+  cursor: not-allowed;  /* cursor doesn't show*/
+  filter: saturate(0.6);  /* to be slightly 'pale' */
+  box-shadow: 2px 2px 6px rgba(240,101,2,.4);  /* soften the shadow when disabled */
+}
+
 /* for 'start new agme' to be disabled when tryong to click it */
 #post_round_actions button:disabled{
   opacity: .6;
