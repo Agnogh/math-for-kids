@@ -15,11 +15,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // number of 'chances' per game mode
     const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
 
+    // adding now for new (old) section that is hidden and shows after rounds are over
+    const postRound = document.getElementById('post_round_pane_showing_links_and_restart');
+    
     const resetButton = document.getElementById('reset_button');  // for reset buttonafter 10 rounds
     const leaderboardLink = document.getElementById('leaderboard_link');  // leaderboard
 
     const counterLine = document.getElementById('counter_line');  // 
 
+    //  same button for but in new section 
+    if (postRound) postRound.hidden = true;
     if (resetButton) resetButton.disabled = true;  // set button to not-clickable
     if (leaderboardLink) leaderboardLink.hidden = true;  // do not show link to eladerboard by default
     if (counterLine) counterLine.textContent = '0/0 • 0.0%';
@@ -147,6 +152,9 @@ modeInputs.forEach(input => {
             if (randomNumberButton) randomNumberButton.disabled = true;
             if (resetButton) resetButton.disabled = false;
             if (leaderboardLink) leaderboardLink.hidden = false;
+            // for revealing previously hidden button when above 10 rolls are met
+            if (postRound) postRound.hidden = false;
+
 
         resultBox.textContent += `Final score after 10 rounds: ${inGameWinCount}/10.`;
 
