@@ -82,8 +82,24 @@ h1 {
     box-shadow: 4px 2px 6px 4px rgb(135, 31, 31); 
     border-radius: 20%;
     background-color: yellow;
-}
 
+  }
+
+  /* “Game mode” title to match other elements */
+#modes legend {
+  display: inline-block;
+  margin: 4px auto 8px;
+  padding: 6px 12px;
+  font-weight: 800;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: #adf309;
+  background: rgba(18,31,26,0.6);
+  border: 2px double #adf309;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px #f06502;
+  text-align: center;
+}
+  
 /* rules for main (containing "play area") */
 main {
     /* flex: 1; need to drop this as it is messing with UI */
