@@ -563,6 +563,24 @@ button:disabled {
   cursor: not-allowed;
 }
 
+/* container for the end - action when 10 rounds complete */
+#end_actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* Disabled look (for button and link when is disabled/not clcikable) */
+#end_actions #reset_button:disabled {
+  opacity: .45;
+  cursor: not-allowed;  /* so there is no option to click on it */
+  filter: saturate(0.6);  /* slightly 'pale' */
+  box-shadow: 2px 2px 6px rgba(240,101,2,.4);
+}
+
+
 #action_button_on_welcome_pane {
   width: 100%;
   display: flex;
