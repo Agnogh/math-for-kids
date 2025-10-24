@@ -88,14 +88,14 @@ h1 {
   /* “Game mode” title to match other elements */
 #modes legend {
   display: inline-block;
-  margin: 4px auto 8px;
-  padding: 6px 12px;
-  font-weight: 800;
-  font-size: clamp(1rem, 3vw, 1.25rem);
+  margin: 4px auto 8px;  /* give it some space around */
+  padding: 6px 12px;  /* some 'breathing room */
+  font-weight: 800;  /* needs to be highloighted more as it is title */
+  /*font-size: clamp(1rem, 3vw, 1.25rem); need to drop this */
   color: #adf309;
   background: rgba(18,31,26,0.6);
   border: 2px double #adf309;
-  border-radius: 12px;
+  border-radius: 12px;  /* nice oround shapes */
   box-shadow: 4px 4px 8px #f06502;
   text-align: center;
 }
