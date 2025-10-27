@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // trying to fix the reset button
     // const leaderboardLink = document.getElementById('leaderboard_link');  // leaderboard
     const leaderboardLink = postRound?.querySelector('#leaderboard_link');
-    
+
     const counterLine = document.getElementById('counter_line');  // 
 
     //  same button for but in new section 
@@ -180,6 +180,7 @@ modeInputs.forEach(input => {
     // Reset listener  
     if (resetButton) {
         resetButton.addEventListener("click", () => {
+            console.log('[reset] clicked');  // added to see if this is even operational
         // setting rules `normal` game mode, no wins or any rolls, nothing selected
         state.mode = "normal";
         state.rolls = 0;
