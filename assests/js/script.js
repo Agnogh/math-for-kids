@@ -18,9 +18,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // adding now for new (old) section that is hidden and shows after rounds are over
     const postRound = document.getElementById('post_round_pane_showing_links_and_restart');
     
-    const resetButton = document.getElementById('reset_button');  // for reset buttonafter 10 rounds
-    const leaderboardLink = document.getElementById('leaderboard_link');  // leaderboard
+    // trying to fix the reset button
+    // const resetButton = document.getElementById('reset_button');  // for reset buttonafter 10 rounds
+    const resetButton = postRound?.querySelector('#reset_button');
 
+    // trying to fix the reset button
+    // const leaderboardLink = document.getElementById('leaderboard_link');  // leaderboard
+    const leaderboardLink = postRound?.querySelector('#leaderboard_link');
+    
     const counterLine = document.getElementById('counter_line');  // 
 
     //  same button for but in new section 
