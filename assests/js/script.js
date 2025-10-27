@@ -147,11 +147,14 @@ modeInputs.forEach(input => {
             }   
 
         // Update selectedNumberBox with full message and addon now ratio of wins and loses
-        selectedNumberBox.innerHTML = (ranNumPulled === 1)
-            ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}. <br> Your Luck index: ${luckFactorIndicator}%`
-            : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]. <br> Your Luck index: ${luckFactorIndicator}%`;
-        
-
+        // Fixing the clickable button
+        if (selectedNumberBox) {
+            const message = (ranNumPulled === 1)
+                ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}. <br> Your Luck index: ${luckFactorIndicator}%`
+                : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]. <br> Your Luck index: ${luckFactorIndicator}%`;
+            
+            selectedNumberBox.innerHTML = message;
+        }
 
         if (state.rolls === 10) {
         // freeze UI until 10 rounds are up
@@ -181,6 +184,7 @@ modeInputs.forEach(input => {
     if (resetButton) {
         resetButton.addEventListener("click", () => {
             console.log('[reset] clicked');  // added to see if this is even operational
+            resultBox.textContent = '🔄 Reset clicked – starting a new game...';  // alert('Reset clicked')
         // setting rules `normal` game mode, no wins or any rolls, nothing selected
         state.mode = "normal";
         state.rolls = 0;
