@@ -8,8 +8,8 @@ let inGameWinCount = 0;
 let inGameLoseCount = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
-    const numberButtons = document.querySelectorAll("#buttons button");     // creating constant variable, looking inside all elements with IDs button
-    const selectedNumberBox = document.querySelector("#selectedNumberBox p");       // constant checking all elements with keyID "selectedBumberBox"
+    const numberButtons = document.querySelectorAll("#buttons button");  // creating constant variable, looking inside all elements with IDs button
+    const selectedNumberBox = document.querySelector("#selectedNumberBox p");  // constant checking all elements with keyID "selectedBumberBox"
     const resultBox = document.getElementById("display_results_box");
     const randomNumberButton = document.getElementById("random_number_button");
     // number of 'chances' per game mode
@@ -27,6 +27,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const leaderboardLink = postRound?.querySelector('#leaderboard_link');
 
     const counterLine = document.getElementById('counter_line');  // 
+
+    // CHECK
+    // const b = document.getElementById('random_number_button'); b
+    // document.getElementById('random_number_button')?.disabled
+    // getComputedStyle(document.getElementById('random_number_button')).pointerEvents
+    
+
 
     //  same button for but in new section 
 
@@ -55,12 +62,38 @@ const modeInputs = document.querySelectorAll('#modes input[name="game_mode"]');
 const mode_types = { 'normal': 'normal', 'easy': 'easy', 'easiest': 'easiest' };
 const locked_mode_types = { 'normal': 'normal', 'easy': 'easy', 'easiest': 'easiest' };
 
+
+/*  ANOTHER ATTEMPT TO FIX "STart new game" button  */ 
+// helper for selected number area/box
+    function updateResults(messageHtml) {
+        if (resultBox) resultBox.innerHTML = messageHtml;
+    }
+
+    // Helper ofr enable / disable + highlight the lucky button
+    function updateLuckyButtonState() {
+        const button_refresh_start = document.getElementById('random_number_button');
+        if (!button_refresh_start) return;
+
+        const ready_for_new_game =  //
+            state.selected !== null &&  // selected number
+            // userSelectedNumber !== null &&  // some number needs to be selected
+            state.mode !== null &&  // mode needs to be selected / set
+            // gameMode !== null &&  // at least one mode selected (normal is by default)
+            state.rolls < 10;  // needs to be below 10 spins
+            // totalRoundsPlayed < 10; // as game rules say 10 draws
+
+    button_refresh_start.disabled = !ready_for_new_game;  // button is disabled if not "readz_for_new_game"
+    button_refresh_start.classList.toggle('is-active', ready_for_new_game);
+    }
+
+
 // auto set state to active (radio is checked)
 function setActiveGameMode(newGameMode) {
   state.mode = newGameMode; // 'normal' | 'easy' | 'easiest'
     modeInputs.forEach(input => {
-    input.checked = (input.value === locked_mode_types[newGameMode]);
-  });
+        input.checked = (input.value === locked_mode_types[newGameMode]);
+    });
+    updateLuckyButtonState();
 }
 
 // this is when 1st roll happens to block chagne + revert radio btn
@@ -85,7 +118,7 @@ modeInputs.forEach(input => {
     setActiveGameMode(state.mode);
 
     /* rule for user selecting number */ 
-    numberButtons.forEach((button) => {     // for each eleemnt inside 'numberButtons' run
+    numberButtons.forEach(button => {     // for each eleemnt inside 'numberButtons' run
         button.addEventListener("click", function () {      // add event listener to button when "clicked" call / run callback function
         // This should reset all buttons
             numberButtons.forEach((btn) => {
@@ -101,7 +134,9 @@ modeInputs.forEach(input => {
 
         // Show alert for selčected number by user
             alert(`You selected number ${userSelectedNumber}. Lady Luck will be with you !`);
-
+            
+            state.selected = Number(button.dataset.value);
+            updateLuckyButtonState();
         });
     });
 
@@ -126,6 +161,8 @@ modeInputs.forEach(input => {
 
     // lock mode after first roll by incrementing rolls
         state.rolls += 1;
+    // call out function - updates state of the button based on number of spins 
+        updateLuckyButtonState();
     // new if statement for selected vs random number
         if (hit) {
             inGameWinCount++;
@@ -148,13 +185,11 @@ modeInputs.forEach(input => {
 
         // Update selectedNumberBox with full message and addon now ratio of wins and loses
         // Fixing the clickable button
-        if (selectedNumberBox) {
-            const message = (ranNumPulled === 1)
-                ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}. <br> Your Luck index: ${luckFactorIndicator}%`
-                : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]. <br> Your Luck index: ${luckFactorIndicator}%`;
-            
-            selectedNumberBox.innerHTML = message;
-        }
+        const message = (ranNumPulled === 1)
+            ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}. <br> Your Luck index: ${luckFactorIndicator}%`
+            : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]. <br> Your Luck index: ${luckFactorIndicator}%`;
+
+            updateResults(message);
 
         if (state.rolls === 10) {
         // freeze UI until 10 rounds are up
@@ -164,6 +199,7 @@ modeInputs.forEach(input => {
             // for revealing previously hidden button when above 10 rolls are met
             if (postRound) postRound.hidden = false;
 
+            updateLuckyButtonState()
 
         resultBox.textContent += `Final score after 10 rounds: ${inGameWinCount}/10.`;
 
@@ -197,8 +233,8 @@ modeInputs.forEach(input => {
 
         numberButtons.forEach(btn => { btn.style.backgroundColor = ""; btn.style.color = ""; });
 
-        resultBox.textContent = "New game started — pick number and select `I feel lucky`!";
-        selectedNumberBox.innerHTML = "";
+        resultBox.textContent = "";
+        if (resultBox) resultBox.textContent = "New game started — pick number and select `I feel lucky`!";
         if (counterLine) counterLine.textContent = "0/0 • 0.0%";
 
         randomNumberButton.disabled = false;
