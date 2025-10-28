@@ -33,16 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if (leaderboardLink) leaderboardLink.hidden = true;  // do not show link to eladerboard by default
     if (counterLine) counterLine.textContent = '0/0 • 0.0%';
 
-    // returns 'ranNumPulled' random numbers 1..9 (now no dupes)
-    function getRandomNumberPulls(ranNumPulled) {
-        const pulls = [];
-        while (pulls.length < ranNumPulled) {
-            const n = Math.floor(Math.random() * 9) + 1;
-            if (!pulls.includes(n)) pulls.push(n);
-        }
-        return pulls;
-    }
-
     // >>  Game State  <<
 /* adding game state (normal default)*/
 const state = {
@@ -61,7 +51,7 @@ const locked_mode_types = { 'normal': 'normal', 'easy': 'easy', 'easiest': 'easi
 const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
 
 
-/*  ANOTHER ATTEMPT TO FIX "STart new game" button  */ 
+    // >>  Helpers  <<
 // helper for selected number area/box
     function updateResults(messageHtml) {
         if (resultBox) resultBox.innerHTML = messageHtml;
@@ -69,21 +59,27 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
 
     // Helper ofr enable / disable + highlight the lucky button
     function updateLuckyButtonState() {
-        const button_refresh_start = document.getElementById('random_number_button');
+        const button_refresh_start = document.getElementById("random_number_button");
         if (!button_refresh_start) return;
 
         const ready_for_new_game =  //
             state.selected !== null &&  // selected number
-            // userSelectedNumber !== null &&  // some number needs to be selected
             state.mode !== null &&  // mode needs to be selected / set
-            // gameMode !== null &&  // at least one mode selected (normal is by default)
             state.rolls < 10;  // needs to be below 10 spins
-            // totalRoundsPlayed < 10; // as game rules say 10 draws
 
-    button_refresh_start.disabled = !ready_for_new_game;  // button is disabled if not "readz_for_new_game"
-    button_refresh_start.classList.toggle('is-active', ready_for_new_game);
+        button_refresh_start.disabled = !ready_for_new_game;  // button disabled is equal to not "ready_for_new_game"
+        button_refresh_start.classList.toggle("is-active", ready_for_new_game);
     }
 
+    // returns 'ranNumPulled' random numbers 1..9 (no dupes)
+    function getRandomNumberPulls(ranNumPulled) {
+        const pulls = [];
+        while (pulls.length < ranNumPulled) {
+            const n = Math.floor(Math.random() * 9) + 1;
+            if (!pulls.includes(n)) pulls.push(n);
+        }
+        return pulls;
+    }
 
 // auto set state to active (radio is checked)
 function setActiveGameMode(newGameMode) {
