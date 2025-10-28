@@ -12,9 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const resultBox = document.getElementById("display_results_box");
     const randomNumberButton = document.getElementById("random_number_button");
     
-    // number of 'chances' per game mode - 
-    const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
-
     // >>  Section after 10 spins  <<
     // new (old) section that is hidden and shows after rounds are over
     const postRound = document.getElementById("post_round_pane_showing_links_and_restart");
@@ -46,20 +43,22 @@ document.addEventListener("DOMContentLoaded", function() {
         return pulls;
     }
 
-/* adding game state (for normal for now)*/
+    // >>  Game State  <<
+/* adding game state (normal default)*/
 const state = {
-    mode: 'normal',
-    rolls: 0,
-    wins: 0,
-    selected: null,
-    modeLocked: false
+    mode: 'normal',  // normal is selscted by default but can be 'easy' and 'easiest'
+    rolls: 0,  // num. spins/rolls
+    wins: 0,  // number hits/wins/success guess
+    selected: null,  // nothing is selected for lucky number
+    modeLocked: false  // once 1st roll happnes, mode cannot be changed
 };
 
-
-
-/*  */
+/* Mapping/list of available modes */
 const mode_types = { 'normal': 'normal', 'easy': 'easy', 'easiest': 'easiest' };
 const locked_mode_types = { 'normal': 'normal', 'easy': 'easy', 'easiest': 'easiest' };
+
+// number for 'chances' per game mode 
+const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
 
 
 /*  ANOTHER ATTEMPT TO FIX "STart new game" button  */ 
