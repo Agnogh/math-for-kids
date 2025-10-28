@@ -1,13 +1,13 @@
 
 
 let userSelectedNumber = null; // will store clicked number
-
-
 /* this is for win and lose count */
 let inGameWinCount = 0;
 let inGameLoseCount = 0;
 
+// >> boot when DOM is ready <<
 document.addEventListener("DOMContentLoaded", function() {
+    // >> DOM references <<
     const numberButtons = document.querySelectorAll("#buttons button");  // creating constant variable, looking inside all elements with IDs button
     const selectedNumberBox = document.querySelector("#selectedNumberBox p");  // constant checking all elements with keyID "selectedBumberBox"
     const resultBox = document.getElementById("display_results_box");
@@ -16,17 +16,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
 
     // adding now for new (old) section that is hidden and shows after rounds are over
-    const postRound = document.getElementById('post_round_pane_showing_links_and_restart');
+    const postRound = document.getElementById("post_round_pane_showing_links_and_restart");
     
     // trying to fix the reset button
     // const resetButton = document.getElementById('reset_button');  // for reset buttonafter 10 rounds
-    const resetButton = postRound?.querySelector('#reset_button');
+    const resetButton = postRound?.querySelector("#reset_button");
 
     // trying to fix the reset button
     // const leaderboardLink = document.getElementById('leaderboard_link');  // leaderboard
-    const leaderboardLink = postRound?.querySelector('#leaderboard_link');
+    const leaderboardLink = postRound?.querySelector("#leaderboard_link");
 
-    const counterLine = document.getElementById('counter_line');  // 
+    const counterLine = document.getElementById("counter_line");  // 
+    // game modes
+    const modeInputs = document.querySelectorAll('#modes input[name="game_mode"]');
 
     // CHECK
     // const b = document.getElementById('random_number_button'); b
@@ -55,8 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
 /* adding game state (for normal for now)*/
 const state = { mode: 'normal', rolls: 0, wins: 0, selected: null, modeLocked: false };
 
-/* game modes */
-const modeInputs = document.querySelectorAll('#modes input[name="game_mode"]');
+
 
 /*  */
 const mode_types = { 'normal': 'normal', 'easy': 'easy', 'easiest': 'easiest' };
