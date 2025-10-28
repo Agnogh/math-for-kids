@@ -9,37 +9,29 @@ let inGameLoseCount = 0;
 document.addEventListener("DOMContentLoaded", function() {
     // >> DOM references <<
     const numberButtons = document.querySelectorAll("#buttons button");  // creating constant variable, looking inside all elements with IDs button
-    const selectedNumberBox = document.querySelector("#selectedNumberBox p");  // constant checking all elements with keyID "selectedBumberBox"
     const resultBox = document.getElementById("display_results_box");
     const randomNumberButton = document.getElementById("random_number_button");
-    // number of 'chances' per game mode
+    
+    // number of 'chances' per game mode - 
     const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
 
-    // adding now for new (old) section that is hidden and shows after rounds are over
+    // >>  Section after 10 spins  <<
+    // new (old) section that is hidden and shows after rounds are over
     const postRound = document.getElementById("post_round_pane_showing_links_and_restart");
-    
-    // trying to fix the reset button
-    // const resetButton = document.getElementById('reset_button');  // for reset buttonafter 10 rounds
+    // fix of the reset button
     const resetButton = postRound?.querySelector("#reset_button");
-
-    // trying to fix the reset button
-    // const leaderboardLink = document.getElementById('leaderboard_link');  // leaderboard
+    // leaderboard
     const leaderboardLink = postRound?.querySelector("#leaderboard_link");
-
     const counterLine = document.getElementById("counter_line");  // 
+ 
     // game modes
     const modeInputs = document.querySelectorAll('#modes input[name="game_mode"]');
 
-    // CHECK
-    // const b = document.getElementById('random_number_button'); b
-    // document.getElementById('random_number_button')?.disabled
-    // getComputedStyle(document.getElementById('random_number_button')).pointerEvents
-    
 
-
-    //  same button for but in new section 
-
-    if (postRound) postRound.hidden = true;
+    // >>  Starting UI State  <<
+    /*  same button for but in new section (between comman button
+    for roll and game stats) */
+    if (postRound) postRound.hidden = true;  // do not show game stats
     if (resetButton) resetButton.disabled = true;  // set button to not-clickable
     if (leaderboardLink) leaderboardLink.hidden = true;  // do not show link to eladerboard by default
     if (counterLine) counterLine.textContent = '0/0 • 0.0%';
@@ -55,7 +47,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 /* adding game state (for normal for now)*/
-const state = { mode: 'normal', rolls: 0, wins: 0, selected: null, modeLocked: false };
+const state = {
+    mode: 'normal',
+    rolls: 0,
+    wins: 0,
+    selected: null,
+    modeLocked: false
+};
 
 
 
