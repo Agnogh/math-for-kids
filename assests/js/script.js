@@ -81,37 +81,40 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
         return pulls;
     }
 
+    // >>  Mode Selection  <<
 // auto set state to active (radio is checked)
-function setActiveGameMode(newGameMode) {
-  state.mode = newGameMode; // 'normal' | 'easy' | 'easiest'
-    modeInputs.forEach(input => {
-        input.checked = (input.value === locked_mode_types[newGameMode]);
-    });
-    updateLuckyButtonState();
-}
-
-// this is when 1st roll happens to block chagne + revert radio btn
-modeInputs.forEach(input => {
-  input.addEventListener('change', () => {
-    if (state.rolls > 0) {
-      // Locked- revert UI back to the current mode
-      const currentRadioValue = locked_mode_types[state.mode];
-      modeInputs.forEach(radioBTN => { radioBTN.checked = (radioBTN.value === currentRadioValue); });
-      // tell the user inline alert)
-      resultBox.textContent = 'Mode is locked after first roll.';
-      return;
+    function setActiveGameMode(newGameMode) {
+        state.mode = newGameMode; // 'normal' | 'easy' | 'easiest'
+        modeInputs.forEach(input => {
+            input.checked = (input.value === locked_mode_types[newGameMode]);
+        });
+        updateLuckyButtonState();
     }
 
-    // ok to switch
-    const mapped = mode_types[input.value]; // 'normal' | 'easy' | 'easiest'
-    setActiveGameMode(mapped);
-  });
+// this is when 1st roll happens to block chagne + revert radio btn
+    modeInputs.forEach(input => {
+    input.addEventListener('change', () => {
+        if (state.rolls > 0) {
+        // Locked- revert UI back to the current mode
+        const currentRadioValue = locked_mode_types[state.mode];
+        modeInputs.forEach(radioBTN => { 
+            radioBTN.checked = (radioBTN.value === currentRadioValue);
+        });
+        // tell the user inline alert)
+        resultBox.textContent = 'Mode is locked after first roll.';
+        return;
+        }
+
+    // switch between game modes
+        const mapped = mode_types[input.value]; // 'normal' | 'easy' | 'easiest'
+        setActiveGameMode(mapped);
+    });
 });
 
     // Start mode when loaded 
     setActiveGameMode(state.mode);
 
-    /* rule for user selecting number */ 
+    // >>  User selected number  << 
     numberButtons.forEach(button => {     // for each eleemnt inside 'numberButtons' run
         button.addEventListener("click", function () {      // add event listener to button when "clicked" call / run callback function
         // This should reset all buttons
@@ -123,13 +126,13 @@ modeInputs.forEach(input => {
             button.style.backgroundColor = "green";     // using properties backgroundColor to change when selected
             button.style.color = "red";     // using properties color to change the style fo button to red
     
-            // storing picked number as number (numeric9)
+        // storing picked number as number (numeric)
             userSelectedNumber = Number(button.textContent);
+            state.selected = Number(button.dataset.value);
 
-        // Show alert for selčected number by user
+        // Show alert for selected number by user
             alert(`You selected number ${userSelectedNumber}. Lady Luck will be with you !`);
             
-            state.selected = Number(button.dataset.value);
             updateLuckyButtonState();
         });
     });
