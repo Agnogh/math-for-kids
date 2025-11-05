@@ -483,7 +483,13 @@ main {
 */
 
 
-#random_number_button{
+#random_number_button {
+  transition:
+    box-shadow 160ms ease,
+    filter 160ms ease,
+    transform 120ms ease;
+  isolation: isolate;
+
   min-width: 200px;  /* I MIGHT REMOVE THIS TO AUTO-WRAP*/
   padding: 5% 5%;  /* percentages work better that 'px' */
   border-radius: 25%; /* nice round edges */
@@ -496,6 +502,23 @@ main {
   appearance:none;
   -webkit-appearance:none; /* found this on internet for webKit browsing for removal of styling specific to platform  */
   font: inherit;
+}
+
+
+#random_number_button:hover,
+#random_number_button:focus-visible {
+  box-shadow:
+    0 0 8px rgba(173, 243, 9, 0.6),
+    0 0 18px rgba(173, 243, 9, 0.5),
+    0 0 26px rgba(240, 101, 2, 0.45),
+    0 6px 16px rgba(240, 101, 2, 0.4);
+  outline: 2px solid rgba(5, 215, 243, 0.55);
+  outline-offset: 2px;
+  filter: brightness(1.08);
+}
+
+#random_number_button:active {
+  transform: translateY(1px) scale(0.985);
 }
 
 /* need to drop this as I decided to go with fotter results showing up
