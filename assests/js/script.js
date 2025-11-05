@@ -119,7 +119,7 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
         button.addEventListener("click", function () {  // add event listener to button when "clicked" call / run callback function
         //  this will allow click, but prevent change in UI
             if (state.rolls >= 10) {
-                alert("Game is over. Please start a new game anf then select you lucky number.");
+                alert("Game is over. Please start a new game and then select your lucky number.");
                 return;  // do not change colors or selection
             }
             // This should reset all buttons
@@ -190,7 +190,7 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
         // Update selectedNumberBox with full message and addon now ratio of wins and loses
         // Fixing the clickable button
         const message = (ranNumPulled === 1)
-            ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}%`
+            ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}`
             : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}].`;
 
         updateResults(message);
