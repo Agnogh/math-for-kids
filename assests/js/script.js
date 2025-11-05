@@ -213,34 +213,39 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
         }
     });
 
-    // Reset listener  
+    // >>  Reset listener <<  
     if (resetButton) {
         resetButton.addEventListener("click", () => {
             console.log('[reset] clicked');  // added to see if this is even operational
             resultBox.textContent = '🔄 Reset clicked – starting a new game...';  // alert('Reset clicked')
         // setting rules `normal` game mode, no wins or any rolls, nothing selected
-        state.mode = "normal";
-        state.rolls = 0;
-        state.wins = 0;
-        state.selected = null;
+            state.mode = "normal";
+            state.rolls = 0;
+            state.wins = 0;
+            state.selected = null;
 
-        inGameWinCount = 0;
-        inGameLoseCount = 0;
-        userSelectedNumber = null;
+            inGameWinCount = 0;
+            inGameLoseCount = 0;
+            userSelectedNumber = null;
 
-        numberButtons.forEach(btn => { btn.style.backgroundColor = ""; btn.style.color = ""; });
+            numberButtons.forEach(btn => {
+                btn.style.backgroundColor = "";  // revert to original
+                btn.style.color = "";  // revert to default colour
+            });
+        
+        // reset text and round counter 
+            resultBox.textContent = "";
+            if (resultBox) resultBox.textContent = "New game started — pick number and select `I feel lucky`!";
+            if (counterLine) counterLine.textContent = "0/0 • 0.0%";
 
-        resultBox.textContent = "";
-        if (resultBox) resultBox.textContent = "New game started — pick number and select `I feel lucky`!";
-        if (counterLine) counterLine.textContent = "0/0 • 0.0%";
+            randomNumberButton.disabled = false;
+            resetButton.disabled = true;
+            if (leaderboardLink) leaderboardLink.hidden = true;
+            // and now hide it again
+            if (postRound) postRound.hidden = true; 
 
-        randomNumberButton.disabled = false;
-        resetButton.disabled = true;
-        if (leaderboardLink) leaderboardLink.hidden = true;
-        // and now hide it again
-        if (postRound) postRound.hidden = true; 
-
-        setActiveGameMode("normal");        
-    });
-  }
+            setActiveGameMode("normal");
+            updateLuckyButtonState();        
+        });
+    }
 });
