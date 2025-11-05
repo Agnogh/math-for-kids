@@ -538,15 +538,22 @@ until conditions are met (displays links that were previously on footer */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 12px;
+  /*padding: 8px 12px;*/
+  padding: clamp(6px, 1.2vw, 12px) clamp(10px, 2vw, 16px);
   border-radius: 10px;
   background: rgba(0,0,0,0.35);
   color: #adf309;
+  
+  font: inherit;  /* to make sure font will match */
   font-weight: 700;
+  
   text-decoration: none;
   border: 2px double #adf309;
   box-shadow: 4px 4px 8px #f06502;
   cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 
