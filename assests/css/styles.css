@@ -514,6 +514,10 @@ main {
     0 6px 16px rgba(240, 101, 2, 0.4);
   outline: 2px solid rgba(5, 215, 243, 0.55);
   outline-offset: 2px;
+
+}
+
+#random_number_button:hover { 
   filter: brightness(1.08);
 }
 
