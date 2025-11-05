@@ -143,7 +143,7 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
     randomNumberButton.addEventListener("click", function () {
     // limit to 10 rolls
         if (state.rolls >= 10) {
-            resultBox.textContent = "Game over, 10 rolls used up. test, test, test (change later)";
+            resultBox.textContent = `Game over, 10 rolls used up. Final score after 10 rounds: ${inGameWinCount}/10.`;
             randomNumberButton.disabled = true;  
             randomNumberButton.classList.remove('is-active');  // gray out visualy only
             return;  // still no incerase rolls as gameplay is still 10 rolls
@@ -179,14 +179,14 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
         const luckFactorIndicator = ((inGameWinCount / totalGamesPlayed) * 100).toFixed(1);  // new constant that is assigned calculated value so percentage of win is shown/displayed
                 
         if (counterLine) {
-            counterLine.textContent = `${inGameWinCount}/${totalGamesPlayed} • ${luckFactorIndicator}%`;
+            counterLine.textContent = `Luck index: ${inGameWinCount}/${totalGamesPlayed} • ${luckFactorIndicator}%`;
             }   
 
         // Update selectedNumberBox with full message and addon now ratio of wins and loses
         // Fixing the clickable button
         const message = (ranNumPulled === 1)
-            ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}. <br> Your Luck index: ${luckFactorIndicator}%`
-            : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]. <br> Your Luck index: ${luckFactorIndicator}%`;
+            ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}%`
+            : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]`;
 
         updateResults(message);
 
@@ -200,7 +200,7 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
 
             updateLuckyButtonState();
 
-            resultBox.textContent += `Final score after 10 rounds: ${inGameWinCount}/10.`;
+            resultBox.textContent += ` Final score after 10 rounds: ${inGameWinCount}/10.`;
 
         const entry = {
             wins: inGameWinCount,  // number of wins in game
