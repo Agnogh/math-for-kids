@@ -116,8 +116,13 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
 
     // >>  User selected number  << 
     numberButtons.forEach(button => {     // for each eleemnt inside 'numberButtons' run
-        button.addEventListener("click", function () {      // add event listener to button when "clicked" call / run callback function
-        // This should reset all buttons
+        button.addEventListener("click", function () {  // add event listener to button when "clicked" call / run callback function
+        //  this will allow click, but prevent change in UI
+            if (state.rolls >= 10) {
+                alert("Game is over. Please start a new game anf then select you lucky number.");
+                return;  // do not change colors or selection
+            }
+            // This should reset all buttons
             numberButtons.forEach(btn => {
                 btn.style.backgroundColor = "";     // resets color style for background to defoult 
                 btn.style.color = "";       // resets to default colour of the button
@@ -186,7 +191,7 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
         // Fixing the clickable button
         const message = (ranNumPulled === 1)
             ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}%`
-            : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]`;
+            : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}].`;
 
         updateResults(message);
 
