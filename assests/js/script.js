@@ -65,7 +65,7 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
         const ready_for_new_game =  //
             state.selected !== null &&  // selected number
             state.mode !== null &&  // mode needs to be selected / set
-            state.rolls < 10;  // needs to be below 10 spins
+            state.rolls < 11;  // increased to 11 for user alert (game is still 10 spins))
 
         button_refresh_start.disabled = !ready_for_new_game;  // button disabled is equal to not "ready_for_new_game"
         button_refresh_start.classList.toggle("is-active", ready_for_new_game);
@@ -143,8 +143,10 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
     randomNumberButton.addEventListener("click", function () {
     // limit to 10 rolls
         if (state.rolls >= 10) {
-            resultBox.textContent = "Game over, 10 rolls used up.";
-            return;
+            resultBox.textContent = "Game over, 10 rolls used up. test, test, test (change later)";
+            randomNumberButton.disabled = true;  
+            randomNumberButton.classList.remove('is-active');  // gray out visualy only
+            return;  // still no incerase rolls as gameplay is still 10 rolls
         }
     // adding heads up when user doesn't follow game instructions
         if (userSelectedNumber === null) {  // if user didn't make selection
@@ -190,7 +192,7 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
 
         if (state.rolls === 10) {
         // freeze UI until 10 rounds are up
-            if (randomNumberButton) randomNumberButton.disabled = true;
+            // if (randomNumberButton) randomNumberButton.disabled = true; need to drop this as we do not want it disabled
             if (resetButton) resetButton.disabled = false;
             if (leaderboardLink) leaderboardLink.hidden = false;
             // for revealing previously hidden button when above 10 rolls are met
@@ -233,15 +235,14 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
                 btn.style.color = "";  // revert to default colour
             });
         
-        // reset text and round counter 
-            resultBox.textContent = "";
-            if (resultBox) resultBox.textContent = "New game started — pick number and select `I feel lucky`!";
+        // reset text and round counter
+            resultBox.textContent = "New game started — pick number and select `I feel lucky`!";
             if (counterLine) counterLine.textContent = "0/0 • 0.0%";
 
             randomNumberButton.disabled = false;
             resetButton.disabled = true;
             if (leaderboardLink) leaderboardLink.hidden = true;
-            // and now hide it again
+        // and now hide it again
             if (postRound) postRound.hidden = true; 
 
             setActiveGameMode("normal");
