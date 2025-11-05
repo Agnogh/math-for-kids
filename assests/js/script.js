@@ -118,7 +118,7 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
     numberButtons.forEach(button => {     // for each eleemnt inside 'numberButtons' run
         button.addEventListener("click", function () {      // add event listener to button when "clicked" call / run callback function
         // This should reset all buttons
-            numberButtons.forEach((btn) => {
+            numberButtons.forEach(btn => {
                 btn.style.backgroundColor = "";     // resets color style for background to defoult 
                 btn.style.color = "";       // resets to default colour of the button
             });
@@ -138,15 +138,15 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
     });
 
 
-
+    // >>  Game Logic - "I feel lucky"  <<
     // rule for randomly created number with 'I feel lucky number' button clicked
     randomNumberButton.addEventListener("click", function () {
-        // limit to 10 rolls
+    // limit to 10 rolls
         if (state.rolls >= 10) {
             resultBox.textContent = "Game over, 10 rolls used up.";
             return;
         }
-        // adding heads up when user doesn't follow game instructions
+    // adding heads up when user doesn't follow game instructions
         if (userSelectedNumber === null) {  // if user didn't make selection
             resultBox.textContent = "Pick number first";  // populate textbox with explanations
             return;  // then stop
@@ -173,8 +173,8 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
             : `😔 No match. Your picked ${userSelectedNumber} vs draws [${pulls.join(', ')}].`;  // for few random numbers
         }
 
-        const totalGamesPlayed = inGameWinCount + inGameLoseCount;      // new constant variable that is assigned sum of both win and loses
-        const luckFactorIndicator = ((inGameWinCount / totalGamesPlayed) * 100 ).toFixed(1);     // new constant that is assigned calculated value so percentage of win is shown/displayed
+        const totalGamesPlayed = inGameWinCount + inGameLoseCount;  // new constant variable that is assigned sum of both win and loses
+        const luckFactorIndicator = ((inGameWinCount / totalGamesPlayed) * 100).toFixed(1);  // new constant that is assigned calculated value so percentage of win is shown/displayed
                 
         if (counterLine) {
             counterLine.textContent = `${inGameWinCount}/${totalGamesPlayed} • ${luckFactorIndicator}%`;
@@ -186,7 +186,7 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
             ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}. <br> Your Luck index: ${luckFactorIndicator}%`
             : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}]. <br> Your Luck index: ${luckFactorIndicator}%`;
 
-            updateResults(message);
+        updateResults(message);
 
         if (state.rolls === 10) {
         // freeze UI until 10 rounds are up
@@ -196,9 +196,9 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
             // for revealing previously hidden button when above 10 rolls are met
             if (postRound) postRound.hidden = false;
 
-            updateLuckyButtonState()
+            updateLuckyButtonState();
 
-        resultBox.textContent += `Final score after 10 rounds: ${inGameWinCount}/10.`;
+            resultBox.textContent += `Final score after 10 rounds: ${inGameWinCount}/10.`;
 
         const entry = {
             wins: inGameWinCount,  // number of wins in game
@@ -210,8 +210,8 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
         const list = JSON.parse(localStorage.getItem(localStorageGame) || '[]');  // read saved scor
         list.push(entry);
         localStorage.setItem(localStorageGame, JSON.stringify(list));  // JSON.stringfy from local save back to string 
-    }
-        });
+        }
+    });
 
     // Reset listener  
     if (resetButton) {
