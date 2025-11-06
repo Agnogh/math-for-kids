@@ -190,7 +190,7 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
         // Update selectedNumberBox with full message and addon now ratio of wins and loses
         // Fixing the clickable button
         const message = (ranNumPulled === 1)
-            ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}`
+            ? `Selected number ${userSelectedNumber} VS Random number ${pulls[0]}.`
             : `Selected number ${userSelectedNumber} VS Random numbers [${pulls.join(', ')}].`;
 
         updateResults(message);
