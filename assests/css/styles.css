@@ -177,6 +177,29 @@ main {
 
 }
 
+
+/* styling for title of the game rule */
+#game_rules_title {
+  margin: 6px auto 10px;
+  padding: 6px 12px;
+  display: inline-block;
+  font-weight: 800;
+  color: #adf309;
+  background: rgba(18,31,26,0.6);
+  border: 2px double #adf309;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px #f06502;
+  text-align: center;
+}
+
+/* to keep section nicely centered and not edge-to-edge */
+#welcome_pane_main_section {
+  max-width: 900px;  /* keeps it from going too wide */
+  margin: 16% auto 12px;  /* centered */
+  padding: clamp(18px, 3vw, 28px);
+}
+
+
 #game_rules_order_list {
   margin: 0.1rem 0 0;     /* space above/below */
   padding-left: 0.5rem;  /* indent numbers a litlte bit */
