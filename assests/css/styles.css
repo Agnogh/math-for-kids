@@ -750,6 +750,12 @@ button:disabled {
   max-height: 50px;
 }
 
+/* attempt to fix size mismatch between 'soc.med.' and 'star game' */
+#action_button_on_welcome_pane a {
+  min-width: clamp(180px, 36vw, 260px);
+  font-size: clamp(.95rem, 2.4vw, 1.05rem);
+  padding: clamp(8px, 1.6vw, 12px) clamp(14px, 2.6vw, 20px);
+}
 
 
 .action_button_on_leaderboard button {
@@ -923,6 +929,12 @@ footer.slightly_muted {
   backdrop-filter: blur(3px);
   box-shadow: 4px 4px 8px #b77314;
   border-style: double;
+}
+
+
+/* ATTEMPT trying to match social media icons with rest of the ui - EXPERIMENTAL */
+#social_media_section a {
+  width: 48px; height: 48px;
 }
 
 @media screen and (min-width: 400px) {
