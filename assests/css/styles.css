@@ -241,7 +241,8 @@ main {
 
 /* styling for title of the game rule */
 #game_rules_title {
-  margin: 6px auto 10px;
+  /*margin: 6px auto 10px; TRYING */
+  margin: 0 auto .5rem;
   padding: 6px 12px;
   display: inline-block;
   font-weight: 800;
