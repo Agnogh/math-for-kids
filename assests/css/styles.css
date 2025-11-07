@@ -177,6 +177,15 @@ main {
 
 }
 
+#game_rules_order_list {
+  margin: 0.1rem 0 0;     /* space above/below */
+  padding-left: 0.5rem;  /* indent numbers a litlte bit */
+}
+
+#game_rules_order_list li {
+  margin: .1rem 0;
+}
+
 /* header just for the leaderboard page */
 #leaderboard_header_section {
   position: fixed;
@@ -448,7 +457,7 @@ main {
   isolation: isolate; /* keep glow in top onyl */
 
   width: clamp(54px, 21vw, 84px);  /* experimentally addeed until it fits */
-  height: clamp(54px, 21vw, 44px);  /* experimekntally addeed until it fits */
+  height: clamp(54px, 21vw, 84px);  /* experimekntally addeed until it fits */
   border-radius: 50%;  /* some styling */
   border: 2px double #adf309;
   background: rgba(140, 238, 3, 0.6);
