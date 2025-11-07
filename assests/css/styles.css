@@ -5,7 +5,14 @@
 
 /* Base rule */
 * { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; }
+
+/* SCROLLABLE ISSUE L-R */
+html, body {
+  height: 100%;
+  margin: 0;
+  max-width: 100%; 
+  overflow-x: hidden;
+}
 
 
 /* general rule (aplpied to if nothing specific was called out*/
@@ -211,8 +218,25 @@ main {
     margin: 16% auto 12px;
 /*    margin: 10% auto; */
     box-shadow: 4px 4px 8px #f06502;
-
+    
+    border: 2px double #adf309;
+    border-radius: 12px;
 }
+
+#welcome_pane_main_section {
+  max-width: min(900px, 92vw);
+  margin: 72px auto 12px;                 /* clear the fixed header cleanly */
+  padding: clamp(16px, 4vw, 28px) clamp(16px, 4vw, 28px);
+}
+
+/** FIX SIDEWAY SCROLLING 
+/* to keep section nicely centered and not edge-to-edge 
+#welcome_pane_main_section {
+  max-width: 900px;   - commentkeeps it from going too wide 
+  margin: 16% auto 12px;   - comment centered 
+  padding: clamp(18px, 3vw, 28px);
+}
+*/
 
 
 /* styling for title of the game rule */
@@ -229,21 +253,14 @@ main {
   text-align: center;
 }
 
-/* to keep section nicely centered and not edge-to-edge */
-#welcome_pane_main_section {
-  max-width: 900px;  /* keeps it from going too wide */
-  margin: 16% auto 12px;  /* centered */
-  padding: clamp(18px, 3vw, 28px);
-}
-
 
 #game_rules_order_list {
-  margin: 0.1rem 0 0;     /* space above/below */
-  padding-left: 0.5rem;  /* indent numbers a litlte bit */
+  margin: 0.9rem 0 0;     /* space above/below */
+  padding-left: 0.9rem;  /* indent numbers a litlte bit */
 }
 
 #game_rules_order_list li {
-  margin: .1rem 0;
+  margin: .3rem 0;
 }
 
 /* header just for the leaderboard page */
