@@ -1,3 +1,8 @@
+/*TRYING TO FIX SCROLLING  */
+:root {
+  --header-h: 56px; --footer-h: 96px;
+}
+
 /* Base rule */
 * { box-sizing: border-box; }
 html, body { height: 100%; margin: 0; }
@@ -12,6 +17,16 @@ html, body { height: 100%; margin: 0; }
 /*    border-style: double;
     border-color: red;
     */
+}
+
+/* TRZING OT FIX SCROLLING */
+html, body {
+  height: 100%;
+}
+/* TRYING TO FIX SCROLLING */
+body {
+  min-height: 100svh;
+  overflow: hidden; /* prevent page scroll */
 }
 
 /* rule for entire body */
@@ -99,7 +114,29 @@ h1 {
   box-shadow: 4px 4px 8px #f06502;
   text-align: center;
 }
-  
+
+/* TRYING OT FIX SCROLLING */
+/* make footer fixed to bottom so layout is one screen */
+#game_page_footer {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  margin: 0;
+  border-radius: 16px;
+  height: var(--footer-h);
+  display: grid;
+  place-items: center;
+}
+
+/* TRYING OT FIX SCROLLING */
+/* give main exactly the remaining height between header and footer */
+main {
+  height: calc(100svh - var(--header-h) - var(--footer-h));
+  overflow: auto;                /* scrolls internally only if needed */
+  padding: 8px clamp(12px, 4vw, 24px) 12px; /* drop the big bottom padding */
+  gap: 12px;                     /* slightly tighter to fit small phones */
+}
+
+
 /* rules for main (containing "play area") */
 main {
     /* flex: 1; need to drop this as it is messing with UI */
@@ -752,6 +789,13 @@ button:disabled {
 
 /* attempt to fix size mismatch between 'soc.med.' and 'star game' */
 #action_button_on_welcome_pane a {
+  transition:
+    box-shadow 160ms ease,
+    filter 160ms ease,
+    transform 120ms ease,
+    outline-color 120ms ease;
+  position: relative;
+  isolation: isolate;
   min-width: clamp(180px, 36vw, 260px);
   font-size: clamp(.95rem, 2.4vw, 1.05rem);
   padding: clamp(8px, 1.6vw, 12px) clamp(14px, 2.6vw, 20px);
@@ -779,7 +823,21 @@ button:disabled {
 }
 
 /* buttons on Welcome and Leaderbaord when moving over */
+#action_button_on_welcome_pane a:hover {
+  filter: brightness(1.08);
+}
+
 #action_button_on_welcome_pane a:hover,
+#action_button_on_welcome_pane a:focus-visible {
+  box-shadow:
+    0 0 8px rgba(173,243,9,.6),
+    0 0 18px rgba(173,243,9,.5),
+    0 0 26px rgba(240,101,2,.45),
+    0 6px 16px rgba(240,101,2,.4);
+  outline: 2px solid rgba(5,215,243,.55);
+  outline-offset: 2px;
+}
+
 .action_button_on_leaderboard a:hover,
 .action_button_on_leaderboard button:hover {
   filter: brightness(1.08);
@@ -795,7 +853,10 @@ button:disabled {
   outline-offset: 2px;
 }
 
-#action_button_on_welcome_pane a:focus-visible,
+#action_button_on_welcome_pane a:focus-visible {
+  filter: brightness(1.08);
+}
+
 .action_button_on_leaderboard a:focus-visible,
 .action_button_on_leaderboard button:focus-visible {
   filter: brightness(1.1);
@@ -809,7 +870,11 @@ button:disabled {
 }
 
 /* for welvcome and leadebaord command buttons when pressed */
-#action_button_on_welcome_pane a:active,
+#action_button_on_welcome_pane a:active {
+  transform: translateY(1px) scale(.985);
+}
+
+
 .action_button_on_leaderboard a:active,
 .action_button_on_leaderboard button:active {
   transform: translateY(1px) scale(0.985);
@@ -909,6 +974,8 @@ footer.slightly_muted {
     text-align: center;
     display: flex;
     justify-content: space-evenly;
+    gap: 8px;
+    flex-wrap: wrap;  /* wrap on small phones */
     padding: 5px 5px;
     list-style-type: none;
     font-size: 100%;
@@ -918,8 +985,13 @@ footer.slightly_muted {
 
 #social_media_section a {
   display: inline-flex;
+  /* FOR NOW UNTIL I FIGURE OUT IF THIS SOLEVES PROBLEM
   width: 42px;
   height: 42px;
+  */
+  width: clamp(32px, 9vw, 44px);
+  height: clamp(32px, 9vw, 44px);
+
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -960,6 +1032,14 @@ footer.slightly_muted {
     body {
         font-size: 140%;
     }
+}
+
+/* TRYING TO FIX SCROLLING compress spacing a bit more EXPERIMENTAL */
+@media (max-height: 700px) {
+  #modes { gap: 6px; padding: 6px; }
+  #playing_area_box { padding: 8px 10px; }
+  #random_number_generator { padding: 8px 10px; }
+  #buttons { gap: 6px 10px; }
 }
 
 @media screen and (min-width: 1000px) {
