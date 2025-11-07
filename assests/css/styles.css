@@ -693,11 +693,12 @@ button:disabled {
 }
 
 /* for 'start new agme' to be disabled when tryong to click it */
+/* this is no longer used
 #post_round_actions button:disabled{
   opacity: .6;
   cursor: not-allowed;
 }
-
+*/
 
 #action_button_on_welcome_pane {
   width: 100%;
@@ -726,12 +727,69 @@ button:disabled {
   max-height: 50px;
 }
 
+
+
 .action_button_on_leaderboard button {
   font: inherit;  /* this is for fixing scaling issue */
   appearance: none;  /* avoids iOS/Android quirks */
   -webkit-appearance: none;
   font-weight: 700;  /* need to keep this as it doesn't remain from before*/
 }
+
+ 
+/* Neon glow fancy look for command buttons on welcome pane & leaderbaord*/
+#action_button_on_welcome_pane a,
+.action_button_on_leaderboard a,
+.action_button_on_leaderboard button {
+  transition:
+    box-shadow 160ms ease,
+    filter 160ms ease,
+    transform 120ms ease,
+    outline-color 120ms ease;
+  isolation: isolate; /* keep glow above neighbors */
+}
+
+/* buttons on Welcome and Leaderbaord when moving over */
+#action_button_on_welcome_pane a:hover,
+.action_button_on_leaderboard a:hover,
+.action_button_on_leaderboard button:hover {
+  filter: brightness(1.08);
+  box-shadow:
+    0 0 6px rgba(173, 243, 9, 0.55),
+    0 0 14px rgba(173, 243, 9, 0.45),
+    0 0 22px rgba(240, 101, 2, 0.35),
+    0 4px 12px rgba(240, 101, 2, 0.35);
+  text-shadow:
+    0 0 2px rgba(173, 243, 9, 0.9),
+    0 0 6px rgba(173, 243, 9, 0.6);
+  outline: 2px solid rgba(5, 215, 243, 0.45);
+  outline-offset: 2px;
+}
+
+#action_button_on_welcome_pane a:focus-visible,
+.action_button_on_leaderboard a:focus-visible,
+.action_button_on_leaderboard button:focus-visible {
+  filter: brightness(1.1);
+  box-shadow:
+    0 0 8px rgba(173, 243, 9, 0.65),
+    0 0 18px rgba(173, 243, 9, 0.5),
+    0 0 28px rgba(240, 101, 2, 0.5),
+    0 6px 16px rgba(240, 101, 2, 0.4);
+  outline: 3px solid rgba(5, 215, 243, 0.7);
+  outline-offset: 3px;
+}
+
+/* for welvcome and leadebaord command buttons when pressed */
+#action_button_on_welcome_pane a:active,
+.action_button_on_leaderboard a:active,
+.action_button_on_leaderboard button:active {
+  transform: translateY(1px) scale(0.985);
+  box-shadow:
+    0 0 4px rgba(173, 243, 9, 0.5),
+    0 0 12px rgba(240, 101, 2, 0.35),
+    0 2px 8px rgba(240, 101, 2, 0.35);
+}
+
 
 p {
     /* background-color: yellow; need to get rid of this as it is messing with my styling*/
