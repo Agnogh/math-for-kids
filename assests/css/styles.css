@@ -1054,11 +1054,52 @@ footer.slightly_muted {
 
 /* TRYING TO FIX SCROLLING compress spacing a bit more EXPERIMENTAL */
 @media (max-height: 700px) {
+  main {
+    padding: 8px clamp(10px, 4vw, 20px) 56px;
+    gap: 10px; 
+  }
   #modes { gap: 6px; padding: 6px; }
-  #playing_area_box { padding: 8px 10px; }
-  #random_number_generator { padding: 8px 10px; }
-  #buttons { gap: 6px 10px; }
+  #playing_area_box {
+    padding: 8px 10px;
+  }
+
+  #title_of_playing_area_box {
+    margin: 2px 0 6px;
+  }
+/* to help with nuimber button shrinking */
+  #buttons {
+    gap: 6px 10px;
+  }
+  #buttons button {
+    width: clamp(46px, 18vw, 70px);
+    height: clamp(46px, 18vw, 70px);
+    font-size: clamp(.9rem, 4.4vw, 1.2rem);
+  }
+
+    /* tighten lucky button block */
+  #random_number_generator {
+    padding: 8px 10px;
+  }
+  #random_number_button {
+      padding: 10px 14px; 
+      min-width: 160px;
+      border-radius: 14px;
+    }
+
+  /* compact footer */
+  #game_page_footer {
+    padding: 6px 10px;
+    border-radius: 14px;
+  }
+  #display_results_box {
+    margin: 0 0 4px;
+    padding: 2px 6px;
+  }
+  #counter_line {
+    margin: 0;
+  }
 }
+
 
 @media screen and (min-width: 1000px) {
     body {
