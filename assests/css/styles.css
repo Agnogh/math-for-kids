@@ -292,6 +292,8 @@ main {
   text-decoration: none;
 }
 
+
+
 /* Main content: padding under fixed header + centered column */
 #leaderboard_main_section {
   padding-top: 56px;  /* to matches hedaer height */
@@ -475,7 +477,15 @@ main {
   border-radius: 20px; /* experimantly added to have best visual IMO */
   display: inline-block;
   box-shadow: 4px 4px 8px #f06502;  /* to 'overpower' red shadow from 'p' element */
+/* PLAYING AROUND - REMOVE AFTER CONFIRMING
+  display: block;
+  margin: 4px auto 6px;
+  padding: 6px 10px;
+  max-width: max-content;
+  text-align: center
+*/
 }
+
 
 /* removing this for now but keeping the code in case new style doesn't adjust
 .btn_1, .btn_2, .btn_3, .btn_4, .btn_5, .btn_6, .btn_7, .btn_8, .btn_9 {
