@@ -68,7 +68,7 @@ header {
   color: #adf309;
   box-shadow: 4px 4px 8px #f06502;
   border-style: double;
-  padding-top: 3%;
+  /*padding-top: 3%;  hope this fixes alignment of page title */
   height: 56px;
 }
 
