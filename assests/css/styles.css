@@ -934,24 +934,37 @@ footer {
 }
 
 #footer_on_welcome_pane {
-    margin-top: 24px;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 5px 5px;
-    list-style-type: none;
+  /* help with resiying with scaling */
+  font-size: clamp(12px, 1.8vw, 18px);
+  
+  margin-top: 24px;
+  text-align: center;
+  display: flex;
+  /* justify-content: space-evenly; SOC MED SCALING  */
+  justify-content: center;
+  /* padding: 5px 5px; SOC MED SCALING */
+  padding: 0.4em 0.6em;
+  list-style-type: none;
 
-    left: 0; right: 0; bottom: 0;
-    box-shadow: 4px 4px 8px #f06502;
-    height: 64px;
-    align-items: center;
-    left: 0; right: 0; bottom: 0;
+  left: 0; right: 0; bottom: 0;
+  box-shadow: 4px 4px 8px #f06502;
+  /*height: 64px; SOC MED SCALING */
+  min-height: 3.2em;
+  /*SOC MED SCALING */
+  gap: 0.6em;
+
+  min-height: 3.2em;
+  align-items: center;
+  left: 0; right: 0; bottom: 0;
     
 }
 
 /* Footer on leaderboard (non-fixed so long tables can scroll naturally) 
    I might CHANGE FROM DESCRIPTION TO SOCIAL MEDIA */
 footer.slightly_muted {
+  /* SOC MED SCALING*/
+  font-size: clamp(12px, 1.7vw, 18px);
+
   margin: 16px auto 12px;  /* adjsuted to match */
   padding: 2% 5% 5%;  /* to improve spacing (I MIGHT NEED TO GO WITh PX % PX)*/
   text-align: center;
@@ -1014,11 +1027,16 @@ footer.slightly_muted {
     flex-wrap: wrap;  /* wrap on small phones */
     
     flex-wrap: nowrap;  /*maybe I jsut drop entirely, but going with this*/
-    gap: 6px;  /* experimental - needed for smaller device and large number of Sic.med */
+    /* gap: 6px;  /* experimental - needed for smaller device and large number of Sic.med */
+    gap: 0.4em; /* gpoing with em as it is difficult to scale with px */
     justify-content: center;  /* needed so we have better UI on smalld evices (maybe I drop one social media */
 
-    padding: 5px 5px;
+    /*padding: 5px 5px; forgot to comment this out */
     list-style-type: none;
+    /* SOC MEDIA SCALING (will be transfered to a elemnt */
+    align-items: center;
+    flex-wrap: nowrap;  
+
     font-size: 100%;
     padding: 0%;
     box-shadow: 4px 4px 8px #f06502;
@@ -1030,8 +1048,16 @@ footer.slightly_muted {
   width: 42px;
   height: 42px;
   */
+  
+  /* trying to fix scaling SOC MEDIA SACLING
   width: clamp(32px, 9vw, 44px);
   height: clamp(32px, 9vw, 44px);
+  */
+
+  width: 2.4em;
+  height: 2.4em;
+  font-size: 1.3em;
+  line-height: 1;
 
   border-radius: 10px;
   align-items: center;
@@ -1042,6 +1068,8 @@ footer.slightly_muted {
   backdrop-filter: blur(3px);
   box-shadow: 4px 4px 8px #b77314;
   border-style: double;
+
+  border-radius: 10px;
 }
 
 
