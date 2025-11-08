@@ -958,6 +958,13 @@ footer.slightly_muted {
     padding: 5%;
 }
 
+/* To make 'reset' button respons better */
+#reset_button{
+  min-width: clamp(200px, 44vw, 320px);
+  padding: clamp(10px, 2.2vw, 14px) clamp(16px, 3.2vw, 22px);
+  font-size: clamp(.95rem, 2.6vw, 1.15rem);
+}
+
 /*footer for game page (as keyID is suggesing)*/
 #game_page_footer{
   margin: 6px 0 10px;  /* MIGHT NEED A BIT ADJUSTMENT LATER ON */
