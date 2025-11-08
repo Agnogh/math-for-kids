@@ -1164,6 +1164,21 @@ footer.slightly_muted {
   }
 }
 
+/*Experimental for 'game button' until I sort them for all trasholds*/ 
+@media (min-width: 768px) {
+  #action_button_on_welcome_pane a {
+    font-size: 1.15rem;  /* text bigger */
+    padding: 14px 22px;  /* roomier */
+    min-width: 220px;  /* wider button */
+    border-radius: 14px;  /* slightly rounder to match scale */
+  }
+}
+
+@media screen and (min-width: 768px) {
+    #buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 @media screen and (min-width: 1000px) {
     body {
@@ -1174,16 +1189,12 @@ footer.slightly_muted {
       width: 42px;
       height: 42px;
     }
-}
 
-@media screen and (min-width: 1200px) {
-    body {
-        font-size: 220%;
-        }
-}
-@media screen and (min-width: 768px) {
-    #buttons {
-        grid-template-columns: repeat(3, 1fr);
+    #action_button_on_welcome_pane a {
+      font-size: 1.65rem;  /* text bigger */
+      padding: 29px 25px;  /* roomier */
+      min-width: 240px;  /* wider button */
+      border-radius: 26px;  /* slightly rounder to match scale */
     }
 }
 
@@ -1192,3 +1203,20 @@ footer.slightly_muted {
         grid-template-columns: repeat(10, 1fr);
     }
 }
+
+@media screen and (min-width: 1200px) {
+    body {
+      font-size: 220%;
+      }
+
+    #action_button_on_welcome_pane a {
+      font-size: 1.95rem;  /* text bigger */
+      padding: 33px 29px;  /* roomier */
+      min-width: 240px;  /* wider button */
+      border-radius: 26px;  /* slightly rounder to match scale */
+    }
+
+}
+
+
+
