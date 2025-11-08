@@ -1008,9 +1008,15 @@ footer.slightly_muted {
 #social_media_section {
     text-align: center;
     display: flex;
+    /* TRYING TO RESOLVE SOCIAL MEDIA WRAP
     justify-content: space-evenly;
     gap: 8px;
     flex-wrap: wrap;  /* wrap on small phones */
+    
+    flex-wrap: nowrap;  /*maybe I jsut drop entirely, but going with this*/
+    gap: 6px;  /* experimental - needed for smaller device and large number of Sic.med */
+    justify-content: center;  /* needed so we have better UI on smalld evices (maybe I drop one social media */
+
     padding: 5px 5px;
     list-style-type: none;
     font-size: 100%;
@@ -1041,12 +1047,19 @@ footer.slightly_muted {
 
 /* ATTEMPT trying to match social media icons with rest of the ui - EXPERIMENTAL */
 #social_media_section a {
-  width: 48px; height: 48px;
+  /* decreasing for smaller device */
+  width: 33px;
+  height: 33px;
 }
 
 @media screen and (min-width: 400px) {
     body {
         font-size: 120%;
+    }
+
+    #social_media_section a {
+      width: 36px;
+      height: 36px;
     }
 }
 
@@ -1067,6 +1080,12 @@ footer.slightly_muted {
     body {
         font-size: 140%;
     }
+
+    #social_media_section a {
+      width: 40px;
+      height: 40px;
+    }
+
 }
 
 /* TRYING TO FIX SCROLLING compress spacing a bit more EXPERIMENTAL */
@@ -1121,6 +1140,11 @@ footer.slightly_muted {
 @media screen and (min-width: 1000px) {
     body {
         font-size: 170%;
+    }
+
+    #social_media_section a {
+      width: 42px;
+      height: 42px;
     }
 }
 
