@@ -385,6 +385,8 @@ main{
   padding: 10px 12px;
   border-style: double;
   border-color: yellowgreen;
+/* trimms bottom space*/
+  padding-block: 8px 10px; 
 }
 
 /* BUTTON RESIZING/SCALING - Trim vertical gaps */
@@ -424,11 +426,18 @@ main{
 }
 
 #number_selector_box {
+/*
     width: fit-content;
     height: fit-content;
     display: flex; 
     justify-content: center;
     margin: 0 auto;
+*/
+    /* POPULATING ISSUE */
+  display: grid;  /* avoids flex stretching */
+  place-items: center;  /* grid sits cenetred */
+  margin: 0;  /* remov extra margin */
+  padding: 0;  /* no inner padding */
 }
 
 .action_button_on_leaderboard a ,
@@ -552,6 +561,8 @@ main{
   grid-template-columns: repeat(3, 1fr);
   gap: 8px 12px;
   justify-items:center;
+  align-content: center;  /* no extra vertical room in grid */
+  margin: 4px 0 0;  /* tiny nudge below “Pick your number”*/
 }
 
 /* Style for number buttons */
@@ -562,8 +573,12 @@ main{
     transform 120ms ease;
   isolation: isolate; /* keep glow in top onyl */
 
-  width: clamp(54px, 14vw, 84px);  /* experimentally addeed until it fits */
-  height: clamp(54px, 14vw, 84px);  /* experimekntally addeed until it fits */
+  /*width: clamp(54px, 14vw, 84px);  /* experimentally addeed until it fits */
+  /*height: clamp(54px, 14vw, 84px);  /* experimekntally addeed until it fits */
+  width: clamp(54px, 14vw, 84px);
+  height: clamp(54px, 14vw, 84px);
+  font-size: clamp(1rem, 4vw, 1.35rem);
+
   border-radius: 50%;  /* some styling */
   border: 2px double #adf309;
   background: rgba(140, 238, 3, 0.6);
@@ -1211,6 +1226,16 @@ footer.slightly_muted {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+
+@media (min-width: 900px){
+  #buttons button{
+    width: clamp(54px, 11vw, 78px);
+    height: clamp(54px, 11vw, 78px);
+    font-size: clamp(1rem, 3.2vw, 1.25rem);
+  }
+}
+
 
 @media screen and (min-width: 1000px) {
     body {
