@@ -134,7 +134,7 @@ h1 {
   place-items: center;
 }
 
-/* TRYING OT FIX SCROLLING */
+/* TRYING OT FIX SCROLLING - FIXED */
 /* give main exactly the remaining height between header and footer */
 main {
   height: calc(100svh - var(--header-h) - var(--footer-h));
@@ -154,6 +154,13 @@ main {
     /* padding-bottom: 88px; might need to replace this */
     max-width: 900px;
     padding: 8px clamp(12px, 4vw, 24px) 72px;
+}
+
+/*  TRYING TO FIXSCALING /RESIZINIG* -(adding later to top)/
+main{
+  align-items: center;
+  gap: 12px;
+  max-width: 900px;
 }
 
 /* Fieldset container */
@@ -380,7 +387,12 @@ main {
   border-color: yellowgreen;
 }
 
-
+/* BUTTON RESIZING/SCALING - Trim vertical gaps */
+#playing_area_box,
+#random_number_generator,
+#post_round_pane_showing_links_and_restart{
+  margin: 4px 0;
+}
 
 /* I might need to go back to this if new styling doesn't work
 #title_of_playing_area_box {
@@ -402,8 +414,14 @@ main {
   border-style: double;
   border-color: yellowgreen;
   /* width: fit-content; */
+  /* font-size: clamp(1rem, 2.6vw, 1.25rem); PUSH IT FOR NOW*/
 }
 
+  /* fixing sizing of the numbers for better UI */
+#modes legend,
+#title_of_playing_area_box {
+  font-size: clamp(1rem, 2.6vw, 1.25rem);
+}
 
 #number_selector_box {
     width: fit-content;
@@ -544,14 +562,14 @@ main {
     transform 120ms ease;
   isolation: isolate; /* keep glow in top onyl */
 
-  width: clamp(54px, 21vw, 84px);  /* experimentally addeed until it fits */
-  height: clamp(54px, 21vw, 84px);  /* experimekntally addeed until it fits */
+  width: clamp(54px, 14vw, 84px);  /* experimentally addeed until it fits */
+  height: clamp(54px, 14vw, 84px);  /* experimekntally addeed until it fits */
   border-radius: 50%;  /* some styling */
   border: 2px double #adf309;
   background: rgba(140, 238, 3, 0.6);
   color:#231a00;
   font-weight:800;
-  font-size: clamp(1rem, 4.8vw, 1.35rem);
+  font-size: clamp(1rem, 4vw, 1.35rem);
   box-shadow: 4px 4px 8px #f06502;
   cursor:pointer;
 }
@@ -641,6 +659,8 @@ main {
   appearance:none;
   -webkit-appearance:none; /* found this on internet for webKit browsing for removal of styling specific to platform  */
   font: inherit;
+  /* TRYING TO FIX SCALING OF BUTTONS */
+  font-size: clamp(.95rem, 2.4vw, 1.15rem);
 }
 
 
@@ -729,6 +749,9 @@ until conditions are met (displays links that were previously on footer */
 
   appearance: none;
   -webkit-appearance: none;
+
+  /* FIXING BUTTONS RE-SCALE (hopefully) */
+  font-size: clamp(.9rem, 2.2vw, 1.1rem);
 }
 
 
@@ -1114,6 +1137,11 @@ footer.slightly_muted {
       height: 40px;
     }
 
+    #buttons button{
+      width: clamp(64px, 10vw, 96px);
+      height: clamp(64px, 10vw, 96px);
+      font-size: clamp(1.05rem, 3.2vw, 1.5rem);
+  }
 }
 
 /* TRYING TO FIX SCROLLING compress spacing a bit more EXPERIMENTAL */
@@ -1172,6 +1200,10 @@ footer.slightly_muted {
     min-width: 220px;  /* wider button */
     border-radius: 14px;  /* slightly rounder to match scale */
   }
+
+  main {
+    gap: 14px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1196,6 +1228,13 @@ footer.slightly_muted {
       min-width: 240px;  /* wider button */
       border-radius: 26px;  /* slightly rounder to match scale */
     }
+
+    #buttons button {
+      width: clamp(72px, 8vw, 108px);
+      height: clamp(72px, 8vw, 108px);
+      font-size: clamp(1.1rem, 2.6vw, 1.6rem);
+  }
+
 }
 
 @media screen and (min-width: 1034px) {
@@ -1216,6 +1255,11 @@ footer.slightly_muted {
       border-radius: 26px;  /* slightly rounder to match scale */
     }
 
+    #buttons button {
+      width: clamp(75px, 6vw, 112px);
+      height: clamp(75px, 6vw, 112px);
+      font-size: clamp(1.1rem, 2.6vw, 1.6rem);
+    }
 }
 
 
