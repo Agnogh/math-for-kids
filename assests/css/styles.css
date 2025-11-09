@@ -1236,13 +1236,13 @@ footer.slightly_muted {
   }
 
 }
-
+/* need to drop this for avoid clipping of number 9
 @media screen and (min-width: 1034px) {
     #buttons {
         grid-template-columns: repeat(10, 1fr);
     }
 }
-
+*/
 @media screen and (min-width: 1200px) {
     body {
       font-size: 220%;
