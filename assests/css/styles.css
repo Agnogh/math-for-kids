@@ -434,8 +434,11 @@ main{
     margin: 0 auto;
 */
     /* POPULATING ISSUE */
-  display: grid;  /* avoids flex stretching */
-  place-items: center;  /* grid sits cenetred */
+  /*display: grid;  /* avoids flex stretching */
+  display: flex;  /* Lets try fixing the gap with this */
+  justify-content: center;  /**/
+  align-items: flex-start;  /* stick the grid to top*/
+  /*place-items: center;  /* grid sits cenetred */
   margin: 0;  /* remov extra margin */
   padding: 0;  /* no inner padding */
 }
@@ -561,7 +564,8 @@ main{
   grid-template-columns: repeat(3, 1fr);
   gap: 8px 12px;
   justify-items:center;
-  align-content: center;  /* no extra vertical room in grid */
+  /*align-content: center;  /* no extra vertical room in grid */
+  align-content: start;
   margin: 4px 0 0;  /* tiny nudge below “Pick your number”*/
 }
 
@@ -577,7 +581,9 @@ main{
   /*height: clamp(54px, 14vw, 84px);  /* experimekntally addeed until it fits */
   width: clamp(54px, 14vw, 84px);
   height: clamp(54px, 14vw, 84px);
-  font-size: clamp(1rem, 4vw, 1.35rem);
+  /* font-size: clamp(1rem, 4vw, 1.35rem);
+  /* vh so tall devic grow text also */
+  font-size: clamp(1rem, 1.2vh + 1.6vw, 1.35rem);
 
   border-radius: 50%;  /* some styling */
   border: 2px double #adf309;
@@ -1180,7 +1186,9 @@ footer.slightly_muted {
   #buttons button {
     width: clamp(46px, 18vw, 70px);
     height: clamp(46px, 18vw, 70px);
-    font-size: clamp(.9rem, 4.4vw, 1.2rem);
+    /*font-size: clamp(.9rem, 4.4vw, 1.2rem);
+    /* when hight is tight to compres some more (EXPERIMENTAL) */
+    font-size: clamp(.9rem, 1.0vh + 4.0vw, 1.2rem);
   }
 
     /* tighten lucky button block */
@@ -1204,6 +1212,14 @@ footer.slightly_muted {
   }
   #counter_line {
     margin: 0;
+  }
+}
+
+/* trying to fix that buttons are shaped as circles (EXPERIMENTAL) */
+@media (min-height: 820px) {
+  #buttons button{
+    width: clamp(58px, 10.5vw, 92px);
+    height: clamp(58px, 10.5vw, 92px);
   }
 }
 
