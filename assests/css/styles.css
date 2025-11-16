@@ -370,7 +370,7 @@ main {
   /* fixing sizing of the numbers for better UI */
 #modes legend,
 #title_of_playing_area_box {
-  font-size: clamp(1rem, 2.6vw, 1.25rem);
+  font-size: clamp(1em, 0.6vh + 1.2vw, 1.8em);
 }
 
 #number_selector_box {
