@@ -20,10 +20,6 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* flex-direction: column;
-/*    border-style: double;
-    border-color: red;
-    */
 }
 
 /* TRZING OT FIX SCROLLING */
@@ -42,9 +38,7 @@ body {
     min-height: 100vh;  /* for mobile address bar */
     text-align: center;
     display: flex;
-    /* justify-content: center;  -> needed for now */
     flex-direction: column;
-    /* justify-content: column; -> just for moving main up */
     align-items: center;
     background: url(../images/numbers\ background\ -2-.jfif) repeat center center/cover;
     min-height: 100vh;
@@ -68,7 +62,6 @@ header {
   color: #adf309;
   box-shadow: 4px 4px 8px #f06502;
   border-style: double;
-  /*padding-top: 3%;  hope this fixes alignment of page title */
   height: 56px;
 }
 
@@ -113,7 +106,6 @@ h1 {
   margin: 4px auto 8px;  /* give it some space around */
   padding: 6px 12px;  /* some 'breathing room */
   font-weight: 800;  /* needs to be highloighted more as it is title */
-  /*font-size: clamp(1rem, 3vw, 1.25rem); need to drop this */
   color: #adf309;
   background: rgba(18,31,26,0.6);
   border: 2px double #adf309;
@@ -138,29 +130,20 @@ h1 {
 /* give main exactly the remaining height between header and footer */
 main {
   height: calc(100svh - var(--header-h) - var(--footer-h));
-  overflow: auto;                /* scrolls internally only if needed */
+  overflow: auto;  /* scrolls internally only if needed */
   padding: 8px clamp(12px, 4vw, 24px) 12px; /* drop the big bottom padding */
-  gap: 12px;                     /* slightly tighter to fit small phones */
+  gap: 12px;  /* slightly tighter to fit small phones */
 }
 
 
 /* rules for main (containing "play area") */
 main {
-    /* flex: 1; need to drop this as it is messing with UI */
     margin-top: 5%;
     margin: 0 auto;
     display: grid;
     gap: 16px;   
-    /* padding-bottom: 88px; might need to replace this */
     max-width: 900px;
     padding: 8px clamp(12px, 4vw, 24px) 72px;
-}
-
-/*  TRYING TO FIXSCALING /RESIZINIG* -(adding later to top)/
-main{
-  align-items: center;
-  gap: 12px;
-  max-width: 900px;
 }
 
 /* Fieldset container */
@@ -223,7 +206,6 @@ main{
     font-size: 100%;
     max-width: 90vw;
     margin: 16% auto 12px;
-/*    margin: 10% auto; */
     box-shadow: 4px 4px 8px #f06502;
     
     border: 2px double #adf309;
@@ -232,23 +214,13 @@ main{
 
 #welcome_pane_main_section {
   max-width: min(900px, 92vw);
-  margin: 72px auto 12px;                 /* clear the fixed header cleanly */
+  margin: 72px auto 12px;  /* clear the fixed header cleanly */
   padding: clamp(16px, 4vw, 28px) clamp(16px, 4vw, 28px);
 }
-
-/** FIX SIDEWAY SCROLLING 
-/* to keep section nicely centered and not edge-to-edge 
-#welcome_pane_main_section {
-  max-width: 900px;   - commentkeeps it from going too wide 
-  margin: 16% auto 12px;   - comment centered 
-  padding: clamp(18px, 3vw, 28px);
-}
-*/
 
 
 /* styling for title of the game rule */
 #game_rules_title {
-  /*margin: 6px auto 10px; TRYING */
   margin: 0 auto .5rem;
   padding: 6px 12px;
   display: inline-block;
@@ -263,7 +235,7 @@ main{
 
 
 #game_rules_order_list {
-  margin: 0.9rem 0 0;     /* space above/below */
+  margin: 0.9rem 0 0;  /* space above/below */
   padding-left: 0.9rem;  /* indent numbers a litlte bit */
 }
 
@@ -357,24 +329,6 @@ main{
   justify-content: center;  /* nicely aligned to center */
 }
 
-/* keeping this for now until I am sure that new style is operational
-#playing_area_box {
-    border-style: double;
-    color: rgb(200, 255, 0); might need to go with different due to consistency 
-    background-color: rgba(18, 31, 26, 0.6); 
-    padding: 10%;
-    padding-left: 5%;
-    padding-right: 5%;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    margin-top: 1%;
-    font-size: 180%;
-    max-width: 90vw;
-    margin: 0 auto;
-}
-*/
-
 /* Section frame */
 #playing_area_box{
   border-style: double;
@@ -400,14 +354,6 @@ main{
   margin: 4px 0;
 }
 
-/* I might need to go back to this if new styling doesn't work
-#title_of_playing_area_box {
-    color: black;
-    border: greenyellow;
-
-}
-*/
-
 /* Title in the frame */
 #title_of_playing_area_box{
   margin: 2px 0 10px;
@@ -419,8 +365,6 @@ main{
   border-radius: 12px;
   border-style: double;
   border-color: yellowgreen;
-  /* width: fit-content; */
-  /* font-size: clamp(1rem, 2.6vw, 1.25rem); PUSH IT FOR NOW*/
 }
 
   /* fixing sizing of the numbers for better UI */
@@ -430,26 +374,14 @@ main{
 }
 
 #number_selector_box {
-/*
-    width: fit-content;
-    height: fit-content;
-    display: flex; 
-    justify-content: center;
-    margin: 0 auto;
-*/
     /* POPULATING ISSUE */
   display: grid;  /* avoids flex stretching */
-  /* display: flex;  /* Lets try fixing the gap with this */
-  /*justify-content: center;  /**/
-  /*align-items: flex-start;  /* stick the grid to top*/
   place-items: center;  /* grid sits cenetred */
   margin: 0;  /* remov extra margin */
   padding: 0;  /* no inner padding */
 
   content-visibility: visible;
   contain-intrinsic-size: 0 0 !important;
-
-  /*min-height: 0;*/
 }
 
 .action_button_on_leaderboard a ,
@@ -468,8 +400,6 @@ main{
   cursor: pointer;  /* I might add this to all, but placing only here for now */
   border: none; /* for the <button> - might be removed later on */
 }
-
-
 
 
 /* Table (for leaderboard results) */
@@ -516,56 +446,13 @@ main{
   border-radius: 20px; /* experimantly added to have best visual IMO */
   display: inline-block;
   box-shadow: 4px 4px 8px #f06502;  /* to 'overpower' red shadow from 'p' element */
-/* PLAYING AROUND - REMOVE AFTER CONFIRMING
-  display: block;
-  margin: 4px auto 6px;
-  padding: 6px 10px;
-  max-width: max-content;
-  text-align: center
-*/
 }
 
-
-/* removing this for now but keeping the code in case new style doesn't adjust
-.btn_1, .btn_2, .btn_3, .btn_4, .btn_5, .btn_6, .btn_7, .btn_8, .btn_9 {
-
-    border-style: double;
-    border-radius: 45%;
-    background-color: yellow;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    border-radius: 50%;
-    width: fit-content;
-    height: fit-content;
-    justify-content: space-evenly;
-
-    text-align: center;
-    font-size: 1.3em;
-
-}
-*/
 
 .empty_button_to_trick_ui {
     visibility: hidden;     /* need to hide it as I do not need it for functional purposes, just for better alignment */
 }
 
-/* thisd needs to be done from scratch
-#buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items:center;
-    justify-content: center;
-    
-    z-index: 3;
-    color: red;
-
-    gap: 1rem 2rem;  /* adding spacing as buttons are overlapping each other 
-    margin: 3rem 0;  /* adding spacing top and bottom
- 
-}
-*/
 
 /* grid fro number buttons (3×3) */
 #buttons{
@@ -573,7 +460,6 @@ main{
   grid-template-columns: repeat(3, auto);
   gap: 10px 14px;
   justify-items:center;
-  /*align-content: center;  /* no extra vertical room in grid */
   align-content: start;
   margin: 0;  /* tiny nudge below “Pick your number”*/
 }
@@ -586,14 +472,10 @@ main{
     transform 120ms ease;
   isolation: isolate; /* keep glow in top onyl */
 
-  /*width: clamp(54px, 14vw, 84px);  /* experimentally addeed until it fits */
-  /*height: clamp(54px, 14vw, 84px);  /* experimekntally addeed until it fits */
   width: clamp(54px, 14vw, 84px);
-  /*
-  height: clamp(54px, 14vw, 84px);*/
+
   aspect-ratio: 1 / 1;
-  /* font-size: clamp(1rem, 4vw, 1.35rem);
-  /* vh so tall devic grow text also */
+
   font-size: clamp(1rem, 1.2vh + 1.6vw, 1.35rem);
 
   border-radius: 50%;  /* some styling */
@@ -654,23 +536,6 @@ main{
 
 }
 
-/* this might not be bneeded if new style works
-#random_number_button {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    border-style: double;
-    border-radius: 25%;
-    width: fit-content;
-    height: fit-content;
-    justify-content: space-evenly;
-    background-color: yellow;
-    font-size: 1.5em;
-
-}
-*/
-
 
 #random_number_button {
   transition:
@@ -716,18 +581,6 @@ main{
   transform: translateY(1px) scale(0.985);
 }
 
-/* need to drop this as I decided to go with fotter results showing up
-#selectedNumberBox {
-    background-color: rgba(47, 48, 40, 0.6);
-    color: aliceblue;
-    text-align: inherit;
-    align-items: inherit;
-    padding: 5%;
-    border-radius: 15%;
-    border-color: rgb(159, 202, 39);
-    border-style:double;
-}
-*/
 
 /* to show 'blank' as I am moving to results showing up in fotter */
 #selectedNumberBox {
@@ -792,14 +645,14 @@ until conditions are met (displays links that were previously on footer */
 #post_round_pane_showing_links_and_restart a:hover {
   filter: brightness(1.08);
   box-shadow:
-    0 0 6px rgba(173, 243, 9, 0.55),   /* green inner glow */
+    0 0 6px rgba(173, 243, 9, 0.55),  /* green inner glow */
     0 0 14px rgba(173, 243, 9, 0.45),
     0 0 22px rgba(240, 101, 2, 0.35),  /* orange outer glow */
-    0 4px 12px rgba(240, 101, 2, 0.35);/* drop shadow */
+    0 4px 12px rgba(240, 101, 2, 0.35);  /* drop shadow */
   text-shadow:
     0 0 2px rgba(173, 243, 9, 0.9),
     0 0 6px rgba(173, 243, 9, 0.6);
-  outline: 2px solid rgba(5, 215, 243, 0.45); /* subtle teal rim */
+  outline: 2px solid rgba(5, 215, 243, 0.45);  /* subtle teal rim */
   outline-offset: 2px;
 }
 
@@ -835,13 +688,6 @@ button:disabled {
   box-shadow: 2px 2px 6px rgba(240,101,2,.4);  /* soften the shadow when disabled */
 }
 
-/* for 'start new agme' to be disabled when tryong to click it */
-/* this is no longer used
-#post_round_actions button:disabled{
-  opacity: .6;
-  cursor: not-allowed;
-}
-*/
 
 #action_button_on_welcome_pane {
   width: 100%;
@@ -969,11 +815,9 @@ button:disabled {
 
 
 p {
-    /* background-color: yellow; need to get rid of this as it is messing with my styling*/
     color: black;
     font: bold;
     border-radius: 15%;
-    /*box-shadow: 3px 3px 8px 2px rgb(247, 1, 1); need to drop this as it is messing up with me */
 }
 
 
@@ -1076,10 +920,6 @@ footer.slightly_muted {
 #social_media_section {
     text-align: center;
     display: flex;
-    /* TRYING TO RESOLVE SOCIAL MEDIA WRAP
-    justify-content: space-evenly;
-    gap: 8px;
-    flex-wrap: wrap;  /* wrap on small phones */
     
     flex-wrap: nowrap;  /*maybe I jsut drop entirely, but going with this*/
     /* gap: 6px;  /* experimental - needed for smaller device and large number of Sic.med */
@@ -1099,15 +939,6 @@ footer.slightly_muted {
 
 #social_media_section a {
   display: inline-flex;
-  /* FOR NOW UNTIL I FIGURE OUT IF THIS SOLEVES PROBLEM
-  width: 42px;
-  height: 42px;
-  */
-  
-  /* trying to fix scaling SOC MEDIA SACLING
-  width: clamp(32px, 9vw, 44px);
-  height: clamp(32px, 9vw, 44px);
-  */
 
   width: 2.4em;
   height: 2.4em;
@@ -1199,7 +1030,6 @@ footer.slightly_muted {
     width: clamp(46px, 18vw, 70px);
     height: clamp(46px, 18vw, 70px);
     
-    /*font-size: clamp(.9rem, 4.4vw, 1.2rem);
     /* when hight is tight to compres some more (EXPERIMENTAL) */
     font-size: clamp(.9rem, 1.0vh + 4.0vw, 1.2rem);
   }
@@ -1298,13 +1128,7 @@ footer.slightly_muted {
   }
 
 }
-/* need to drop this for avoid clipping of number 9
-@media screen and (min-width: 1034px) {
-    #buttons {
-        grid-template-columns: repeat(10, 1fr);
-    }
-}
-*/
+
 @media screen and (min-width: 1200px) {
     body {
       font-size: 220%;
@@ -1323,6 +1147,4 @@ footer.slightly_muted {
       font-size: clamp(1.1rem, 2.6vw, 1.6rem);
     }
 }
-
-
 
