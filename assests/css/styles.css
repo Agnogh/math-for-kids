@@ -386,7 +386,11 @@ main{
   border-style: double;
   border-color: yellowgreen;
 /* trimms bottom space*/
-  padding-block: 8px 10px; 
+  padding-block: 8px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* BUTTON RESIZING/SCALING - Trim vertical gaps */
@@ -434,13 +438,18 @@ main{
     margin: 0 auto;
 */
     /* POPULATING ISSUE */
-  /*display: grid;  /* avoids flex stretching */
-  display: flex;  /* Lets try fixing the gap with this */
-  justify-content: center;  /**/
-  align-items: flex-start;  /* stick the grid to top*/
-  /*place-items: center;  /* grid sits cenetred */
+  display: grid;  /* avoids flex stretching */
+  /* display: flex;  /* Lets try fixing the gap with this */
+  /*justify-content: center;  /**/
+  /*align-items: flex-start;  /* stick the grid to top*/
+  place-items: center;  /* grid sits cenetred */
   margin: 0;  /* remov extra margin */
   padding: 0;  /* no inner padding */
+
+  content-visibility: visible;
+  contain-intrinsic-size: 0 0 !important;
+
+  /*min-height: 0;*/
 }
 
 .action_button_on_leaderboard a ,
@@ -561,12 +570,12 @@ main{
 /* grid fro number buttons (3×3) */
 #buttons{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px 12px;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px 14px;
   justify-items:center;
   /*align-content: center;  /* no extra vertical room in grid */
   align-content: start;
-  margin: 4px 0 0;  /* tiny nudge below “Pick your number”*/
+  margin: 0;  /* tiny nudge below “Pick your number”*/
 }
 
 /* Style for number buttons */
@@ -580,7 +589,9 @@ main{
   /*width: clamp(54px, 14vw, 84px);  /* experimentally addeed until it fits */
   /*height: clamp(54px, 14vw, 84px);  /* experimekntally addeed until it fits */
   width: clamp(54px, 14vw, 84px);
-  height: clamp(54px, 14vw, 84px);
+  /*
+  height: clamp(54px, 14vw, 84px);*/
+  aspect-ratio: 1 / 1;
   /* font-size: clamp(1rem, 4vw, 1.35rem);
   /* vh so tall devic grow text also */
   font-size: clamp(1rem, 1.2vh + 1.6vw, 1.35rem);
@@ -1182,10 +1193,12 @@ footer.slightly_muted {
 /* to help with nuimber button shrinking */
   #buttons {
     gap: 6px 10px;
+    align-content: start;
   }
   #buttons button {
     width: clamp(46px, 18vw, 70px);
     height: clamp(46px, 18vw, 70px);
+    
     /*font-size: clamp(.9rem, 4.4vw, 1.2rem);
     /* when hight is tight to compres some more (EXPERIMENTAL) */
     font-size: clamp(.9rem, 1.0vh + 4.0vw, 1.2rem);
@@ -1243,6 +1256,10 @@ footer.slightly_muted {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1180px){
+  #playing_area_box{ padding-block: 6px 8px; }
+  #title_of_playing_area_box{ margin-bottom: 8px; }
+}
 
 @media (min-width: 900px){
   #buttons button{
@@ -1252,6 +1269,10 @@ footer.slightly_muted {
   }
 }
 
+
+@media (min-width: 900px) and (max-width: 1200px){
+  #playing_area_box{ padding-block: 8px 8px; }
+}
 
 @media screen and (min-width: 1000px) {
     body {
