@@ -940,8 +940,8 @@ footer.slightly_muted {
     display: flex;
     
     flex-wrap: nowrap;  /*maybe I jsut drop entirely, but going with this*/
-    /* gap: 6px;  /* experimental - needed for smaller device and large number of Sic.med */
-    gap: 0.4em; /* gpoing with em as it is difficult to scale with px */
+    gap: 6px;  /* experimental - needed for smaller device and large number of Sic.med */
+    /* gap: 0.4em; /* gpoing with em as it is difficult to scale with px */
     justify-content: center;  /* needed so we have better UI on smalld evices (maybe I drop one social media */
 
     /*padding: 5px 5px; forgot to comment this out */
@@ -1000,6 +1000,10 @@ footer.slightly_muted {
     #footer_on_welcome_pane i {
       font-size: 1.8rem;
     } 
+
+    #social_media_section {
+      gap: 0.6em;
+    }
 }
 
 /* Leaving at 420 for now, but I MIGHT DECIDE TO GO WITH 400px RULE */
