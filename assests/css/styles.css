@@ -838,7 +838,8 @@ footer {
 
 #footer_on_welcome_pane {
   /* help with resiying with scaling */
-  font-size: clamp(12px, 1.8vw, 18px);
+  /*font-size: clamp(12px, 1.8vw, 18px);*/
+  font-size: clamp(0.9rem, 1.6vw, 1.2rem);
   
   margin-top: 24px;
   text-align: center;
@@ -854,12 +855,22 @@ footer {
   /*height: 64px; SOC MED SCALING */
   min-height: 3.2em;
   /*SOC MED SCALING */
-  gap: 0.6em;
+  /*gap: 0.6em; */
+  gap: clamp(0.6rem, 1.2vw, 1.5rem);
 
   min-height: 3.2em;
   align-items: center;
   left: 0; right: 0; bottom: 0;
     
+}
+
+#footer_on_welcome_pane i {
+  font-size: clamp(1rem, 2vw, 2rem);
+  transition: transform 0.2s ease;
+}
+
+#footer_on_welcome_pane i:hover {
+  transform: scale(1.2);
 }
 
 /* Footer on leaderboard (non-fixed so long tables can scroll naturally) 
@@ -1129,53 +1140,67 @@ footer.slightly_muted {
 }
 
 @media screen and (min-width: 1000px) {
-    body {
-        font-size: 170%;
-        height: clamp(75px, 6vw, 112px);
+  body {
+      font-size: 170%;
+      height: clamp(75px, 6vw, 112px);
+      }
+
+  #social_media_section a {
+    width: 42px;
+    height: 42px;
     }
 
-    #social_media_section a {
-      width: 42px;
-      height: 42px;
+  #action_button_on_welcome_pane a {
+    font-size: 1.65rem;  /* text bigger */
+    padding: 29px 25px;  /* roomier */
+    min-width: 240px;  /* wider button */
+    border-radius: 26px;  /* slightly rounder to match scale */
     }
 
-    #action_button_on_welcome_pane a {
-      font-size: 1.65rem;  /* text bigger */
-      padding: 29px 25px;  /* roomier */
-      min-width: 240px;  /* wider button */
-      border-radius: 26px;  /* slightly rounder to match scale */
+  #buttons button {
+    height: clamp(72px, 8vw, 108px);
+    font-size: clamp(1rem, 2.0vw, 1.4rem);
     }
 
-    #buttons button {
-      height: clamp(72px, 8vw, 108px);
-      font-size: clamp(1rem, 2.0vw, 1.4rem);
+  footer.slightly_muted {
+    font-size: 1.5rem;
     }
 
-    footer.slightly_muted {
-      font-size: 1.5rem;
-    }
+  #footer_on_welcome_pane {
+    font-size: 1.4rem;
+  }
+  #footer_on_welcome_pane i {
+    font-size: 2.2rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    body {
-      font-size: 220%;
-      }
-
-    #action_button_on_welcome_pane a {
-      font-size: 1.95rem;  /* text bigger */
-      padding: 33px 29px;  /* roomier */
-      min-width: 240px;  /* wider button */
-      border-radius: 26px;  /* slightly rounder to match scale */
+  body {
+    font-size: 220%;
     }
 
-    #buttons button {
-      height: clamp(75px, 6vw, 112px);
-      font-size: clamp(1rem, 1.8vw, 1.35rem);
+  #action_button_on_welcome_pane a {
+    font-size: 1.95rem;  /* text bigger */
+    padding: 33px 29px;  /* roomier */
+    min-width: 240px;  /* wider button */
+    border-radius: 26px;  /* slightly rounder to match scale */
     }
 
-    footer.slightly_muted {
-      font-size: 1.7rem;
+  #buttons button {
+    height: clamp(75px, 6vw, 112px);
+    font-size: clamp(1rem, 1.8vw, 1.35rem);
     }
+
+  footer.slightly_muted {
+    font-size: 1.7rem;
+    }
+
+  #footer_on_welcome_pane {
+    font-size: 1.6rem;
+  }
+  #footer_on_welcome_pane i {
+    font-size: 2.5rem;
+  }
 }
 
 /*this better work as I am at the edge of my patience*/
