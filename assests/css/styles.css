@@ -472,11 +472,15 @@ main {
     transform 120ms ease;
   isolation: isolate; /* keep glow in top onyl */
 
-  width: clamp(54px, 14vw, 84px);
+  /*width: clamp(54px, 14vw, 84px); */
+  --btnS: clamp(54px, 10vmin, 96px);  /* base diameter*/
+  width: var(--btnS);
+  height: var(--btnS);
+  border-radius: 50%;  /* for round corners */
+  /*aspect-ratio: 1 / 1;*/
 
-  aspect-ratio: 1 / 1;
-
-  font-size: clamp(1rem, 1.2vh + 1.6vw, 1.35rem);
+  /*font-size: clamp(1rem, 1.2vh + 1.6vw, 1.35rem);*/
+  font-size: clamp(1rem, calc(var(--btnS) * 0.28), 1.6rem); /* EXPERIMENTAL */
 
   border-radius: 50%;  /* some styling */
   border: 2px double #adf309;
@@ -862,10 +866,13 @@ footer {
    I might CHANGE FROM DESCRIPTION TO SOCIAL MEDIA */
 footer.slightly_muted {
   /* SOC MED SCALING*/
-  font-size: clamp(12px, 1.7vw, 18px);
+  /*font-size: clamp(12px, 1.7vw, 18px);*/
+  font-size: 0.95rem;
+  line-height: 1.3;
 
   margin: 16px auto 12px;  /* adjsuted to match */
-  padding: 2% 5% 5%;  /* to improve spacing (I MIGHT NEED TO GO WITh PX % PX)*/
+  /*padding: 2% 5% 5%;  /* to improve spacing (I MIGHT NEED TO GO WITh PX % PX)*/
+  padding: 0.9rem 1.2rem 1.2rem;  /*lets try this (EXPERIMENTAL*/
   text-align: center;
   background: rgba(60,63,66,0.6);  /* not needed but overpowering it just in case */
   border-style: double;
@@ -978,10 +985,14 @@ footer.slightly_muted {
 }
 
 /* Leaving at 420 for now, but I MIGHT DECIDE TO GO WITH 400px RULE */
-@media (max-width: 420px){
+@media (max-width: 420px) {
   #head_of_the_table th, #leaderboard_rows td{
     padding: 8px 10px;
     font-size: .92rem;
+
+  footer.slightly_muted {
+    font-size: 0.9rem;
+  }
   }
   .action_button_on_leaderboard a,
   .action_button_on_leaderboard button{
@@ -991,19 +1002,23 @@ footer.slightly_muted {
 }
 
 @media screen and (min-width: 600px) {
-    body {
-        font-size: 140%;
+  body {
+    font-size: 140%;
     }
 
-    #social_media_section a {
-      width: 40px;
-      height: 40px;
+  #social_media_section a {
+    width: 40px;
+    height: 40px;
     }
 
-    #buttons button{
-      width: clamp(64px, 10vw, 96px);
-      height: clamp(64px, 10vw, 96px);
-      font-size: clamp(1.05rem, 3.2vw, 1.5rem);
+  #buttons button {
+    width: clamp(64px, 10vw, 96px);
+    height: clamp(64px, 10vw, 96px);
+    font-size: clamp(1.05rem, 3.2vw, 1.5rem);
+    }
+
+  footer.slightly_muted {
+    font-size: 1rem;
   }
 }
 
@@ -1078,6 +1093,10 @@ footer.slightly_muted {
   main {
     gap: 14px;
   }
+
+  footer.slightly_muted {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1097,6 +1116,11 @@ footer.slightly_muted {
     height: clamp(54px, 11vw, 78px);
     font-size: clamp(1rem, 3.2vw, 1.25rem);
   }
+
+  footer.slightly_muted {
+    font-size: 1.25rem;
+  }
+
 }
 
 
@@ -1107,6 +1131,7 @@ footer.slightly_muted {
 @media screen and (min-width: 1000px) {
     body {
         font-size: 170%;
+        height: clamp(75px, 6vw, 112px);
     }
 
     #social_media_section a {
@@ -1122,13 +1147,13 @@ footer.slightly_muted {
     }
 
     #buttons button {
-      /*width: clamp(72px, 8vw, 108px); */
-      width: clamp(64px, 6.6vw, 88px);
       height: clamp(72px, 8vw, 108px);
-      /*font-size: clamp(1.1rem, 2.6vw, 1.6rem);*/
       font-size: clamp(1rem, 2.0vw, 1.4rem);
-  }
+    }
 
+    footer.slightly_muted {
+      font-size: 1.5rem;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1144,12 +1169,44 @@ footer.slightly_muted {
     }
 
     #buttons button {
-      /*width: clamp(75px, 6vw, 112px);*/
-      width: clamp(62px, 5.2vw, 84px);
-      /*height: clamp(75px, 6vw, 112px);*/
       height: clamp(75px, 6vw, 112px);
-      /*font-size: clamp(1.1rem, 2.6vw, 1.6rem);*/
       font-size: clamp(1rem, 1.8vw, 1.35rem);
+    }
+
+    footer.slightly_muted {
+      font-size: 1.7rem;
     }
 }
 
+/*this better work as I am at the edge of my patience*/
+
+@media (max-aspect-ratio: 3/4) {  /* very tall phones/talbets */
+  #buttons button {
+    height: calc(var(--btnS) * 1.30);  /* bit taller */
+    width: calc(var(--btnS) * 0.95);  /* slightly slimer */
+  }
+}
+
+/* 3) portrait but not extreme */
+@media (max-aspect-ratio: 5/6) and (min-aspect-ratio: 3/4) {
+  #buttons button {
+    height: calc(var(--btnS) * 1.18);
+    width: var(--btnS);
+  }
+}
+
+/* 4) more wider than tall -> horizontal egg */
+@media (min-aspect-ratio: 16/10) {  /* laptops/desktops & iPad landscepe*/
+  #buttons button {
+    width: calc(var(--btnS) * 1.28);  /* wider */
+    height: calc(var(--btnS) * 0.95);  /* a touch flatter */
+  }
+}
+
+/* 5) very wide layouts ultra-wide monitors */
+@media (min-aspect-ratio: 21/9) {
+  #buttons button {
+    width:  calc(var(--btnS) * 1.40);
+    height: calc(var(--btnS) * 0.92);
+  }
+}
