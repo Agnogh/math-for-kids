@@ -993,6 +993,13 @@ footer.slightly_muted {
       width: 36px;
       height: 36px;
     }
+
+    #footer_on_welcome_pane {
+      font-size: 1rem;
+    } 
+    #footer_on_welcome_pane i {
+      font-size: 1.8rem;
+    } 
 }
 
 /* Leaving at 420 for now, but I MIGHT DECIDE TO GO WITH 400px RULE */
@@ -1030,6 +1037,17 @@ footer.slightly_muted {
 
   footer.slightly_muted {
     font-size: 1rem;
+  }
+
+  #footer_on_welcome_pane {
+    font-size: 1.2rem;
+  } 
+  #footer_on_welcome_pane i {
+    font-size: 2rem;
+  }
+
+  #social_media_section {
+    gap: 0.8em;
   }
 }
 
@@ -1108,6 +1126,18 @@ footer.slightly_muted {
   footer.slightly_muted {
     font-size: 1.1rem;
   }
+
+  #footer_on_welcome_pane {
+    font-size: 1.2rem;
+  } 
+  #footer_on_welcome_pane i {
+    font-size: 2.2rem;
+  }
+
+  #social_media_section {
+    gap: 1.1em;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -1167,10 +1197,14 @@ footer.slightly_muted {
     }
 
   #footer_on_welcome_pane {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   #footer_on_welcome_pane i {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
+  }
+
+  #social_media_section {
+    gap: 1.4em;
   }
 }
 
@@ -1196,11 +1230,16 @@ footer.slightly_muted {
     }
 
   #footer_on_welcome_pane {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
   #footer_on_welcome_pane i {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
+
+  #social_media_section {
+    gap: 1.6em;
+  }
+
 }
 
 /*this better work as I am at the edge of my patience*/
