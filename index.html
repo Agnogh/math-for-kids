@@ -72,13 +72,14 @@
     </div>
     </div>
 
-        <div id="random_number_generator" aria-label="Random number generator">
+        <div id="random_number_generator">
             <button id="random_number_button" 
-            aria-label="Generate a random lucky number for this round">I feel lucky! (click me)
+            aria-label="Generate a random lucky number for this round"
+            >I feel lucky! (click me)
             </button>
         </div>
 <!-- replaced old section with new one that will be hidden  -->
-        <section id="post_round_pane_showing_links_and_restart" hidden>
+        <section id="post_round_pane_showing_links_and_restart" hidden aria-label="Post-round actions">
             <!-- adding disabled on the button so it is not clickable based on YouTube-->
             <button id="reset_button" type="button" disabled title="Game already in progres">Start new game</button>
             <a id="leaderboard_link" href="leaderboard.html" target="_blank" rel="noopener" hidden>View Leaderboard</a>
@@ -88,7 +89,7 @@
 
     <footer id="game_page_footer">
 
-        <p id="display_results_box" aria-live="polite">Are you ready to try your luck?</p>
+        <p id="display_results_box" role="status" aria-live="polite">Are you ready to try your luck?</p>
 
     <!-- Ratio and luick index box -->
         <p id="counter_line">Wins/Rolls • Luck %</p>
