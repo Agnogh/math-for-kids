@@ -236,7 +236,9 @@ main {
 
 #game_rules_order_list {
   margin: 0.9rem 0 0;  /* space above/below */
-  padding-left: 0.9rem;  /* indent numbers a litlte bit */
+  /*padding-left: 0.9rem; - Need to drop this as large devices are not looking good /* indent numbers a litlte bit */
+  padding-left: 0;
+  list-style-position: inside;  /* should move numbers inside and next to tetx */
 }
 
 #game_rules_order_list li {
