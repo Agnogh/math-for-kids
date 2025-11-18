@@ -184,6 +184,7 @@ main {
   border: 2px double #adf309;
   box-shadow: 4px 4px 8px #f06502;  /* starndar shawod used everywhere else */
   cursor:pointer;  /* to change pointer when hovered NEED TO ADD THIS FOR ALL BUTTONS*/
+  transition: transform 120ms ease, box-shadow 140ms ease, filter 160ms ease;  /* smooth transition*/
 }
 
 #modes label span:active {
@@ -872,7 +873,7 @@ footer {
 
 #footer_on_welcome_pane i {
   font-size: clamp(1rem, 2vw, 2rem);
-  transition: transform 0.2s ease;
+  transition: transform 200ms ease;
 }
 
 #footer_on_welcome_pane i:hover {
@@ -989,6 +990,16 @@ footer.slightly_muted {
   width: 33px;
   height: 33px;
 }
+
+
+#social_media_section a {
+  transition: transform 150ms ease;
+}
+
+#social_media_section a:active {
+  transform: translateY(1px) scale(0.985);
+}
+
 
 @media screen and (min-width: 400px) {
     body {
