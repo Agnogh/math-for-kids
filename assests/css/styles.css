@@ -30,7 +30,9 @@ html, body {
 body {
   min-height: 100svh;
   overflow: hidden; /* prevent page scroll */
+  font-family: 'Orbitron', sans-serif;
 }
+
 
 /* rule for entire body */
 body {
