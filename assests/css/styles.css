@@ -959,7 +959,7 @@ footer.slightly_muted {
 
     font-size: 100%;
     padding: 0%;
-    box-shadow: 4px 4px 8px #f06502;
+    /*box-shadow: 4px 4px 8px #f06502;*/
 }
 
 #social_media_section a {
