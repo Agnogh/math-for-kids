@@ -992,6 +992,20 @@ footer.slightly_muted {
 }
 
 
+@media (min-width: 320px) {
+    #head_of_the_table th, #leaderboard_rows td {
+      padding: 8px 10px;
+      font-size: .77rem;
+    }
+  }
+
+@media (min-width: 360px) {
+    #head_of_the_table th, #leaderboard_rows td {
+      padding: 8px 10px;
+      font-size: .87rem;
+    }
+  }
+
 @media screen and (min-width: 400px) {
     body {
         font-size: 120%;
@@ -1015,7 +1029,7 @@ footer.slightly_muted {
 }
 
 /* Leaving at 420 for now, but I MIGHT DECIDE TO GO WITH 400px RULE */
-@media (max-width: 420px) {
+@media (min-width: 420px) {
   #head_of_the_table th, #leaderboard_rows td{
     padding: 8px 10px;
     font-size: .92rem;
