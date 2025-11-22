@@ -133,7 +133,7 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
     
         // storing picked number as number (numeric)
             userSelectedNumber = Number(button.textContent);
-            state.selected = Number(button.dataset.value);
+            state.selected = Number(button.textContent);
 
         // Show alert for selected number by user
             alert(`You selected number ${userSelectedNumber}. Lady Luck will be with you !`);
