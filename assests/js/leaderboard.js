@@ -8,6 +8,10 @@
         const empty = document.getElementById('empty_state');
         const clearBtn = document.getElementById('clear_btn');
         const note = document.getElementById('last_saved_note');
+        // Safety stop if critical elements are missing (Mika T. said this will avoid runtime errors)
+        if (!table || !tbody || !empty || !clearBtn || !note) {
+            return;
+        }
 
 
     // reads scores and returns array
