@@ -3,29 +3,21 @@
   --header-h: 56px; --footer-h: 96px;
 }
 
-/* Base rule */
-* { box-sizing: border-box; }
+/* general rule (aplpied to if nothing specific was called out*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 /* SCROLLABLE ISSUE L-R */
 html, body {
   height: 100%;
-  margin: 0;
   max-width: 100%; 
   overflow-x: hidden;
 }
 
 
-/* general rule (aplpied to if nothing specific was called out*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* TRZING OT FIX SCROLLING */
-html, body {
-  height: 100%;
-}
 /* TRYING TO FIX SCROLLING */
 body {
   min-height: 100svh;
