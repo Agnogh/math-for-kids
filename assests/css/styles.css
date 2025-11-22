@@ -1019,8 +1019,6 @@ footer.slightly_muted {
     }
 
   #buttons button {
-    width: clamp(64px, 10vw, 96px);
-    height: clamp(64px, 10vw, 96px);
     font-size: clamp(1.05rem, 3.2vw, 1.5rem);
     }
 
@@ -1060,9 +1058,6 @@ footer.slightly_muted {
     align-content: start;
   }
   #buttons button {
-    width: clamp(46px, 18vw, 70px);
-    height: clamp(46px, 18vw, 70px);
-    
     /* when hight is tight to compres some more (EXPERIMENTAL) */
     font-size: clamp(.9rem, 1.0vh + 4.0vw, 1.2rem);
   }
@@ -1146,16 +1141,13 @@ footer.slightly_muted {
 /* trying to fix that buttons are shaped as circles (EXPERIMENTAL) */
 @media (min-height: 820px) {
   #buttons button{
-    width: clamp(58px, 10.5vw, 92px);
-    height: clamp(58px, 10.5vw, 92px);
+    /* no size override – base + aspect-ratio will handle it */
   }
 }
 
 
 @media (min-width: 900px){
   #buttons button{
-    width: clamp(54px, 11vw, 78px);
-    height: clamp(54px, 11vw, 78px);
     font-size: clamp(1rem, 3.2vw, 1.25rem);
   }
 
@@ -1201,7 +1193,6 @@ footer.slightly_muted {
     }
 
   #buttons button {
-    height: clamp(72px, 8vw, 108px);
     font-size: clamp(1rem, 2.0vw, 1.4rem);
     }
 
@@ -1234,7 +1225,6 @@ footer.slightly_muted {
     }
 
   #buttons button {
-    height: clamp(75px, 6vw, 112px);
     font-size: clamp(1rem, 1.8vw, 1.35rem);
     }
 
