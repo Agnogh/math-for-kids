@@ -18,24 +18,17 @@ html, body {
 }
 
 
-/* TRYING TO FIX SCROLLING */
-body {
-  min-height: 100svh;
-  overflow: hidden; /* prevent page scroll */
-  font-family: 'Orbitron', sans-serif;
-}
-
-
 /* rule for entire body */
 body {
-    padding-top: 56px;
-    min-height: 100vh;  /* for mobile address bar */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: url(../images/numbers\ background\ -2-.jfif) repeat center center/cover;
-    min-height: 100vh;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden; /* prevent page scroll */
+  padding-top: 56px;
+  min-height: 100vh;  /* for mobile address bar */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(../images/numbers\ background\ -2-.jfif) repeat center center/cover;
 }
 
 
