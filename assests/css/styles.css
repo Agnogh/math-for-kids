@@ -311,7 +311,6 @@ main {
 
 /* Section frame */
 #playing_area_box{
-  border-style: double;
   color:#adf309;
   background: rgba(18,31,26,0.6);
   border-radius: 12px;
