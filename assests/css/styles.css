@@ -120,18 +120,14 @@ main {
   overflow: auto;  /* scrolls internally only if needed */
   padding: 8px clamp(12px, 4vw, 24px) 12px; /* drop the big bottom padding */
   gap: 12px;  /* slightly tighter to fit small phones */
+  margin-top: 5%;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;   
+  max-width: 900px;
+  padding: 8px clamp(12px, 4vw, 24px) 72px;
 }
 
-
-/* rules for main (containing "play area") */
-main {
-    margin-top: 5%;
-    margin: 0 auto;
-    display: grid;
-    gap: 16px;   
-    max-width: 900px;
-    padding: 8px clamp(12px, 4vw, 24px) 72px;
-}
 
 /* Fieldset container */
 #modes {
@@ -932,37 +928,23 @@ footer.slightly_muted {
 
 #social_media_section a {
   display: inline-flex;
-
-  width: 2.4em;
-  height: 2.4em;
-  font-size: 1.3em;
-  line-height: 1;
-
-  border-radius: 10px;
   align-items: center;
   justify-content: center;
+  width: 33px;
+  height: 33px;
+  font-size: 1.3em;
+  line-height: 1;
+  border-radius: 10px;
   text-decoration: none;
   color: rgb(165, 227, 6);
   background: rgba(0,0,0,0.35);
   backdrop-filter: blur(3px);
   box-shadow: 4px 4px 8px #b77314;
   border-style: double;
-
-  border-radius: 10px;
-}
-
-
-/* ATTEMPT trying to match social media icons with rest of the ui - EXPERIMENTAL */
-#social_media_section a {
-  /* decreasing for smaller device */
-  width: 33px;
-  height: 33px;
-}
-
-
-#social_media_section a {
   transition: transform 150ms ease;
+
 }
+
 
 #social_media_section a:active {
   transform: translateY(1px) scale(0.985);
