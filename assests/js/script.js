@@ -223,7 +223,6 @@ const randomNumbersByMode = { normal: 1, easy: 2, easiest: 3 };
     // >>  Reset listener <<  
     if (resetButton) {
         resetButton.addEventListener("click", () => {
-            console.log('[reset] clicked');  // added to see if this is even operational
             resultBox.textContent = '🔄 Reset clicked – starting a new game...';  // alert('Reset clicked')
         // setting rules `normal` game mode, no wins or any rolls, nothing selected
             state.mode = "normal";
