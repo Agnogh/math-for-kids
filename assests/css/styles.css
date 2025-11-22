@@ -187,26 +187,18 @@ main {
 
 
 #welcome_pane_main_section {
-    border-style: double;
     color: rgb(200, 255, 0);
     background-color: rgba(18, 31, 26, 0.6);
-    padding: clamp(42px, 2.2vw, 24px) clamp(56px, 4vw, 32px);
     width: 100%;
     height: auto;
     text-align: center;
     font-size: 100%;
-    max-width: 90vw;
-    margin: 16% auto 12px;
     box-shadow: 4px 4px 8px #f06502;
-    
     border: 2px double #adf309;
     border-radius: 12px;
-}
-
-#welcome_pane_main_section {
-  max-width: min(900px, 92vw);
-  margin: 72px auto 12px;  /* clear the fixed header cleanly */
-  padding: clamp(16px, 4vw, 28px) clamp(16px, 4vw, 28px);
+    max-width: min(900px, 92vw);
+    margin: 72px auto 12px;  /* clear the fixed header cleanly */
+    padding: clamp(16px, 4vw, 28px) clamp(16px, 4vw, 28px);
 }
 
 
