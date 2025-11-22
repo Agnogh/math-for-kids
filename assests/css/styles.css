@@ -827,7 +827,7 @@ button:disabled {
 
 p {
     color: black;
-    font: bold;
+    font-weight: bold;
     border-radius: 15%;
 }
 
