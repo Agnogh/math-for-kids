@@ -1030,14 +1030,15 @@ footer.slightly_muted {
 
 /* Leaving at 420 for now, but I MIGHT DECIDE TO GO WITH 400px RULE */
 @media (min-width: 420px) {
-  #head_of_the_table th, #leaderboard_rows td{
+  #head_of_the_table th, #leaderboard_rows td {
     padding: 8px 10px;
     font-size: .92rem;
+  }
 
   footer.slightly_muted {
     font-size: 0.9rem;
   }
-  }
+  
   .action_button_on_leaderboard a,
   .action_button_on_leaderboard button{
     padding: 8px 10px;
