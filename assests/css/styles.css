@@ -994,16 +994,29 @@ footer.slightly_muted {
 
 @media (min-width: 320px) {
     #head_of_the_table th, #leaderboard_rows td {
-      padding: 8px 10px;
+      padding: 2px 8px;
       font-size: .77rem;
+    }
+
+    .action_button_on_leaderboard a,
+    .action_button_on_leaderboard button {
+      padding: 5px 9px;  /* EXPERIMENTAL Change later */
+      font-size: .75rem;  /* EXPERIMENTAL Change later */
     }
   }
 
 @media (min-width: 360px) {
     #head_of_the_table th, #leaderboard_rows td {
-      padding: 8px 10px;
+      padding: 4px 9px;
       font-size: .87rem;
     }
+
+    .action_button_on_leaderboard a,
+    .action_button_on_leaderboard button {
+      padding: 8px 10px;  /* EXPERIMENTAL Change later */
+      font-size: .95rem;  /* EXPERIMENTAL Change later */
+    }
+
   }
 
 @media screen and (min-width: 400px) {
@@ -1041,8 +1054,8 @@ footer.slightly_muted {
   
   .action_button_on_leaderboard a,
   .action_button_on_leaderboard button{
-    padding: 8px 10px;
-    font-size: .95rem;
+    padding: 7px 11px;  /* EXPERIMENTAL Change later */
+    font-size: .95rem;  /* EXPERIMENTAL Change later */
   }
 }
 
@@ -1129,16 +1142,19 @@ footer.slightly_muted {
   }
 }
 
-/* trying to fix that buttons are shaped as circles (EXPERIMENTAL) */
-@media (min-height: 820px) {
-  #buttons button{
-    width: clamp(58px, 10.5vw, 92px);
-    height: clamp(58px, 10.5vw, 92px);
-  }
-}
-
 /*Experimental for 'game button' until I sort them for all trasholds*/ 
 @media (min-width: 768px) {
+  #head_of_the_table th, #leaderboard_rows td {
+    padding: 14px 15px;  /* EXPERIMENTAL adjust later if needed */
+    font-size: 1.08rem;  /* EXPERIMENTAL adjust later if needed */
+  }
+
+  .action_button_on_leaderboard a,
+  .action_button_on_leaderboard button {
+    padding: 12px 13px;  /* EXPERIMENTAL Change later */
+    font-size: 1.1rem;  /* EXPERIMENTAL Change later */
+  }
+
   #action_button_on_welcome_pane a {
     font-size: 1.15rem;  /* text bigger */
     padding: 14px 22px;  /* roomier */
@@ -1178,6 +1194,15 @@ footer.slightly_muted {
   #title_of_playing_area_box{ margin-bottom: 8px; }
 }
 
+/* trying to fix that buttons are shaped as circles (EXPERIMENTAL) */
+@media (min-height: 820px) {
+  #buttons button{
+    width: clamp(58px, 10.5vw, 92px);
+    height: clamp(58px, 10.5vw, 92px);
+  }
+}
+
+
 @media (min-width: 900px){
   #buttons button{
     width: clamp(54px, 11vw, 78px);
@@ -1196,10 +1221,22 @@ footer.slightly_muted {
   #playing_area_box{ padding-block: 8px 8px; }
 }
 
+@media (min-width: 1000px) {
+  #head_of_the_table th, #leaderboard_rows td {
+    padding: 19px 18px;  /* EXPERIMENTAL adjust later if needed */ 
+    font-size: 1.3rem;  /* EXPERIMENTAL adjust later if needed */
+  }
+
+  .action_button_on_leaderboard a,
+  .action_button_on_leaderboard button {
+    padding: 14px 15px;  /* EXPERIMENTAL Change later */
+    font-size: 1.4rem;  /* EXPERIMENTAL Change later */
+  }
+}
+
 @media screen and (min-width: 1000px) {
   body {
       font-size: 170%;
-      height: clamp(75px, 6vw, 112px);
       }
 
   #social_media_section a {
@@ -1270,7 +1307,6 @@ footer.slightly_muted {
 }
 
 /*this better work as I am at the edge of my patience*/
-
 @media (max-aspect-ratio: 3/4) {  /* very tall phones/talbets */
   #buttons button {
     height: calc(var(--btnS) * 1.30);  /* bit taller */
