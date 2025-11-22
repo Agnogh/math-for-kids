@@ -118,8 +118,6 @@ h1 {
 main {
   height: calc(100svh - var(--header-h) - var(--footer-h));
   overflow: auto;  /* scrolls internally only if needed */
-  padding: 8px clamp(12px, 4vw, 24px) 12px; /* drop the big bottom padding */
-  gap: 12px;  /* slightly tighter to fit small phones */
   margin-top: 5%;
   margin: 0 auto;
   display: grid;
@@ -866,9 +864,6 @@ footer.slightly_muted {
   font-weight: 700;  /* to stand out a bit more */
 }
 
-#display_results_box {
-    padding: 5%;
-}
 
 /* To make 'reset' button respons better */
 #reset_button{
@@ -889,7 +884,7 @@ footer.slightly_muted {
 }
 
 /* active result box */
-#display_results_box{
+#display_results_box {
   margin: 0 0 6px;
   padding: 2px 8px;
   background: rgba(0,0,0,0.35);
@@ -910,17 +905,13 @@ footer.slightly_muted {
 #social_media_section {
     text-align: center;
     display: flex;
-    
     flex-wrap: nowrap;  /*maybe I jsut drop entirely, but going with this*/
     gap: 6px;  /* experimental - needed for smaller device and large number of Sic.med */
     justify-content: center;  /* needed so we have better UI on smalld evices (maybe I drop one social media */
-
     /*padding: 5px 5px; forgot to comment this out */
     list-style-type: none;
     /* SOC MEDIA SCALING (will be transfered to a elemnt */
     align-items: center;
-    flex-wrap: nowrap;  
-
     font-size: 100%;
     padding: 0%;
 }
