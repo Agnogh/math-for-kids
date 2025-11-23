@@ -1133,13 +1133,6 @@ footer.slightly_muted {
   #title_of_playing_area_box{ margin-bottom: 8px; }
 }
 
-/* trying to fix that buttons are shaped as circles (EXPERIMENTAL) */
-@media (min-height: 820px) {
-  #buttons button{
-    /* no size override – base + aspect-ratio will handle it */
-  }
-}
-
 
 @media (min-width: 900px){
   #buttons button{
