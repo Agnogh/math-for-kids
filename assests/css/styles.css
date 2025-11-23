@@ -101,17 +101,6 @@ h1 {
   text-align: center;
 }
 
-/* TRYING OT FIX SCROLLING */
-/* make footer fixed to bottom so layout is one screen */
-#game_page_footer {
-  position: fixed;
-  left: 0; right: 0; bottom: 0;
-  margin: 0;
-  border-radius: 16px;
-  height: var(--footer-h);
-  display: grid;
-  place-items: center;
-}
 
 /* TRYING OT FIX SCROLLING - FIXED */
 /* give main exactly the remaining height between header and footer */
@@ -872,9 +861,15 @@ footer.slightly_muted {
   font-size: clamp(.95rem, 2.6vw, 1.15rem);
 }
 
+/* make footer fixed to bottom so layout is one screen */
 /*footer for game page (as keyID is suggesing)*/
-#game_page_footer{
-  margin: 6px 0 10px;  /* MIGHT NEED A BIT ADJUSTMENT LATER ON */
+#game_page_footer {
+  position: fixed;
+  margin: 0;
+  height: var(--footer-h);
+  place-items: center;
+  display: grid;
+  left: 0; right: 0; bottom: 0;
   padding: 8px 12px;  /*for improving UI/spacing */
   background: rgba(60,63,66,0.8);  /* a bit more dim than ussual */
   border: 2px double #adf309;  /* standard same as every other element */
