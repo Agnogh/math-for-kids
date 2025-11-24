@@ -286,6 +286,8 @@ main {
   text-align: center;  /* text inside box centered */
   max-width: fit-content;  /* to avoid unnecesarry long text box */
   justify-self: center;  /* set in center (was aligned left */
+  align-items: center;  /* centered (when buttons are exceptionally high)*/
+  display: inline-flex;  /* centered (when buttons are exceptionally high)*/
 }
 
 
