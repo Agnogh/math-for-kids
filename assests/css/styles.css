@@ -267,6 +267,8 @@ main {
   text-align: center;  /* text is centered in relation to text holder */
   max-width: fit-content;  /* to decrease unnecesary large text holder */
   justify-self: center;  /* to align center text holder */
+  align-items: center;  /* centered (when buttons are exceptionally high)*/
+  display: inline-flex;  /* centered (when buttons are exceptionally high)*/
 }
 
 /* text just before table (will be emojis) */
