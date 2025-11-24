@@ -54,6 +54,7 @@ header {
 
 #header_for_welcome_page a {
   color: #adf309;
+  text-decoration: none;
 }
 
 /* header for game page*/
