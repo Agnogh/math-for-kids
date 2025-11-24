@@ -1228,6 +1228,15 @@ footer.slightly_muted {
 
 }
 
+@media (min-width: 1000px) {
+  #game_page_header,
+  #header_for_welcome_page,
+  #leaderboard_header_section {
+    height: 70px;
+  }
+ }
+
+
 /*this better work as I am at the edge of my patience*/
 @media (max-aspect-ratio: 3/4) {  /* very tall phones/talbets */
   #buttons button {
