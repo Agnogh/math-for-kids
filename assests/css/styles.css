@@ -343,8 +343,6 @@ main {
     /* POPULATING ISSUE */
   display: grid;  /* avoids flex stretching */
   place-items: center;  /* grid sits cenetred */
-  content-visibility: visible;
-  contain-intrinsic-size: 0 0 !important;
 }
 
 .action_button_on_leaderboard a ,
