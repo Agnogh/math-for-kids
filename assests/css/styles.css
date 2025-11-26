@@ -127,6 +127,12 @@ main {
   padding: 8px clamp(12px, 4vw, 24px) 72px;
 }
 
+#empty_state {
+  /* I will ahve to twaek this later on since this is seen ONLY when no game is played */
+  font-size: 1rem;  /* EXPERIMENTAL FOR NOW (maybe go with clamp) */
+  font-weight: 600;  /* EXPERIMENTAL FOR NOW (maybe 400 ) */
+  margin: 6px 0 10px;  /* EXPERIMENTAL FOR NOW(I am just pulling number out of ym head here) */
+}
 
 /* Fieldset container */
 #modes {
