@@ -138,10 +138,18 @@ main {
 
 #empty_state {
   /* I will ahve to twaek this later on since this is seen ONLY when no game is played */
-  font-size: 0.95rem;  /* EXPERIMENTAL FOR NOW (maybe go with clamp) */
+  /* font-size: 0.95rem;  /* EXPERIMENTAL FOR NOW (maybe go with clamp) */
+  font-size: clamp(0.9rem, 2.2vw, 1.1rem);  /* trying with clamp */
   font-weight: 600;  /* EXPERIMENTAL FOR NOW (maybe 400 ) */
   margin: 4px 0 6px;  /* EXPERIMENTAL FOR NOW(I am just pulling number out of ym head here) */
+  padding: 6px 10px;  /* EXPERIMENTAL FOR NOW (a bit of breathing room */
+
   text-align: center;
+  color: #adf309;
+  background: rgba(0,0,0,0.55);
+  border: 2px double #adf309;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px #f06502;
 }
 
 /* Fieldset container */
