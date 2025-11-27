@@ -127,11 +127,21 @@ main {
   padding: 8px clamp(12px, 4vw, 24px) 72px;
 }
 
+#leaderboard_game_history_box {
+  margin: 6px 0 10px;
+  padding: 8px 12px;
+  background: rgba(18,31,26,0.6);
+  border: 2px double #adf309;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px #f06502;
+}
+
 #empty_state {
   /* I will ahve to twaek this later on since this is seen ONLY when no game is played */
-  font-size: 1rem;  /* EXPERIMENTAL FOR NOW (maybe go with clamp) */
+  font-size: 0.95rem;  /* EXPERIMENTAL FOR NOW (maybe go with clamp) */
   font-weight: 600;  /* EXPERIMENTAL FOR NOW (maybe 400 ) */
-  margin: 6px 0 10px;  /* EXPERIMENTAL FOR NOW(I am just pulling number out of ym head here) */
+  margin: 4px 0 6px;  /* EXPERIMENTAL FOR NOW(I am just pulling number out of ym head here) */
+  text-align: center;
 }
 
 /* Fieldset container */

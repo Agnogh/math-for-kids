@@ -55,25 +55,26 @@
                 <a href="index.html"   target="_blank" rel="noopener">Game Page</a>
                 <button id="clear_btn" type="button" title="Remove saved scores">Clear leaderboard</button>
             </nav>
+            <section id="leaderboard_game_history_box">
+                <h4 id="empty_state" class="empty" aria-live="polite">
+                    No scores yet. Play a 10-roll game and come back!
+                </h4>
 
-            <h4 id="empty_state" class="empty" hidden>No scores yet. Play a 10-roll game and come back!</h4>
-
-            <p id="last_saved_note" class="slightly_muted"></p>
-            
-            <table id="board" aria-describedby="last_saved_note" hidden>
-            <thead id="head_of_the_table">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Score</th>
-                    <th scope="col" class="right">Luck index %</th>
-                    <th scope="col">Game Mode</th>
-                    <th scope="col">Time</th>
-                </tr>
-            </thead>
-            <tbody id="leaderboard_rows"></tbody>
-            </table>
-
-    
+                <p id="last_saved_note" class="slightly_muted"></p>
+                
+                <table id="board" aria-describedby="last_saved_note" hidden>
+                    <thead id="head_of_the_table">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Score</th>
+                            <th scope="col" class="right">Luck index %</th>
+                            <th scope="col">Game Mode</th>
+                            <th scope="col">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard_rows"></tbody>
+                </table>
+            </section>
     </main>
 
     <footer class="slightly_muted" aria-label="Information about how leaderboard works">
