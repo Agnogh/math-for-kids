@@ -907,9 +907,9 @@ footer.slightly_muted {
 /* make footer fixed to bottom so layout is one screen */
 /*footer for game page (as keyID is suggesing)*/
 #game_page_footer {
-  position: fixed;
+  /* position: fixed; Lets comment this out for now to fix UI on large devices*/
   margin: 0;
-  height: var(--footer-h);
+  /* height: var(--footer-h); Lets comment thjis out for now*/
   place-items: center;
   display: grid;
   left: 0; right: 0; bottom: 0;
@@ -926,7 +926,7 @@ footer.slightly_muted {
   margin: 0 0 6px;
   padding: 2px 8px;
   background: rgba(0,0,0,0.35);
-  border-radius: 10px;
+  border-radius: 25%;  /* adjsuting based on try and fail technique for best fit */
   font-weight:700;
   color:#adf309;
   box-shadow: 4px 4px 8px #f06502;
