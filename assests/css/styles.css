@@ -1395,6 +1395,12 @@ arrogant diletants for making me come up with this rules*/
       padding-bottom: 6px;
     }
 
+   #empty_state {
+      font-size: 1.7rem;
+      padding-top: 12px;
+      padding-bottom: 12px;
+   }
+
     #leaderboard_explanation {
       font-size: 1.9rem;
       padding: 4px 10px;
@@ -1407,7 +1413,7 @@ arrogant diletants for making me come up with this rules*/
       min-height: 48px;
     }
 
-    #footer.slightly_muted {
+    footer.slightly_muted {
       font-size: 1.9rem;
       padding: 4px 10px;
       min-height: 8px;
