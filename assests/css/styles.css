@@ -990,7 +990,6 @@ footer.slightly_muted {
       padding: 5px 9px;  /* EXPERIMENTAL Change later */
       font-size: .75rem;  /* EXPERIMENTAL Change later */
     }
-  }
 
     #game_page_footer {
       font-size: 0.75rem;  /* experimentally */
@@ -998,6 +997,9 @@ footer.slightly_muted {
       border-radius: 20%;  /* % works better than px for me */
     }
   
+  }
+
+
 @media (min-width: 360px) {
     #head_of_the_table th, #leaderboard_rows td {
       padding: 4px 9px;
@@ -1016,7 +1018,7 @@ footer.slightly_muted {
     border-radius: 20%;  /* % works better than px for me */
   }
 
-  }
+}
 
 @media screen and (min-width: 400px) {
     body {
