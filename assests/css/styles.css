@@ -441,6 +441,9 @@ main {
   box-shadow: 4px 4px 8px #f06502;  /* to 'overpower' red shadow from 'p' element */
 }
 
+#last_saved_note:empty {  /* when there is no text hide 'the pill' */
+  display: none;
+}
 
 .empty_button_to_trick_ui {
     visibility: hidden;     /* need to hide it as I do not need it for functional purposes, just for better alignment */
