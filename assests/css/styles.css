@@ -764,6 +764,15 @@ button:disabled {
   isolation: isolate; /* keep glow above neighbors */
 }
 
+
+/* I Gave up on Life itself!!!  */
+.action_button_on_leaderboard a,
+.action_button_on_leaderboard button {
+  min-height: 32px;  /* smaller height */
+  padding: 4px 10px !important;  /* smaller vertical padding */
+  font-size: clamp(0.8rem, 1.5vw, 1rem);  /* still responsive but not huge */
+}
+
 /* buttons on Welcome and Leaderbaord when moving over */
 #action_button_on_welcome_pane a:hover {
   filter: brightness(1.08);
@@ -1356,5 +1365,51 @@ footer.slightly_muted {
   #buttons button {
     width:  calc(var(--btnS) * 1.40);
     height: calc(var(--btnS) * 0.92);
+  }
+}
+
+
+/* I hate whoever created tablets and didn't stick to some standards
+so we have a mix of pretty much any ratio and dimentions on the market
+and every manifacturer thinks they are something special but in fact
+they are messing up with layout. Bunch of pompous, overconfident,
+arrogant diletants for making me come up with this rules*/
+/* iPad PORTRAIT and similar- tall, not too wide */
+@media screen
+  and (min-width: 768px)  /* at least tablet width */
+  and (max-width: 900px)  /* but not laptop wide */
+  and (min-height: 1024px)  /* tall like iPad portrait */
+  and (max-height: 1368px)  /* up to 12.9" iPad Pro */
+{
+  /* rules go here*/
+  .action_button_on_leaderboard a,
+  .action_button_on_leaderboard button {
+    font-size: 1.9rem;
+    padding: 4px 10px;
+    min-height: 8px;
+  }
+
+  #leaderboard_game_history_box {
+    font-size: 1.9rem;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  #leaderboard_explanation {
+    font-size: 1.9rem;
+    padding: 4px 10px;
+    min-height: 48px;
+  }
+
+  #leaderboard_title {
+    font-size: 1.9rem;
+    padding: 4px 10px;
+    min-height: 48px;
+  }
+
+  #footer.slightly_muted {
+    font-size: 1.9rem;
+    padding: 4px 10px;
+    min-height: 8px;
   }
 }
