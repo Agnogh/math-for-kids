@@ -1487,4 +1487,67 @@ arrogant diletants for making me come up with this rules*/
       font-size: 1.55rem;
       padding: 5px 15px;
     }
-}
+
+
+    /* Welcome page */
+    /* Header */
+    #header_for_welcome_page {
+      font-size: 1.7rem;  /* title text size */
+
+    }
+
+    #header_for_welcome_page a {
+      font-size: 2.2rem;  /* link text inside header */
+    }
+
+    /* main */
+    #welcome_pane_main_section {
+      font-size: 1.55rem;  /* body text inside card */
+      padding: 18px 20px;  /* gentle padding bump */
+      margin-top: 80px;  /* tiny extra space under header */
+      margin-bottom: 16px;
+    }
+
+    /* Game rules */
+    #game_rules_title {
+      font-size: 1.95rem;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Game rule list */
+    #game_rules_order_list {
+      font-size: 1.5rem;
+      margin-top: 12px;
+    }
+
+    #game_rules_order_list li {
+      margin: 2.2rem 0;  /* slightly tighter than desktop */
+    }
+
+    /* Start game */
+    #action_button_on_welcome_pane a {
+      font-size: 2rem;
+      padding: 10px 20px;
+      margin-top: 15px;
+      margin-bottom: 1px;
+    }
+
+    /* Footer (text + icons) */
+    #footer_on_welcome_pane {
+      font-size: 1.4rem;
+      padding: 0.6em 0.9em;
+      margin-top: 18px;
+    }
+
+    #social_media_section {
+      gap: 0.8em;  /* breathing space */
+    }
+
+    #social_media_section a {
+      font-size: 1.8rem;  /* icon size */
+      width: 50px;
+      height: 50px;
+    }
+
+  }
