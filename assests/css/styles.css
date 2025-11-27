@@ -907,9 +907,9 @@ footer.slightly_muted {
 /* make footer fixed to bottom so layout is one screen */
 /*footer for game page (as keyID is suggesing)*/
 #game_page_footer {
-  /* position: fixed; Lets comment this out for now to fix UI on large devices*/
+  /* position: fixed; needs to be removed for now*/
   margin: 0;
-  /* height: var(--footer-h); Lets comment thjis out for now*/
+  height: var(--footer-h);
   place-items: center;
   display: grid;
   left: 0; right: 0; bottom: 0;
@@ -1198,12 +1198,24 @@ footer.slightly_muted {
     padding: 19px 18px;  /* EXPERIMENTAL adjust later if needed */ 
     font-size: 1.3rem;  /* EXPERIMENTAL adjust later if needed */
   }
+  
+  #game_page_header, 
+  #header_for_welcome_page,
+  #leaderboard_header_section {
+    height: 70px;
+  }
 
   .action_button_on_leaderboard a,
   .action_button_on_leaderboard button {
     padding: 14px 15px;  /* EXPERIMENTAL Change later */
     font-size: 1.4rem;  /* EXPERIMENTAL Change later */
   }
+
+  #random_number_button {
+    font-size: 1rem;  /*lets try like this*/
+    padding: 8px 14px;  /* little wider, not taller */
+  }
+
 }
 
 @media screen and (min-width: 1000px) {
@@ -1274,16 +1286,13 @@ footer.slightly_muted {
     gap: 1.6em;
   }
 
-}
-
-@media (min-width: 1000px) {
-  #game_page_header,
-  #header_for_welcome_page,
-  #leaderboard_header_section {
-    height: 70px;
+  #game_page_footer {
+    font-size: 1.65rem;  /* decided experimentally (trials and errors) */
+    padding: 8px 16px;  /* to be 'slim' */
+    border-radius: 20%;  /* % works better than px for me */
   }
- }
 
+}
 
 /*this better work as I am at the edge of my patience*/
 @media (max-aspect-ratio: 3/4) {  /* very tall phones/talbets */
