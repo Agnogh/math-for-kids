@@ -1387,6 +1387,7 @@ arrogant diletants for making me come up with this rules*/
       font-size: 1.9rem;
       padding: 4px 10px;
       min-height: 8px;
+      max-height: 120px;
     }
 
     #leaderboard_game_history_box {
@@ -1405,23 +1406,26 @@ arrogant diletants for making me come up with this rules*/
       font-size: 1.9rem;
       padding: 4px 10px;
       min-height: 48px;
+      max-height: 120px;
     }
 
     #leaderboard_title {
       font-size: 1.9rem;
       padding: 4px 10px;
       min-height: 48px;
+      max-height: 120px;
     }
 
     footer.slightly_muted {
       font-size: 1.9rem;
       padding: 4px 10px;
       min-height: 8px;
+      max-height: 120px;
     }
 
       /* Header */
     #game_page_header {
-      font-size: 2.2rem;
+      font-size: 1.8rem;  /* additional tweek for border devices */
     }
 
     #game_page_header a {
