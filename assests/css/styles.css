@@ -1377,39 +1377,114 @@ arrogant diletants for making me come up with this rules*/
 /* iPad PORTRAIT and similar- tall, not too wide */
 @media screen
   and (min-width: 768px)  /* at least tablet width */
-  and (max-width: 900px)  /* but not laptop wide */
+  and (max-width: 1025px)  /* but not laptop wide */
   and (min-height: 1024px)  /* tall like iPad portrait */
   and (max-height: 1368px)  /* up to 12.9" iPad Pro */
-{
-  /* rules go here*/
-  .action_button_on_leaderboard a,
-  .action_button_on_leaderboard button {
-    font-size: 1.9rem;
-    padding: 4px 10px;
-    min-height: 8px;
-  }
+  {
+    /* rules go here*/
+    .action_button_on_leaderboard a,
+    .action_button_on_leaderboard button {
+      font-size: 1.9rem;
+      padding: 4px 10px;
+      min-height: 8px;
+    }
 
-  #leaderboard_game_history_box {
-    font-size: 1.9rem;
-    padding-top: 6px;
-    padding-bottom: 6px;
-  }
+    #leaderboard_game_history_box {
+      font-size: 1.9rem;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
 
-  #leaderboard_explanation {
-    font-size: 1.9rem;
-    padding: 4px 10px;
-    min-height: 48px;
-  }
+    #leaderboard_explanation {
+      font-size: 1.9rem;
+      padding: 4px 10px;
+      min-height: 48px;
+    }
 
-  #leaderboard_title {
-    font-size: 1.9rem;
-    padding: 4px 10px;
-    min-height: 48px;
-  }
+    #leaderboard_title {
+      font-size: 1.9rem;
+      padding: 4px 10px;
+      min-height: 48px;
+    }
 
-  #footer.slightly_muted {
-    font-size: 1.9rem;
-    padding: 4px 10px;
-    min-height: 8px;
-  }
+    #footer.slightly_muted {
+      font-size: 1.9rem;
+      padding: 4px 10px;
+      min-height: 8px;
+    }
+
+      /* Header */
+    #game_page_header {
+      font-size: 2.2rem;
+    }
+
+    #game_page_header a {
+      font-size: 2.3rem;
+    }
+
+    /* Gameplay box */
+    #playing_area_box {
+      font-size: 1.55rem;
+      padding: 1px 25px;
+    }
+
+    #title_of_playing_area_box {
+      font-size: 1.9rem;
+      padding: 6px 14px;
+    }
+
+    /* Game mode buttons */
+    #modes legend {
+      font-size: 1.6rem;
+    }
+
+    #modes label span {
+      font-size: 1.65rem;
+      padding: 1px 14px;
+    }
+
+    /* Number buttons (1–9) */
+    #buttons button {
+      font-size: 1.8rem;
+      padding: 0;  /* They already have size via width/height */
+    }
+
+    /* Random number generator (luck ynumber) */
+    #random_number_generator {
+      font-size: 1.55rem;
+      padding: 3px 14px;
+    }
+
+    #random_number_button {
+      font-size: 1.8rem;
+      padding: 1px 20px;
+    }
+
+    /* Post-round pane */
+    #post_round_pane_showing_links_and_restart {
+      font-size: 1.55rem;
+      padding: 10px 14px;
+    }
+
+    #post_round_pane_showing_links_and_restart button,
+    #post_round_pane_showing_links_and_restart a {
+      font-size: 1.45rem;
+      padding: 3px 12px;
+    }
+
+    /* Display results + counter */
+    #display_results_box {
+      font-size: 1.55rem;
+      padding: 6px 12px;
+    }
+
+    #counter_line {
+      font-size: 1.55rem;
+    }
+
+    /* Fotter */
+    #game_page_footer {
+      font-size: 1.55rem;
+      padding: 5px 15px;
+    }
 }
