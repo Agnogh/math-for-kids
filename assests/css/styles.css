@@ -134,6 +134,11 @@ main {
   border: 2px double #adf309;
   border-radius: 12px;
   box-shadow: 4px 4px 8px #f06502;
+
+  display: flex;
+  flex-direction: column;  /* stack empty_state + last_saved_note + table (when shows) */
+  align-items: center;  /* to center horizntally */
+  justify-content: center;  /* center vertically when theres little conten */
 }
 
 #empty_state {
