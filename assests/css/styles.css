@@ -992,6 +992,12 @@ footer.slightly_muted {
     }
   }
 
+    #game_page_footer {
+      font-size: 0.75rem;  /* experimentally */
+      padding: 8px 16px;
+      border-radius: 20%;  /* % works better than px for me */
+    }
+  
 @media (min-width: 360px) {
     #head_of_the_table th, #leaderboard_rows td {
       padding: 4px 9px;
@@ -1003,6 +1009,12 @@ footer.slightly_muted {
       padding: 8px 10px;  /* EXPERIMENTAL Change later */
       font-size: .95rem;  /* EXPERIMENTAL Change later */
     }
+
+  #game_page_footer {
+    font-size: 0.8rem;  /* experimentally */
+    padding: 8px 16px;
+    border-radius: 20%;  /* % works better than px for me */
+  }
 
   }
 
@@ -1044,6 +1056,13 @@ footer.slightly_muted {
     padding: 7px 11px;  /* EXPERIMENTAL Change later */
     font-size: .95rem;  /* EXPERIMENTAL Change later */
   }
+
+  #game_page_footer {
+    font-size: 0.85rem;  /* experimentally */
+    padding: 8px 16px;
+    border-radius: 20%;  /* % works better than px for me */
+  }
+
 }
 
 @media screen and (min-width: 600px) {
@@ -1110,11 +1129,12 @@ footer.slightly_muted {
       border-radius: 14px;
     }
 
-  /* compact footer */
+  /* compact footer 
   #game_page_footer {
     padding: 6px 10px;
     border-radius: 14px;
   }
+    */
   #display_results_box {
     margin: 0 0 4px;
     padding: 2px 6px;
@@ -1168,6 +1188,12 @@ footer.slightly_muted {
 @media screen and (min-width: 768px) {
     #buttons {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    #game_page_footer {
+      font-size: 1.05rem;  /* experimentally */
+      padding: 8px 16px;  /* to be 'slim' */
+      border-radius: 20%;  /* % works better than px for me */
     }
 }
 
@@ -1290,6 +1316,11 @@ footer.slightly_muted {
     font-size: 1.65rem;  /* decided experimentally (trials and errors) */
     padding: 8px 16px;  /* to be 'slim' */
     border-radius: 20%;  /* % works better than px for me */
+  }
+
+  #random_number_button {
+    font-size: 1.2rem;  /*lets try like this*/
+    padding: 8px 14px;  /* little wider, not taller */
   }
 
 }
