@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Search engines tags -->
+    <meta name="description"
+    content="calculate probablitiy, lotto numbers, math game">
+    <meta name="keywords" content="experience, math, mathematics, calculate, school, lottery, math for kids">
+
+    <!--this should add performance hints (found this on YouTube)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- link to font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!--Link to css file-->
+    <link rel="stylesheet" href="assests/css/styles.css">
+
+    <!--This is code for fav icons-->
+    <link rel="icon" sizes="180x180" href="assests/favicon/lotto-360.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assests/favicon/lotto-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assests/favicon/lotto-32.png">
+    <link rel="icon" type="image/png" sizes="57x57" href="assests/favicon/lotto-57.png">
+    <link rel="icon" type="image/png" sizes="70x70" href="assests/favicon/lotto-70.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="assests/favicon/lotto-72.png">
+    <link rel="icon" type="image/png" sizes="76x76" href="assests/favicon/lotto-76.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assests/favicon/lotto-96.png">
+
+    <!-- Title of the webpage-->
+    <title>Lottery Game "Guess the number"</title>
+
+</head>
+
+<body>
+    <h1 class="i-do-not-like-when-i-need-to-follow-rules-blindly">
+        Game page for "Guess the Number" Game
+    </h1>
+    <header id="game_page_header">
+        <h2>
+            <a href="index.html">Guess the number</a>
+        </h2>
+    </header>
+
+    <main>
+
+    <!-- Buttons for mode game -->
+        <fieldset id="modes" aria-label="Game mode">
+        <legend>Game mode</legend>
+        <label>
+            <input type="radio" name="game_mode" value="normal" aria-label="Normal game mode" checked>
+            <span>Normal</span>
+        </label>
+        <label>
+            <input type="radio" name="game_mode" value="easy" aria-label="Easy game mode">
+            <span>Easy</span>
+        </label>
+        <label>
+            <input type="radio" name="game_mode" value="easiest" aria-label="Easiest game mode">
+            <span>Easiest</span>
+        </label>
+        </fieldset>
+
+        <div id="playing_area_box">
+            <h3 id="title_of_playing_area_box">Pick your number</h3>
+        <div id="number_selector_box">
+            <div class="buttons" id="buttons">
+                <button class="btn_1" id="btn_1" aria-label="Select number 1">1</button>
+                <button class="btn_2" id="btn_2" aria-label="Select number 2">2</button>
+                <button class="btn_3" id="btn_3" aria-label="Select number 3">3</button>
+                <button class="btn_4" id="btn_4" aria-label="Select number 4">4</button>
+                <button class="btn_5" id="btn_5" aria-label="Select number 5">5</button>
+                <button class="btn_6" id="btn_6" aria-label="Select number 6">6</button>
+                <button class="btn_7" id="btn_7" aria-label="Select number 7">7</button>
+                <button class="btn_8" id="btn_8" aria-label="Select number 8">8</button>
+                <button class="btn_9" id="btn_9" aria-label="Select number 9">9</button>
+            <!-- Need to add this to trick the UI from giving me proper button alignment -->
+            <!-- Removing fake button as 'wave' is complaining about accessibility-->
+
+            </div>
+        </div>
+        </div>
+
+            <div id="random_number_generator">
+                <button id="random_number_button"
+                    aria-label="Generate a random lucky number for this round"
+                >I feel lucky! (click me)
+                </button>
+            </div>
+        <!-- replaced old section with new one that will be hidden  -->
+            <section id="post_round_pane_showing_links_and_restart" hidden aria-label="Post-round actions">
+            <!-- adding disabled on the button so it is not clickable based on YouTube-->
+                <button id="reset_button" type="button" disabled title="Game already in progres">Start new game</button>
+                <a id="leaderboard_link" href="leaderboard.html" target="_blank" rel="noopener" hidden>View Leaderboard</a>
+            </section>
+    
+    </main>
+
+    <footer id="game_page_footer">
+
+        <p id="display_results_box" role="status" aria-live="polite">
+            Are you ready to try your luck
+        </p>
+
+    <!-- Ratio and luick index box -->
+        <p id="counter_line" role="status">Wins/Rolls • Luck %</p>
+
+    </footer>
+
+<!--Link to js file-->
+<script src="assests/js/script.js"></script>
+
+
+</body>
+</html>
