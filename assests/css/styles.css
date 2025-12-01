@@ -1561,3 +1561,12 @@ arrogant diletants for making me come up with this rules*/
     }
 
   }
+
+/* Generic "opens in new tab" icon for accessibiltiy found on youtubne */
+a[target="_blank"]::after {
+  content: "↗";  /* the little new-tab arrow */
+  font-size: 0.75em;  /* bit smaller than main text */
+  margin-left: 0.25em;  /* small gap from icon */
+  display: inline-block;
+  vertical-align: baseline;
+}
