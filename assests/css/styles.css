@@ -43,7 +43,7 @@ header {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);  /* need to bury this gap and validator is complaining about deprecated property*/
   white-space: nowrap;
   border: 0;
 }
