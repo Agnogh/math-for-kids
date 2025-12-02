@@ -438,7 +438,7 @@ main {
   background: rgba(0,0,0,0.18);  /* zebra rows (improves readbility, maybe REMOVE it) */
 }
 
-/* general rule for dimmed (NOT SURE IF I WANNA KEEP THIS RULE - Decision later) */
+/* general rule for dimmed */
 .slightly_muted {
     opacity: .8; font-size: .9em;
 }
@@ -481,14 +481,11 @@ main {
     transform 120ms ease;
   isolation: isolate; /* keep glow in top onyl */
 
-  /*width: clamp(54px, 14vw, 84px); */
   --btnS: clamp(54px, 10vmin, 96px);  /* base diameter*/
   width: var(--btnS);
   height: var(--btnS);
   border-radius: 50%;  /* for round corners */
-  /*aspect-ratio: 1 / 1;*/
 
-  /*font-size: clamp(1rem, 1.2vh + 1.6vw, 1.35rem);*/
   font-size: clamp(1rem, calc(var(--btnS) * 0.28), 1.6rem); /* EXPERIMENTAL */
 
   border-radius: 50%;  /* some styling */
@@ -557,7 +554,7 @@ main {
     transform 120ms ease;
   isolation: isolate;
 
-  min-width: 200px;  /* I MIGHT REMOVE THIS TO AUTO-WRAP*/
+  min-width: 200px;  /* AUTO-WRAP -> keep it*/
   padding: 5% 5%;  /* percentages work better that 'px' */
   border-radius: 25%; /* nice round edges */
   background: rgb(114, 82, 38, 0.6);  /*leaving transperancy until I DECIDE ON THE COLOUR*/ 
@@ -711,7 +708,7 @@ button:disabled {
 }
 
 
-/* Make the link look like a button (still need to find background colour match) */
+/* Make the link look like a button */
 #action_button_on_welcome_pane a {
   display: inline-flex;
   align-items: center;
@@ -955,7 +952,6 @@ footer.slightly_muted {
     flex-wrap: nowrap;  /*maybe I jsut drop entirely, but going with this*/
     gap: 6px;  /* experimental - needed for smaller device and large number of Sic.med */
     justify-content: center;  /* needed so we have better UI on smalld evices (maybe I drop one social media */
-    /*padding: 5px 5px; forgot to comment this out */
     list-style-type: none;
     /* SOC MEDIA SCALING (will be transfered to a elemnt */
     align-items: center;
@@ -1140,12 +1136,7 @@ footer.slightly_muted {
       border-radius: 14px;
     }
 
-  /* compact footer 
-  #game_page_footer {
-    padding: 6px 10px;
-    border-radius: 14px;
-  }
-    */
+
   #display_results_box {
     margin: 0 0 4px;
     padding: 2px 6px;
