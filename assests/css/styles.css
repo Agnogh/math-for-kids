@@ -557,7 +557,7 @@ main {
   min-width: 200px;  /* AUTO-WRAP -> keep it*/
   padding: 5% 5%;  /* percentages work better that 'px' */
   border-radius: 25%; /* nice round edges */
-  background: rgb(114, 82, 38, 0.6);  /*leaving transperancy until I DECIDE ON THE COLOUR*/ 
+  background: rgba(114, 82, 38, 0.6);  /*leaving transperancy until I DECIDE ON THE COLOUR*/ 
   color:#adf309;
   font-weight:800;
   border: 2px double #adf309;
