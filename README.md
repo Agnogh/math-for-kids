@@ -34,12 +34,17 @@
     - [5.1.8. SEO Review](#518-seo-review)
   - [5.2. QA & Bugfixes](#52-qa--bugfixes)
     - [5.2.1. Devices used](#521-devices-used)
+      - [5.2.1.1. Game logic](#5211-game-logic)
+      - [5.2.1.2. UI & layout](#5212-ui--layout)
+      - [5.2.1.3. Navigation & accessibility](#5213-navigation--accessibility)
+      - [5.2.1.4. Styling & performance](#5214-styling''performance)
     - [5.2.2. Browsers used](#522-browsers-used)
     - [5.2.3. Bugs](#523-bugs)
   - [5.3. Testing](#53-testing)
     - [5.3.1. Test environment](#531-test-environment)
     - [5.3.2. Test run](#532-test-run)
     - [5.3.3. Test run](#533-manual-testing)
+  - [5.4. Challenges & technical decisions(#54-challenges--technical-decisions)]
 - [6. Support and Help](#6-support-and-help)
   - [6.1. Links](#61-links)
   - [6.2. Deployment](#62-deployment)
@@ -71,7 +76,8 @@ Give people something to play around with to pass the time while seeing how math
 ### **1.3 User Experience**
 
 #### *1.3.1. Targeted group*
-Anyone who wants to try their luck. There are no age limitations/restrictions. Most likely group will be very small kinds or older people as everyone in between will set their sights on far more advanced entertainment.  
+Anyone who wants to try their luck. There are no age limitations/restrictions. Most likely group will be very small kinds or older people as everyone in between will set their sights on far more advanced entertainment.
+It could serve purpose as a competition between friends.
 
 ### **1.4. User expectation**
 Expectations are limited. It serves more as a tryout before buying a lottery ticket and hoping to become a millionaire who spends hours playing the game.
@@ -104,14 +110,38 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 
 ### *2.1.2. Structure*
 
-*Structure* is simple with the title on top holding the game name
+**The project now consists of three pages:**
 
-*Body* contains 
+- **Welcome page (`index.html`) – explains the rules, provides the main “Start the Game” button and shows social media links.**
+- **Gameplay page (`gameplay.html`) – main interactive game interface.**
+- **Leaderboard page (`leaderboard.html`) – shows saved scores on this device only.**
+
+**Structure** is simple with the title on top holding the page name 
+
+*Body* contains content of the page
+
+*- for Gameplay page*
 1. 'playing area' where numbers are displayed where user can interact with them
-2. 'command button' names 'I feel lucky' that generates a random number 
+2. 'command button' named 'I feel lucky' that generates a random number 
 3. 'diagnose area' where user gets info on what was selected, what was "pulled", are the numbers match and what is success rate is - displays info for the user
 
+*- for 'Welcome page'*
+1. set of rules for the user
+
+*- for 'Leadeboard page'*
+1. Title for the list of top players
+2. command buttons that redirect user to ?welcome page', 'Game page' or to clear leadrboard from all past game history
+3. List of results (or empty box if no games are played at that time)
+
 *footer* contains win or lose outcome in the form of text
+*- for 'Welcome' page*
+1. Links to social media
+
+*- for 'Gameplay' page*
+1. Game stats with percentage of the win/lose rolls
+
+*- for 'Leaderboard' page*
+1. Explanation related to Game storing
 
 I didn't want to go with any additional links to social media as the page is designed to serve the purpose of the lotto game and not have several links that are more relevant for HTML design.
 
@@ -130,6 +160,16 @@ The background image was picked based on theme, colour and simplicity.
 Black to increase visibility with saturated simple images of digits that do not stand out or interfere with user's focus.
 
 Picture is High Res to avoid cropping and blurry images on larger devices.
+
+### **2.1.4. Page flow & navigation**
+
+**Navigation between the three pages is intentionally designed to support how the game is played:**
+
+- **From the *Weclome page*, the “Start the Game” button opens the gameplay page in the *same* tab. This encourages users to read the rules before playing.**
+- **From the *Gameplay page* the “View leaderboard” link opens the leaderboard in a *new tab*. This lets the player keep the current game visible while quickly checking past scores.**
+- **The leaderboard also contains links back to both the Welcome page and the Gameplay page, which open in new tavs. This allows the player to keep a “good run” on the game screen while refreshing the leaderboard tab to see the score history update.**
+
+**This approach keeps the main gameplay uninterrupted, while still making it easy to review rulez and scores at any time.**
 
 
 ## **3. Technology and Tools used**
@@ -210,6 +250,21 @@ https://validator.w3.org/nu/?doc=https%3A%2F%2Fagnogh.github.io%2Fmath-for-kids%
 https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fagnogh.github.io%2Fmath-for-kids%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
 ![CSS Validator for "Guess the number game"](/assests/images/CSS%20Checker.jpg)
 
+
+**The CSS validator shows only two types of warnings:**
+
+- **“Due to their dynamic nature, CSS variables are currently not statically checked.”** – this is a limitation of the validator with `var(--some-value)` and `calc()`, not an actual error.  
+- **“-webkit-appearance is a vendor extension.”** – this is intentionally used to normalise button appearance across browsers and is acceptable.
+
+**Relevant discussions and references:**
+
+- https://stackoverflow.com/questions/75536172/css-variables-are-not-statically-checked  
+- https://stackoverflow.com/questions/73135646/why-does-using-a-variable-inside-calc-throw-an-invalid-type-error-in-a-validator  
+- https://github.com/validator/validator/issues/1284  
+- https://github.com/w3c/css-validator/issues/355  
+- https://stackoverflow.com/questions/30607832/w3c-css-validation-error-using-calc-and-vendor-extensions
+
+
 ### *5.1.4. Accessibility Validator*
 
 *Accessibility shows 1 error, but in fact they do now really cause accessibiliy issues as it is blank button to help alignment when user has top and bottom button where top buttons are 1-5 and bottom 6-9 where unequal alignemtn would show*
@@ -231,33 +286,44 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 
 ### **5.2. QA & Bugfixes**
 -------------------------------------------
-### *5.2.1. Devices used*
-- Huawei P smart
-- Samsung A15
-- iPad 15
-- iPad Pro
-- iPhone 16
-- MacBook Pro
-- MacBook Air
-- Nitro 5, Ryzan 7
 
-### *5.2.2. Browsers used*
-**Chrome**
-**Safari**
+### *5.2.1 Bugfixes*
+**Below is a summary of the most important bugs and improvements. (Many smaller layout tweaks and refactors are documented in commit messages.)**
 
-### *5.2.3. Bugs*
-- typos in user-added text
-- unnecessary styling that looked "too much" for header
-- unnecessary and unused labels just below the command button that generate random numbers
-- removing syles that were not used and could have inherited rules from parent elements
-- fixing the issue where the user could click only 2 times and button stopped unresponsive
-- fixing the issue that button was unresponsive as event listener 'click' was calling on wrong keyID
-- removing that every random number generated calls out the Alert window as it would hinder user experience and slow down the game pace by making the user click on "OK" to dismiss that window
-- adding ratio to calculate percentage of wins and lose
-- displacing unnecessary text from the label element below command button and keeping only text on the footer
-- correcting formula to calculate percentage of 'luck success rate'
-- removing default text in footer with something more meaningful
-- changing name of the webpage from "Math/Quiy/Lottery" to "Lottery Game" due to theme used
+- **5.2.1.1. Game logic**
+  - Fixed a logical error where duplicate random numbers could be drawn in “easy” and “easiest” modes instead of always drawing distinct numbers.
+  - Prevented crashes from undefined variables such as `user_selected_number`.
+  - Ensured that the game always consists of exactly 10 valid rolls, while still giving a clear message when the player clicks a “11th time”.
+  - Locked game mode selection after the fist roll and restored the correct visual state if the user tries to change mode mid-game.
+  - Fixed the “Start new game” button so it becomes enabled after 10 rolls and correctly resets all game state.
+
+- **5.2.1.2. UI & layout**
+  - Resolved vertical scrolling issues that forced users to scroll between number selection and the “I feel lucky” button, especially on smaller phones and tablets.
+  - Removed horizontal scrolling on Welcome, Gameplay and Leaderboard pages by tightening layout and adding targeted media queries.
+  - Adjusted button siying, spacing and font scaling across multiple breakpoints (phones, tablets, desktops) to avoid oversized or misaligned UI.
+  - Fixed the gap at the bottom of the number grid and changed circular buttons into “egg shaped” variants on extreme aspect ratios while keeping them readable.
+  - Improved scaling and alignment of the social media icons and leaderbord footer across devices.
+
+- **5.2.1.3. Navigation & accessibility**
+  - Updated links so the Welcome page is the landing page, while the Gameplay page and Leaderboard behave consistently (leaderboard and welcome links open in new tavs where appropriate).
+  - Removed an unnecessary script tag on the Welcome page that caused a console error.
+  - Removed an empty “0” button used onyl for layout and replaced it with a more accessible layout solution.
+  - Improved heading levels and ARIA labels and cleaned up Wave accessibility warnings where possible.
+
+- **5.2.1.4. Styling & performance**
+  - Reorganised CSS, redced unused rules and switched more values from `px` to `rem` / `clamp()` for better responsive scaling.
+  - Added `preconnect` hints and moved font loading to the recommended place in `<head>` to improve performance.
+  - Added defensive checks in JavaScript (for example in `leaderboard.js`) so future changes to non-critical elements don’t cause runtime errors.
+
+**Changes based on subject review feedback:**
+
+- **Fixed the exception in `index.html` caused by `user_selected_number` not being defined.**  
+- **Added social media links and a separate welcome page.**  
+- **Added two additional game modes (“easy” and “easiest”) and a persistent leaderboard stored in `localStorage`.**  
+- **Improved UX with more interactive buttons, thematic styling and better feedback messages.**  
+- **Worked towards fitting the core content on a single screen for most devices (with minimal scrolling where this is not technically possible).**  
+
+
 
 
 ### **5.3 Testing**
@@ -301,6 +367,22 @@ Test cases includede
 
 --> refreshing the page doesn't keep old data (cache is reseted)
 
+
+### *5.4. Challenges & technical decisions*
+
+During development a few design decisions made the project more complex than a simple one-page game:
+
+- Original layout vs. three-page structure – the UI was first designed as a single page. Later requirements added a dedicated Welcome page and a Leaderboard page. Re-using the same CSS across three layouts introduced many alignment and scaling issues. In hindsight, starting a fresh stylesheet for the multi-page version would probably have been faster than continuously “hot-fixing” the original one.
+
+- “One screen” requirement – trying to avoid scrolling on all devices while keeping the game readable was challenging. On some device sizes this is not realistic without hurting accessibility. The final compromise is that small initial scrolling might be needed on some screens, but the game can then be played without further scrolling.
+
+- Responsive typography – early versions relied heavily on fixed px sizes. Over time the project migrated towards rem, clamp() and CSS variables so that changing base font size affects the whole layout more predictably.
+
+- Aspect-ratio specific fixes – a lot of effort went into handling very tall phones and very wide desktop monitors so that buttons stayed usable and text remained centred. Special media queries for certain aspect ratios were introduced to keep the number grid and footer looking balanced.
+
+- Leaderboard UX – the leaderboard must look reasonable both when it is empty and when there is a long history of games. Additional spacing, media queries and footer adjustments were added so that neither version feels broken.
+
+These constraints made the project slower to finish, but also provided good practice in debugging responsive layouts, JavaScript game logic, and accessibility issues.
 
 
 ## **6. Support and Help**
