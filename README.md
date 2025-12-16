@@ -33,18 +33,15 @@
     - [5.1.7. Best Practice Examples Review](#517-best-practice-examples-review)
     - [5.1.8. SEO Review](#518-seo-review)
   - [5.2. QA & Bugfixes](#52-qa--bugfixes)
-    - [5.2.1. Devices used](#521-devices-used)
-      - [5.2.1.1. Game logic](#5211-game-logic)
-      - [5.2.1.2. UI & layout](#5212-ui--layout)
-      - [5.2.1.3. Navigation & accessibility](#5213-navigation--accessibility)
-      - [5.2.1.4. Styling & performance](#5214-styling''performance)
-    - [5.2.2. Browsers used](#522-browsers-used)
-    - [5.2.3. Bugs](#523-bugs)
+    - [5.2.1. Game logic](#521-game-logic)
+    - [5.2.2. UI & layout](#522-ui--layout)
+    - [5.2.3. Navigation & accessibility](#523-navigation--accessibility)
+    - [5.2.4. Styling & performance](#524-styling''performance)
   - [5.3. Testing](#53-testing)
     - [5.3.1. Test environment](#531-test-environment)
     - [5.3.2. Test run](#532-test-run)
-    - [5.3.3. Test run](#533-manual-testing)
-  - [5.4. Challenges & technical decisions(#54-challenges--technical-decisions)]
+    - [5.3.3. Manual testing](#533-manual-testing)
+  - [5.4. Challenges & technical decisions](#54-challenges--technical-decisions)
 - [6. Support and Help](#6-support-and-help)
   - [6.1. Links](#61-links)
   - [6.2. Deployment](#62-deployment)
@@ -290,27 +287,27 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 ### *5.2.1 Bugfixes*
 **Below is a summary of the most important bugs and improvements. (Many smaller layout tweaks and refactors are documented in commit messages.)**
 
-- **5.2.1.1. Game logic**
+- **5.2.1. Game logic**
   - Fixed a logical error where duplicate random numbers could be drawn in “easy” and “easiest” modes instead of always drawing distinct numbers.
   - Prevented crashes from undefined variables such as `user_selected_number`.
   - Ensured that the game always consists of exactly 10 valid rolls, while still giving a clear message when the player clicks a “11th time”.
   - Locked game mode selection after the fist roll and restored the correct visual state if the user tries to change mode mid-game.
   - Fixed the “Start new game” button so it becomes enabled after 10 rolls and correctly resets all game state.
 
-- **5.2.1.2. UI & layout**
+- **5.2.2. UI & layout**
   - Resolved vertical scrolling issues that forced users to scroll between number selection and the “I feel lucky” button, especially on smaller phones and tablets.
   - Removed horizontal scrolling on Welcome, Gameplay and Leaderboard pages by tightening layout and adding targeted media queries.
   - Adjusted button siying, spacing and font scaling across multiple breakpoints (phones, tablets, desktops) to avoid oversized or misaligned UI.
   - Fixed the gap at the bottom of the number grid and changed circular buttons into “egg shaped” variants on extreme aspect ratios while keeping them readable.
   - Improved scaling and alignment of the social media icons and leaderbord footer across devices.
 
-- **5.2.1.3. Navigation & accessibility**
+- **5.2.3. Navigation & accessibility**
   - Updated links so the Welcome page is the landing page, while the Gameplay page and Leaderboard behave consistently (leaderboard and welcome links open in new tavs where appropriate).
   - Removed an unnecessary script tag on the Welcome page that caused a console error.
   - Removed an empty “0” button used onyl for layout and replaced it with a more accessible layout solution.
   - Improved heading levels and ARIA labels and cleaned up Wave accessibility warnings where possible.
 
-- **5.2.1.4. Styling & performance**
+- **5.2.4. Styling & performance**
   - Reorganised CSS, redced unused rules and switched more values from `px` to `rem` / `clamp()` for better responsive scaling.
   - Added `preconnect` hints and moved font loading to the recommended place in `<head>` to improve performance.
   - Added defensive checks in JavaScript (for example in `leaderboard.js`) so future changes to non-critical elements don’t cause runtime errors.
@@ -346,7 +343,7 @@ https://agnogh.github.io/math-for-kids/
 3 -m http.server --bind 127.0.0.1
 --> More > More tools > Developer tools > Console and Network
 
-### *5.3.3. manual testing*
+### *5.3.3. Manual testing*
 
 Test cases includede
 --> loading of the webpage
