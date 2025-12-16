@@ -16,6 +16,7 @@
     - [2.1.1. Color](#211-color)
     - [2.1.2. Structure](#212-structure)
     - [2.1.3. Background Image](#213-background-image)
+    - [2.1.4. Page flow & navigation](#214-page-flow--navigation)
 - [3. Technology and Tools used](#3-Technology-and-tools-used)
   - [3.1. Languages](#31-languages)
   - [3.2. Tools](#32-tools)
@@ -33,10 +34,11 @@
     - [5.1.7. Best Practice Examples Review](#517-best-practice-examples-review)
     - [5.1.8. SEO Review](#518-seo-review)
   - [5.2. QA & Bugfixes](#52-qa--bugfixes)
-    - [5.2.1. Game logic](#521-game-logic)
-    - [5.2.2. UI & layout](#522-ui--layout)
-    - [5.2.3. Navigation & accessibility](#523-navigation--accessibility)
-    - [5.2.4. Styling & performance](#524-styling''performance)
+    - [5.2.1. Bugfixes](#521-bugfixes)
+    - [5.2.2. Game logic](#522-game-logic)
+    - [5.2.3. UI & layout](#523-ui--layout)
+    - [5.2.4. Navigation & accessibility](#524-navigation--accessibility)
+    - [5.2.5. Styling & performance](#525-styling''performance)
   - [5.3. Testing](#53-testing)
     - [5.3.1. Test environment](#531-test-environment)
     - [5.3.2. Test run](#532-test-run)
@@ -72,7 +74,7 @@ Give people something to play around with to pass the time while seeing how math
 
 ### **1.3 User Experience**
 
-#### *1.3.1. Targeted group*
+#### **1.3.1. Targeted group**
 Anyone who wants to try their luck. There are no age limitations/restrictions. Most likely group will be very small kinds or older people as everyone in between will set their sights on far more advanced entertainment.
 It could serve purpose as a competition between friends.
 
@@ -99,25 +101,25 @@ The decision was to go with more round shapes instead of crude and sharp edges t
 Shadows are also included for visual effects with mostly green and orange colours to match and contrast at the same time buttons, and background colours.
 
 
-### *2.1.1. Color*
+### **2.1.1. Color**
 The black background is a good fit for yellow and red with green borders. Green border is perfect for a light transition between the contrast of yellow and orange against black.
 
 Slightly transparent boxes cause that transition in colours to be more distinguished while still slightly transiting from red or yellow to black.
 
 
-### *2.1.2. Structure*
+### **2.1.2. Structure**
 
 **The project now consists of three pages:**
 
-- **Welcome page (`index.html`) – explains the rules, provides the main “Start the Game” button and shows social media links.**
-- **Gameplay page (`gameplay.html`) – main interactive game interface.**
-- **Leaderboard page (`leaderboard.html`) – shows saved scores on this device only.**
+- Welcome page (`index.html`) – explains the rules, provides the main “Start the Game” button and shows social media links.
+- Gameplay page (`gameplay.html`) – main interactive game interface.
+- Leaderboard page (`leaderboard.html`) – shows saved scores on this device only.
 
 **Structure** is simple with the title on top holding the page name 
 
 *Body* contains content of the page
 
-*- for Gameplay page*
+*- for 'Gameplay page'*
 1. 'playing area' where numbers are displayed where user can interact with them
 2. 'command button' named 'I feel lucky' that generates a random number 
 3. 'diagnose area' where user gets info on what was selected, what was "pulled", are the numbers match and what is success rate is - displays info for the user
@@ -130,7 +132,8 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 2. command buttons that redirect user to ?welcome page', 'Game page' or to clear leadrboard from all past game history
 3. List of results (or empty box if no games are played at that time)
 
-*footer* contains win or lose outcome in the form of text
+*Footer* contains win or lose outcome in the form of text
+
 *- for 'Welcome' page*
 1. Links to social media
 
@@ -151,7 +154,7 @@ Bottom part of the UI
 ![Structure "Guess the number game"](/assests/images/Structure%20-2-.jpg)
 
 
-### *2.1.3. Background Image*
+### **2.1.3. Background Image**
 
 The background image was picked based on theme, colour and simplicity.
 Black to increase visibility with saturated simple images of digits that do not stand out or interfere with user's focus.
@@ -162,11 +165,11 @@ Picture is High Res to avoid cropping and blurry images on larger devices.
 
 **Navigation between the three pages is intentionally designed to support how the game is played:**
 
-- **From the *Weclome page*, the “Start the Game” button opens the gameplay page in the *same* tab. This encourages users to read the rules before playing.**
-- **From the *Gameplay page* the “View leaderboard” link opens the leaderboard in a *new tab*. This lets the player keep the current game visible while quickly checking past scores.**
-- **The leaderboard also contains links back to both the Welcome page and the Gameplay page, which open in new tavs. This allows the player to keep a “good run” on the game screen while refreshing the leaderboard tab to see the score history update.**
+- From the *Weclome page*, the “Start the Game” button opens the gameplay page in the *same* tab. This encourages users to read the rules before playing.
+- From the *Gameplay page* the “View leaderboard” link opens the leaderboard in a *new tab*. This lets the player keep the current game visible while quickly checking past scores.
+- The leaderboard also contains links back to both the Welcome page and the Gameplay page, which open in new tavs. This allows the player to keep a “good run” on the game screen while refreshing the leaderboard tab to see the score history update.
 
-**This approach keeps the main gameplay uninterrupted, while still making it easy to review rulez and scores at any time.**
+This approach keeps the main gameplay uninterrupted, while still making it easy to review rulez and scores at any time.
 
 
 ## **3. Technology and Tools used**
@@ -232,17 +235,17 @@ To validate HTML, CSS, accessibility, Responsiveness, and performance... followi
 
 -------------------------------------------
 
-### *5.1.1. Responsiveness* 
+### **5.1.1. Responsiveness** 
 
 https://ui.dev/amiresponsive?url=https://agnogh.github.io/math-for-kids/
 ![Responsiveness of "Guess the number game"](/assests/images/Responsiveness.jpg)
 
-### *5.1.2. HTML Checker*
+### **5.1.2. HTML Checker**
 
 https://validator.w3.org/nu/?doc=https%3A%2F%2Fagnogh.github.io%2Fmath-for-kids%2F
 ![HTML Checker for "Guess the number game"](/assests/images/HTML%20Checker.jpg)
 
-### *5.1.3. CSS Validator*
+### **5.1.3. CSS Validator**
 
 https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fagnogh.github.io%2Fmath-for-kids%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
 ![CSS Validator for "Guess the number game"](/assests/images/CSS%20Checker.jpg)
@@ -262,52 +265,52 @@ https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fagnogh.github.io
 - https://stackoverflow.com/questions/30607832/w3c-css-validation-error-using-calc-and-vendor-extensions
 
 
-### *5.1.4. Accessibility Validator*
+### **5.1.4. Accessibility Validator**
 
 *Accessibility shows 1 error, but in fact they do now really cause accessibiliy issues as it is blank button to help alignment when user has top and bottom button where top buttons are 1-5 and bottom 6-9 where unequal alignemtn would show*
 https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 ![Accessibility Validator for "Guess the number game"](/assests/images/Accessibility%20Validator%20-1-.jpg)
 
-### *5.1.5. Accessibility Review*
+### **5.1.5. Accessibility Review**
 ![Performance Review for "Guess the number game" - 100%](/assests/images/Accessibility%20performance.jpg)
 
-### *5.1.6. Performance Review*
+### **5.1.6. Performance Review**
 ![Performance Review for "Guess the number game - 96%"](/assests/images/Performance%20review.jpg)
 
-### *5.1.7. Best Practice Examples Review*
+### **5.1.7. Best Practice Examples Review**
 ![Best Practice Examples Review for "Guess the number game - 100%"](/assests/images/Best%20Practice%20examples%20review.jpg)
 
-### *5.1.8. SEO Review*
+### **5.1.8. SEO Review**
 ![SEO Review for "Guess the number game - 100%"](/assests/images/SEO%20review.jpg)
 
 
 ### **5.2. QA & Bugfixes**
 -------------------------------------------
 
-### *5.2.1 Bugfixes*
-**Below is a summary of the most important bugs and improvements. (Many smaller layout tweaks and refactors are documented in commit messages.)**
+- **5.2.1 Bugfixes**
+  - Below is a summary of the most important bugs and improvements. (Many smaller layout tweaks and refactors are documented in commit messages.)
 
-- **5.2.1. Game logic**
+- **5.2.2. Game logic**
   - Fixed a logical error where duplicate random numbers could be drawn in “easy” and “easiest” modes instead of always drawing distinct numbers.
   - Prevented crashes from undefined variables such as `user_selected_number`.
   - Ensured that the game always consists of exactly 10 valid rolls, while still giving a clear message when the player clicks a “11th time”.
   - Locked game mode selection after the fist roll and restored the correct visual state if the user tries to change mode mid-game.
   - Fixed the “Start new game” button so it becomes enabled after 10 rolls and correctly resets all game state.
 
-- **5.2.2. UI & layout**
+- **5.2.3. UI & layout**
   - Resolved vertical scrolling issues that forced users to scroll between number selection and the “I feel lucky” button, especially on smaller phones and tablets.
   - Removed horizontal scrolling on Welcome, Gameplay and Leaderboard pages by tightening layout and adding targeted media queries.
   - Adjusted button siying, spacing and font scaling across multiple breakpoints (phones, tablets, desktops) to avoid oversized or misaligned UI.
   - Fixed the gap at the bottom of the number grid and changed circular buttons into “egg shaped” variants on extreme aspect ratios while keeping them readable.
   - Improved scaling and alignment of the social media icons and leaderbord footer across devices.
 
-- **5.2.3. Navigation & accessibility**
+- **5.2.4. Navigation & accessibility**
   - Updated links so the Welcome page is the landing page, while the Gameplay page and Leaderboard behave consistently (leaderboard and welcome links open in new tavs where appropriate).
   - Removed an unnecessary script tag on the Welcome page that caused a console error.
   - Removed an empty “0” button used onyl for layout and replaced it with a more accessible layout solution.
   - Improved heading levels and ARIA labels and cleaned up Wave accessibility warnings where possible.
 
-- **5.2.4. Styling & performance**
+- **5.2.5. Styling & performance**
   - Reorganised CSS, redced unused rules and switched more values from `px` to `rem` / `clamp()` for better responsive scaling.
   - Added `preconnect` hints and moved font loading to the recommended place in `<head>` to improve performance.
   - Added defensive checks in JavaScript (for example in `leaderboard.js`) so future changes to non-critical elements don’t cause runtime errors.
@@ -325,7 +328,7 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 
 ### **5.3 Testing**
 -------------------------------------------
-### *5.3.1. Test environment*
+#### **5.3.1. Test environment**
 *Browsers*
 Chrome, Firefo, Edge, Safari
 
@@ -335,7 +338,7 @@ MacBook Pro
 Samsung Galaxy 15, Huawei P30
 iPhone SE, iPhones 15 Pro, iPad 15
 
-### *5.3.2. Test run*
+#### **5.3.2. Test run**
 *On live website*
 https://agnogh.github.io/math-for-kids/
 
@@ -343,7 +346,7 @@ https://agnogh.github.io/math-for-kids/
 3 -m http.server --bind 127.0.0.1
 --> More > More tools > Developer tools > Console and Network
 
-### *5.3.3. Manual testing*
+#### **5.3.3. Manual testing**
 
 Test cases includede
 --> loading of the webpage
@@ -365,7 +368,7 @@ Test cases includede
 --> refreshing the page doesn't keep old data (cache is reseted)
 
 
-### *5.4. Challenges & technical decisions*
+#### **5.4. Challenges & technical decisions**
 
 During development a few design decisions made the project more complex than a simple one-page game:
 
