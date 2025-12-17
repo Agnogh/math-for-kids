@@ -1,7 +1,7 @@
 "# math-for-kids" 
 
 # Guessing number game
-!["Guess the number game"](/assests/images/Responsivness%20-%20Welcome%20Page.jpg)
+!["Guess the number game"](/assests/images/Responsivness%20-%20Gameplay%20Page.jpg)
 
 ## Table of content
 - [1. Project goal](#1-project-goal)
@@ -117,6 +117,12 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 
 **Structure** is simple with the title on top holding the page name 
 
+![Structure of 'Welcome pane'](/assests/images/)
+
+![Structure of 'Gameplay pane'](/assests/images/)
+
+![Structure of 'Leaderboard pane'](/assests/images/)
+
 *Body* contains content of the page
 
 *- for 'Gameplay page'*
@@ -124,34 +130,46 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 2. 'command button' named 'I feel lucky' that generates a random number 
 3. 'diagnose area' where user gets info on what was selected, what was "pulled", are the numbers match and what is success rate is - displays info for the user
 
+![Structure of body 'Gameplay pane'](/assests/images/)
+
 *- for 'Welcome page'*
 1. set of rules for the user
+
+![Structure of body 'Welcome pane'](/assests/images/)
 
 *- for 'Leadeboard page'*
 1. Title for the list of top players
 2. command buttons that redirect user to ?welcome page', 'Game page' or to clear leadrboard from all past game history
 3. List of results (or empty box if no games are played at that time)
 
+![Structure of body 'Leaderboard pane'](/assests/images/)
+
 *Footer* contains win or lose outcome in the form of text
 
 *- for 'Welcome' page*
 1. Links to social media
 
+![Structure of footer 'Welcome pane'](/assests/images/)
+
 *- for 'Gameplay' page*
 1. Game stats with percentage of the win/lose rolls
+
+![Structure of body 'Gameplay pane'](/assests/images/)
 
 *- for 'Leaderboard' page*
 1. Explanation related to Game storing
 
+![Structure of body 'Leaderboard pane'](/assests/images/)
+
 I didn't want to go with any additional links to social media as the page is designed to serve the purpose of the lotto game and not have several links that are more relevant for HTML design.
 
-Top part of the UI
+Full Structure
 
-![Structure "Guess the number game"](/assests/images/Structure%20-1-.jpg)
+![Structure Full UI - 'Welcome pane'](/assests/images/)
 
-Bottom part of the UI
+![Structure Full UI - 'Gameplay pane'](/assests/images/)
 
-![Structure "Guess the number game"](/assests/images/Structure%20-2-.jpg)
+![Structure Full UI - 'Leaderboard pane'](/assests/images/)
 
 
 ### **2.1.3. Background Image**
@@ -217,6 +235,7 @@ The idea is that the user has a simple-to-follow UI with a clear description.
 User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled" " That way user can play his/her favourite number several rounds in a row.
 Another interaction is that each round requires the user to click on the "I feel lucky" button creates a random number which will be compared with number user selected for him/herself.
 
+***!!!***
 ![User interaction on "Guess the number game"](/assests/images/User%20Interaction.jpg)
 
 No other interaction is needed as text shows up based on either user selection or outcome if the numbers match or not. The calculated success rate (luck factor) is also automatically done and doesn't require input from the user.
@@ -449,3 +468,6 @@ https://github.com/Agnogh/math-for-kids
 
 ## **7. Thanks**
 NA
+
+
+[def]: /assests/images/Responsivness%20-%20Welcome%20Page.jpg
