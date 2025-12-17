@@ -1,7 +1,7 @@
 "# math-for-kids" 
 
 # Guessing number game
-!["Guess the number game"](/assests/images/Responsiveness.jpg)
+!["Guess the number game"](..)
 
 ## Table of content
 - [1. Project goal](#1-project-goal)
