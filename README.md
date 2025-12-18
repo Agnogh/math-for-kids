@@ -251,7 +251,7 @@ To validate HTML, CSS, accessibility, Responsiveness, and performance... followi
 - https://developer.chrome.com/docs/lighthouse/overview/
 
 -------------------------------------------
-***!!!***
+
 ### **5.1.1. Responsiveness** 
 
 https://ui.dev/amiresponsive?url=https://agnogh.github.io/math-for-kids/
@@ -267,7 +267,9 @@ https://validator.w3.org/nu/?doc=https%3A%2F%2Fagnogh.github.io%2Fmath-for-kids%
 
 ![HTML Checker for "Guess the number game" Welcome pane](/assests/images/HTML%20Checker%20-%20Welcome%20Page%20(index.html).jpg)
 
+
 ![HTML Checker for "Guess the number game" Gameplay pane](/assests/images/HTML%20Checker%20-%20Gameplay%20Page%20(gameplay.html).jpg)
+
 
 ![HTML Checker for "Guess the number game" Leaderbaord pane](/assests/images/HTML%20Checker%20-%20Leaderboard%20Page%20(leaderboard.html).jpg)
 
@@ -386,23 +388,37 @@ https://agnogh.github.io/math-for-kids/
 #### **5.3.3. Manual testing**
 
 Test cases includede
---> loading of the webpage
 
---> Responsiveness of the webpage
+### 5.3.3. Manual testing
 
---> checking for errors during the QA (from the console)
+### 5.3.3. Manual Testing
 
---> selection of the number
+| Feature / Component| Test Steps | Expected Result |
+|--------------|--------------------------|--------------------------|
+| **Welcome Page Load** | Open `index.html` on phone, tablet, laptop | Page loads without errors; no horizontal scrolling; header + rules visible |
+| **Start Game Button** | Click **Start the Game** | Opens `gameplay.html` in same tab |
+| **Game Page Load** | Open `gameplay.html` | All UI elements visible: mode selector, number grid, spin button, result pane, footer |
+| **Game Mode Selection** | Select **Normal**, **Easy**, **Easiest** | Only one option active; mode value updates internally |
+| **Number Button Selection** | Click numbers 1–9 | Selected number becomes highlighted; previous highlight is removed |
+| **Spin Without Selection** | Click **I feel lucky** with no number selected | Status text instructs user to select a number |
+| **Spin With Selection** | Select number → click **I feel lucky** | Random number is generated; win/lose message shown; counter updates |
+| **10-Round Limit** | Click **I feel lucky** more than 10 times | Round 11 is blocked; user instructed to start new game |
+| **Start New Game Button** | After 10 rounds, click **Start new game** | Score resets; buttons reset; selection reset |
+| **Leaderboard Link (Game Page)** | After a full game, click **Leaderboard** | Opens `leaderboard.html` in **new tab**, without interrupting game |
+| **LocalStorage Save** | Finish 10 rounds | Score added to localStorage; persists after refresh |
+| **Leaderboard Load** | Open `leaderboard.html` with saved data | Table displays ranking, game mode, luck %, timestamp |
+| **Leaderboard Empty State** | Clear localStorage → Reload page | Shows "**No scores yet**" message centered in the results box |
+| **Clear Leaderboard Button** | Click **Clear leaderboard** | Stored scores deleted; empty state message appears |
+| **Welcome Page Link in Leaderboard** | Click **Welcome Page** link | Opens welcome page in new tab |
+| **Game Page Link in Leaderboard** | Click **Game Page** link | Opens gameplay page in new tab |
+| **Responsiveness (Phones)** | Test 360×640, 414×896, 390×844 | No clipping; full UI visible; footer not oversized |
+| **Responsiveness (Tablets)** | Test 768×1024, 820×1180 | Tablet media query activates: reduced padding, centered titles, reduced button heights |
+| **Responsiveness (Large screens)** | Test 1366×768, 1920×1080 | Layout centered; footer properly sized; no text overlaps |
+| **Accessibility (Keyboard)** | Use TAB to navigate | All interactive elements receive focus in logical order |
+| **Accessibility (ARIA)** | Observe result updates during game | Live regions announce updates; no redundant alerts |
+| **Favicons** | Reload site from GitHub Pages | All favicon files load correctly; no 404 errors |
+| **Error Console** | Open DevTools → Console → Refresh all pages | Zero errors; no undefined variables; no blocked scripts |
 
---> changing selection of the number is reflected in both highlights and functionality
-
---> trying to "spin the wheel" ("I feel lucky" button) while same number is selected
-
---> trying to "spin the wheel" ("I feel lucky" button) with changin numbers every time 
-
---> clicking on "I feel Lucky" once or multiple times in a row is responsive
-
---> refreshing the page doesn't keep old data (cache is reseted)
 
 
 #### **5.4. Challenges & technical decisions**
