@@ -137,7 +137,7 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 
 *- for 'Leadeboard page'*
 1. Title for the list of top players
-2. command buttons that redirect user to ?welcome page', 'Game page' or to clear leadrboard from all past game history
+2. command buttons that redirect user to ?welcome page', 'Game page' or to clear leaderboard from all past game history
 3. List of results (or empty box if no games are played at that time)
 
 ![Structure of body 'Leaderboard pane'](/assests/images/Structure%20of%20body%20-%20Leaderboard%20pane.jpg)
@@ -181,9 +181,9 @@ Picture is High Res to avoid cropping and blurry images on larger devices.
 
 **Navigation between the three pages is intentionally designed to support how the game is played:**
 
-- From the *Weclome page*, the “Start the Game” button opens the gameplay page in the *same* tab. This encourages users to read the rules before playing.
+- From the *Welcome page*, the “Start the Game” button opens the gameplay page in the *same* tab. This encourages users to read the rules before playing.
 - From the *Gameplay page* the “View leaderboard” link opens the leaderboard in a *new tab*. This lets the player keep the current game visible while quickly checking past scores.
-- The leaderboard also contains links back to both the Welcome page and the Gameplay page, which open in new tavs. This allows the player to keep a “good run” on the game screen while refreshing the leaderboard tab to see the score history update.
+- The leaderboard also contains links back to both the Welcome page and the Gameplay page, which open in new tabs. This allows the player to keep a “good run” on the game screen while refreshing the leaderboard tab to see the score history update.
 
 This approach keeps the main gameplay uninterrupted, while still making it easy to review rulez and scores at any time.
 
@@ -333,24 +333,24 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
   - Fixed a logical error where duplicate random numbers could be drawn in “easy” and “easiest” modes instead of always drawing distinct numbers.
   - Prevented crashes from undefined variables such as `user_selected_number`.
   - Ensured that the game always consists of exactly 10 valid rolls, while still giving a clear message when the player clicks a “11th time”.
-  - Locked game mode selection after the fist roll and restored the correct visual state if the user tries to change mode mid-game.
+  - Locked game mode selection after the first roll and restored the correct visual state if the user tries to change mode mid-game.
   - Fixed the “Start new game” button so it becomes enabled after 10 rolls and correctly resets all game state.
 
 - **5.2.3. UI & layout**
   - Resolved vertical scrolling issues that forced users to scroll between number selection and the “I feel lucky” button, especially on smaller phones and tablets.
   - Removed horizontal scrolling on Welcome, Gameplay and Leaderboard pages by tightening layout and adding targeted media queries.
-  - Adjusted button siying, spacing and font scaling across multiple breakpoints (phones, tablets, desktops) to avoid oversized or misaligned UI.
+  - Adjusted button sizing, spacing and font scaling across multiple breakpoints (phones, tablets, desktops) to avoid oversized or misaligned UI.
   - Fixed the gap at the bottom of the number grid and changed circular buttons into “egg shaped” variants on extreme aspect ratios while keeping them readable.
   - Improved scaling and alignment of the social media icons and leaderbord footer across devices.
 
 - **5.2.4. Navigation & accessibility**
-  - Updated links so the Welcome page is the landing page, while the Gameplay page and Leaderboard behave consistently (leaderboard and welcome links open in new tavs where appropriate).
+  - Updated links so the Welcome page is the landing page, while the Gameplay page and Leaderboard behave consistently (leaderboard and welcome links open in new tabs where appropriate).
   - Removed an unnecessary script tag on the Welcome page that caused a console error.
-  - Removed an empty “0” button used onyl for layout and replaced it with a more accessible layout solution.
+  - Removed an empty “0” button used only for layout and replaced it with a more accessible layout solution.
   - Improved heading levels and ARIA labels and cleaned up Wave accessibility warnings where possible.
 
 - **5.2.5. Styling & performance**
-  - Reorganised CSS, redced unused rules and switched more values from `px` to `rem` / `clamp()` for better responsive scaling.
+  - Reorganised CSS, reduced unused rules and switched more values from `px` to `rem` / `clamp()` for better responsive scaling.
   - Added `preconnect` hints and moved font loading to the recommended place in `<head>` to improve performance.
   - Added defensive checks in JavaScript (for example in `leaderboard.js`) so future changes to non-critical elements don’t cause runtime errors.
 
