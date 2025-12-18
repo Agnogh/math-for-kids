@@ -82,9 +82,11 @@ With a random element involved (the number is randomly generated), the user will
 
 
 ### **1.5. User Stories**
-Since the idea is simple to try out your luck and used just for fun with no big expectations, there is no big replayability.
-Users will come over to try out their luck, see what is success rate, maybe try out a challenge to get 2 or 3 in a row or competition among people who will have a better success rate among a certain number of rounds.
 
+- As a user, I want to read the rules before playing so that I understand how the game works.
+- As a user, I want to select a number and receive instant feedback so that the game feels interactive.
+- As a user, I want to see my past results so that I can track my luck over time.
+- As a user, I want to view the leaderboard without interrupting my current game.
 
 
 ## **2. Design of webpage**
