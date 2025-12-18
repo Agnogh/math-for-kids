@@ -61,10 +61,9 @@ The idea behind this project is to
 
 ### **1.1. User goal**
 
-Try out their luck.
-Have fun.
-Compete with friends to achieve a higher score.
-Help users make more analytical decision is it worth buy lottery ticket
+Try their luck, have fun, and compete with friends to achieve a higher score.
+Help users make more analytical decisions about probability and whether buying a lottery ticket is worthwhile.
+
 
 ### **1.2. Site owner goal**
 
@@ -73,7 +72,7 @@ Give people something to play around with to pass the time while seeing how math
 ### **1.3 User Experience**
 
 #### **1.3.1. Targeted group**
-Anyone who wants to try their luck. There are no age limitations/restrictions. Most likely group will be very small kids or older people as everyone in between will set their sights on far more advanced entertainment.
+Anyone who wants to try their luck. There are no age limitations/restrictions. The most likely audience consists of very young users or older people.
 It could serve purpose as a competition between friends.
 
 ### **1.4. User expectation**
@@ -228,7 +227,7 @@ The idea is that the user has a simple-to-follow UI with a clear description.
 - User is prompted with an Alert message after each selected number
 - Below the number selection area is a clearly labelled button that generates a random number when clicked
 - Description text explains what is selected and what random number was "pulled". Also followed by the result of each gamble round with a win-or-lose message
-- user can keep playing and see the overall lucky score but no further interaction is needed
+- The user can continue playing and view their overall luck score without any additional interaction
 
 ### **4.1. User interactions**
 User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled" " That way user can play his/her favourite number several rounds in a row.
@@ -298,7 +297,7 @@ https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fagnogh.github.io
 
 ### **5.1.4. Accessibility Validator**
 
-*Accessibility shows 1 error, but in fact they do now really cause accessibiliy issues as it is blank button to help alignment when user has top and bottom button where top buttons are 1-5 and bottom 6-9 where unequal alignemtn would show*
+*Accessibility shows 1 error, however, this does not cause a real accessibility issue in practice as it is blank button to help alignment when user has top and bottom button where top buttons are 1-5 and bottom 6-9 where unequal alignemtn would show*
 https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 
 ![Accessibility Validator for "Guess the number game" - Welcome pane](/assests/images/Wave%20-%20Welcome%20Page.jpg)
@@ -388,7 +387,7 @@ https://agnogh.github.io/math-for-kids/
 
 #### **5.3.3. Manual testing**
 
-Test cases includede
+The following table outlines key manual test cases performed across all pages.
 
 
 | Feature / Component| Test Steps | Expected Result |
