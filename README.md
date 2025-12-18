@@ -142,7 +142,7 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 
 ![Structure of body 'Leaderboard pane'](/assests/images/Structure%20of%20body%20-%20Leaderboard%20pane.jpg)
 
-*Footer* contains win or lose outcome in the form of text
+The *footer* content differs by page: the Gameplay page displays game statistics, the Welcome page contains social media links, and the Leaderboard page provides information about score storage.
 
 *- for 'Welcome' page*
 1. Links to social media
@@ -159,9 +159,9 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 
 ![Structure of footer 'Leaderboard pane'](/assests/images/Structure%20of%20footer%20-%20Leaderboard%20pane.jpg)
 
-I didn't want to go with any additional links to social media as the page is designed to serve the purpose of the lotto game and not have several links that are more relevant for HTML design.
+Social media links are included only on the Welcome page, while the Gameplay and Leaderboard pages remain focused purely on the game experience.
 
-Full Structure
+Full structure overview per page
 
 ![Structure Full UI - 'Welcome pane'](/assests/images/Full%20UI%20Welcome%20Pane.jpg)
 
