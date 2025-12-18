@@ -115,59 +115,59 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 
 **Structure** is simple with the title on top holding the page name 
 
-![Structure of 'Welcome pane'](/assests/images/)
+![Structure of 'Welcome pane'](/assests/images/Structure%20-%20Welcome%20pane.jpg)
 
-![Structure of 'Gameplay pane'](/assests/images/)
+![Structure of 'Gameplay pane'](/assests/images/Structure%20-%20Gameplay%20pane.jpg)
 
-![Structure of 'Leaderboard pane'](/assests/images/)
+![Structure of 'Leaderboard pane'](/assests/images/Structure%20-%20Leaderboard%20pane.jpg)
 
 *Body* contains content of the page
+
+*- for 'Welcome page'*
+1. set of rules for the user
+
+![Structure of body 'Welcome pane'](/assests/images/Structure%20of%20body%20-%20Welcome%20pane.jpg)
 
 *- for 'Gameplay page'*
 1. 'playing area' where numbers are displayed where user can interact with them
 2. 'command button' named 'I feel lucky' that generates a random number 
 3. 'diagnose area' where user gets info on what was selected, what was "pulled", are the numbers match and what is success rate is - displays info for the user
 
-![Structure of body 'Gameplay pane'](/assests/images/)
-
-*- for 'Welcome page'*
-1. set of rules for the user
-
-![Structure of body 'Welcome pane'](/assests/images/)
+![Structure of body 'Gameplay pane'](/assests/images/Structure%20of%20body%20-%20Gameplay%20pane.jpg)
 
 *- for 'Leadeboard page'*
 1. Title for the list of top players
 2. command buttons that redirect user to ?welcome page', 'Game page' or to clear leadrboard from all past game history
 3. List of results (or empty box if no games are played at that time)
 
-![Structure of body 'Leaderboard pane'](/assests/images/)
+![Structure of body 'Leaderboard pane'](/assests/images/Structure%20of%20body%20-%20Leaderboard%20pane.jpg)
 
 *Footer* contains win or lose outcome in the form of text
 
 *- for 'Welcome' page*
 1. Links to social media
 
-![Structure of footer 'Welcome pane'](/assests/images/)
+![Structure of footer 'Welcome pane'](/assests/images/Structure%20of%20footer%20-%20Welcome%20pane.jpg)
 
 *- for 'Gameplay' page*
 1. Game stats with percentage of the win/lose rolls
 
-![Structure of body 'Gameplay pane'](/assests/images/)
+![Structure of footer 'Gameplay pane'](/assests/images/Structure%20of%20footer%20-%20Gameplay%20pane.jpg)
 
 *- for 'Leaderboard' page*
 1. Explanation related to Game storing
 
-![Structure of body 'Leaderboard pane'](/assests/images/)
+![Structure of footer 'Leaderboard pane'](/assests/images/Structure%20of%20footer%20-%20Leaderboard%20pane.jpg)
 
 I didn't want to go with any additional links to social media as the page is designed to serve the purpose of the lotto game and not have several links that are more relevant for HTML design.
 
 Full Structure
 
-![Structure Full UI - 'Welcome pane'](/assests/images/)
+![Structure Full UI - 'Welcome pane'](/assests/images/Full%20UI%20Welcome%20Pane.jpg)
 
-![Structure Full UI - 'Gameplay pane'](/assests/images/)
+![Structure Full UI - 'Gameplay pane'](/assests/images/Full%20UI%20Gameplay%20Pane.jpg)
 
-![Structure Full UI - 'Leaderboard pane'](/assests/images/)
+![Structure Full UI - 'Leaderboard pane'](/assests/images/Full%20UI%20Leaderboard%20Pane.jpg)
 
 
 ### **2.1.3. Background Image**
@@ -234,7 +234,7 @@ User interacts with numbers from 1-9 but can keep a selected number for several 
 Another interaction is that each round requires the user to click on the "I feel lucky" button creates a random number which will be compared with number user selected for him/herself.
 
 
-![User interaction on "Guess the number game"](/assests/images)
+![User interaction on "Guess the number game"](/assests/images/User%20Interaction.jpg)
 
 No other interaction is needed as text shows up based on either user selection or outcome if the numbers match or not. The calculated success rate (luck factor) is also automatically done and doesn't require input from the user.
 
