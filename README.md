@@ -389,9 +389,6 @@ https://agnogh.github.io/math-for-kids/
 
 Test cases includede
 
-### 5.3.3. Manual testing
-
-### 5.3.3. Manual Testing
 
 | Feature / Component| Test Steps | Expected Result |
 |--------------|--------------------------|--------------------------|
