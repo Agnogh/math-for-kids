@@ -36,7 +36,7 @@
     - [5.2.2. Game logic](#522-game-logic)
     - [5.2.3. UI & layout](#523-ui--layout)
     - [5.2.4. Navigation & accessibility](#524-navigation--accessibility)
-    - [5.2.5. Styling & performance](#525-styling''performance)
+    - [5.2.5. Styling & performance](#525-styling--performance)
   - [5.3. Testing](#53-testing)
     - [5.3.1. Test environment](#531-test-environment)
     - [5.3.2. Test run](#532-test-run)
