@@ -113,55 +113,54 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 - Gameplay page (`gameplay.html`) – main interactive game interface.
 - Leaderboard page (`leaderboard.html`) – shows saved scores on this device only.
 
-**Structure** is simple with the title on top holding the page name 
+**Structure** is kept simple, with a clear title at the top of each page identifying its purpose.
 
-![Structure of 'Welcome pane'](/assests/images/Structure%20-%20Welcome%20pane.jpg)
+### **Page structure overview**
 
-![Structure of 'Gameplay pane'](/assests/images/Structure%20-%20Gameplay%20pane.jpg)
+#### **Welcome page**
+![Welcome Page Layout](/assests/images/Structure%20-%20Welcome%20pane.jpg)
+*Figure: Welcome page layout including rules, call-to-action button and social media footer.*
 
-![Structure of 'Leaderboard pane'](/assests/images/Structure%20-%20Leaderboard%20pane.jpg)
+#### **Gameplay page**
+![Gameplay Page Layout](/assests/images/Structure%20-%20Gameplay%20pane.jpg)
+*Figure: Gameplay page layout showing number selection, game controls and live result feedback.*
 
-*Body* contains content of the page
+#### **Leaderboard page**
+![Leaderboard Page Layout](/assests/images/Structure%20-%20Leaderboard%20pane.jpg)
+*Figure: Leaderboard page layout displaying score table, navigation buttons and empty-state messaging.*
 
-*- for 'Welcome page'*
-1. set of rules for the user
 
-![Structure of body 'Welcome pane'](/assests/images/Structure%20of%20body%20-%20Welcome%20pane.jpg)
+### **Body content by page**
 
-*- for 'Gameplay page'*
-1. 'playing area' where numbers are displayed where user can interact with them
-2. 'command button' named 'I feel lucky' that generates a random number 
-3. 'diagnose area' where user gets info on what was selected, what was "pulled", are the numbers match and what is success rate is - displays info for the user
+#### Welcome page body
+![Welcome Page Body](/assests/images/Structure%20of%20body%20-%20Welcome%20pane.jpg)
+*Figure: Rules and introductory content displayed on the Welcome page.*
 
-![Structure of body 'Gameplay pane'](/assests/images/Structure%20of%20body%20-%20Gameplay%20pane.jpg)
+#### Gameplay page body
+![Gameplay Page Body](/assests/images/Structure%20of%20body%20-%20Gameplay%20pane.jpg)
+*Figure: Interactive game area including number grid and action button.*
 
-*- for 'Leadeboard page'*
-1. Title for the list of top players
-2. command buttons that redirect user to ?welcome page', 'Game page' or to clear leaderboard from all past game history
-3. List of results (or empty box if no games are played at that time)
+#### Leaderboard page body
+![Leaderboard Page Body](/assests/images/Structure%20of%20body%20-%20Leaderboard%20pane.jpg)
+*Figure: Score table area showing either empty state or populated leaderboard.*
 
-![Structure of body 'Leaderboard pane'](/assests/images/Structure%20of%20body%20-%20Leaderboard%20pane.jpg)
 
-The *footer* content differs by page: the Gameplay page displays game statistics, the Welcome page contains social media links, and the Leaderboard page provides information about score storage.
+### **Footer variations**
 
-*- for 'Welcome' page*
-1. Links to social media
+#### Welcome page footer
+![Welcome Page Footer](/assests/images/Structure%20of%20footer%20-%20Welcome%20pane.jpg)
+*Figure: Social media links displayed in the Welcome page footer.*
 
-![Structure of footer 'Welcome pane'](/assests/images/Structure%20of%20footer%20-%20Welcome%20pane.jpg)
+#### Gameplay page footer
+![Gameplay Page Footer](/assests/images/Structure%20of%20footer%20-%20Gameplay%20pane.jpg)
+*Figure: Game statistics and live feedback displayed during gameplay.*
 
-*- for 'Gameplay' page*
-1. Game stats with percentage of the win/lose rolls
+#### Leaderboard page footer
+![Leaderboard Page Footer](/assests/images/Structure%20of%20footer%20-%20Leaderboard%20pane.jpg)
+*Figure: Informational footer explaining local score storage.*
 
-![Structure of footer 'Gameplay pane'](/assests/images/Structure%20of%20footer%20-%20Gameplay%20pane.jpg)
 
-*- for 'Leaderboard' page*
-1. Explanation related to Game storing
-
-![Structure of footer 'Leaderboard pane'](/assests/images/Structure%20of%20footer%20-%20Leaderboard%20pane.jpg)
-
-Social media links are included only on the Welcome page, while the Gameplay and Leaderboard pages remain focused purely on the game experience.
-
-Full structure overview per page
+### **Full structure overview**
 
 ![Structure Full UI - 'Welcome pane'](/assests/images/Full%20UI%20Welcome%20Pane.jpg)
 
