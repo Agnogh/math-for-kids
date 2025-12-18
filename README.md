@@ -29,10 +29,8 @@
     - [5.1.2. HTML Checker](#512-html-checker)
     - [5.1.3. CSS Validator](#513-css-validator)
     - [5.1.4. Accessibility Validator](#514-accessibility-validator)
-    - [5.1.5. Accessibility Review](#515-accessibility-review)
-    - [5.1.6. Performance Review](#516-performance-review)
-    - [5.1.7. Best Practice Examples Review](#517-best-practice-examples-review)
-    - [5.1.8. SEO Review](#518-seo-review)
+    - [5.1.5. Lighthouse Review - Mobile](#515-lighthouse-review---mobile)
+    - [5.1.6. Lighthouse Review - PC](#516-lighthouse-review---pc)
   - [5.2. QA & Bugfixes](#52-qa--bugfixes)
     - [5.2.1. Bugfixes](#521-bugfixes)
     - [5.2.2. Game logic](#522-game-logic)
@@ -235,8 +233,8 @@ The idea is that the user has a simple-to-follow UI with a clear description.
 User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled" " That way user can play his/her favourite number several rounds in a row.
 Another interaction is that each round requires the user to click on the "I feel lucky" button creates a random number which will be compared with number user selected for him/herself.
 
-***!!!***
-![User interaction on "Guess the number game"](/assests/images/User%20Interaction.jpg)
+
+![User interaction on "Guess the number game"](/assests/images)
 
 No other interaction is needed as text shows up based on either user selection or outcome if the numbers match or not. The calculated success rate (luck factor) is also automatically done and doesn't require input from the user.
 
@@ -253,22 +251,33 @@ To validate HTML, CSS, accessibility, Responsiveness, and performance... followi
 - https://developer.chrome.com/docs/lighthouse/overview/
 
 -------------------------------------------
-
+***!!!***
 ### **5.1.1. Responsiveness** 
 
 https://ui.dev/amiresponsive?url=https://agnogh.github.io/math-for-kids/
-![Responsiveness of "Guess the number game"](/assests/images/Responsiveness.jpg)
+![Responsiveness of "Guess the number game" Welcome pane](/assests/images/Responsivness%20-%20Welcome%20Page.jpg)
+
+![Responsiveness of "Guess the number game" Gameplay pane](/assests/images/Responsivness%20-%20Gameplay%20Page.jpg)
+
+![Responsiveness of "Guess the number game" Leaderboard pane](/assests/images/Responsivness%20-%20Leaderboard%20Page.jpg)
 
 ### **5.1.2. HTML Checker**
 
 https://validator.w3.org/nu/?doc=https%3A%2F%2Fagnogh.github.io%2Fmath-for-kids%2F
-![HTML Checker for "Guess the number game"](/assests/images/HTML%20Checker.jpg)
+
+![HTML Checker for "Guess the number game" Welcome pane](/assests/images/HTML%20Checker%20-%20Welcome%20Page%20(index.html).jpg)
+
+![HTML Checker for "Guess the number game" Gameplay pane](/assests/images/HTML%20Checker%20-%20Gameplay%20Page%20(gameplay.html).jpg)
+
+![HTML Checker for "Guess the number game" Leaderbaord pane](/assests/images/HTML%20Checker%20-%20Leaderboard%20Page%20(leaderboard.html).jpg)
 
 ### **5.1.3. CSS Validator**
 
 https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fagnogh.github.io%2Fmath-for-kids%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
-![CSS Validator for "Guess the number game"](/assests/images/CSS%20Checker.jpg)
 
+![CSS Validator for "Guess the number game" - No Errors](/assests/images/CSS%20Validator%201%20-%20No%20Errors.jpg)
+
+![CSS Validator for "Guess the number game" - Warnings explanation](/assests/images/CSS%20Validator%202%20-%20No%20Errors.jpg)
 
 **The CSS validator shows only two types of warnings:**
 
@@ -288,19 +297,28 @@ https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fagnogh.github.io
 
 *Accessibility shows 1 error, but in fact they do now really cause accessibiliy issues as it is blank button to help alignment when user has top and bottom button where top buttons are 1-5 and bottom 6-9 where unequal alignemtn would show*
 https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
-![Accessibility Validator for "Guess the number game"](/assests/images/Accessibility%20Validator%20-1-.jpg)
 
-### **5.1.5. Accessibility Review**
-![Performance Review for "Guess the number game" - 100%](/assests/images/Accessibility%20performance.jpg)
+![Accessibility Validator for "Guess the number game" - Welcome pane](/assests/images/Wave%20-%20Welcome%20Page.jpg)
 
-### **5.1.6. Performance Review**
-![Performance Review for "Guess the number game - 96%"](/assests/images/Performance%20review.jpg)
+![Accessibility Validator for "Guess the number game" - Gameplay pane](/assests/images/Wave%20-%20Gameplay%20Page.jpg)
 
-### **5.1.7. Best Practice Examples Review**
-![Best Practice Examples Review for "Guess the number game - 100%"](/assests/images/Best%20Practice%20examples%20review.jpg)
+![Accessibility Validator for "Guess the number game" - Leaderboard pane](/assests/images/Wave%20-%20Leaderbaord%20Page.jpg)
 
-### **5.1.8. SEO Review**
-![SEO Review for "Guess the number game - 100%"](/assests/images/SEO%20review.jpg)
+
+### **5.1.5. Lighthouse Review - Mobile**
+![Performance Review for "Guess the number game" - Welcome pane](/assests/images/Lighthouse%20Validation%20MOBILE%20-%20Welcome%20Page.jpg)
+
+![Performance Review for "Guess the number game" - Gameplay pane](/assests/images/Lighthouse%20Validation%20MOBILE%20-%20Gameplay.jpg)
+
+![Performance Review for "Guess the number game" - Leaderbaord pane](/assests/images/Lighthouse%20Validation%20MOBILE%20-%20Leaderboard.jpg)
+
+
+### **5.1.6. Lighthouse Review - PC**
+![Performance Review for "Guess the number game - Welcome pane"](/assests/images/Lighthouse%20Validation%20PC%20-%20Welcome%20Page.jpg)
+
+![Performance Review for "Guess the number game - Gameplay pane"](/assests/images/Lighthouse%20Validation%20MOBILE%20-%20Gameplay.jpg)
+
+![Performance Review for "Guess the number game - Leaderboard pane"](/assests/images/Lighthouse%20Validation%20MOBILE%20-%20Leaderboard.jpg)
 
 
 ### **5.2. QA & Bugfixes**
