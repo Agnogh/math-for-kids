@@ -73,7 +73,7 @@ Give people something to play around with to pass the time while seeing how math
 ### **1.3 User Experience**
 
 #### **1.3.1. Targeted group**
-Anyone who wants to try their luck. There are no age limitations/restrictions. Most likely group will be very small kinds or older people as everyone in between will set their sights on far more advanced entertainment.
+Anyone who wants to try their luck. There are no age limitations/restrictions. Most likely group will be very small kids or older people as everyone in between will set their sights on far more advanced entertainment.
 It could serve purpose as a competition between friends.
 
 ### **1.4. User expectation**
@@ -186,7 +186,7 @@ Picture is High Res to avoid cropping and blurry images on larger devices.
 - From the *Gameplay page* the “View leaderboard” link opens the leaderboard in a *new tab*. This lets the player keep the current game visible while quickly checking past scores.
 - The leaderboard also contains links back to both the Welcome page and the Gameplay page, which open in new tabs. This allows the player to continue an active game while refreshing the leaderboard tab to view updated score history.
 
-This approach keeps the main gameplay uninterrupted, while still making it easy to review rulez and scores at any time.
+This approach keeps the main gameplay uninterrupted, while still making it easy to review rules and scores at any time.
 
 
 ## **3. Technology and Tools used**
@@ -272,7 +272,7 @@ https://validator.w3.org/nu/?doc=https%3A%2F%2Fagnogh.github.io%2Fmath-for-kids%
 ![HTML Checker for "Guess the number game" Gameplay pane](/assests/images/HTML%20Checker%20-%20Gameplay%20Page%20(gameplay.html).jpg)
 
 
-![HTML Checker for "Guess the number game" Leaderbaord pane](/assests/images/HTML%20Checker%20-%20Leaderboard%20Page%20(leaderboard.html).jpg)
+![HTML Checker for "Guess the number game" leaderboard pane](/assests/images/HTML%20Checker%20-%20Leaderboard%20Page%20(leaderboard.html).jpg)
 
 ### **5.1.3. CSS Validator**
 
@@ -313,7 +313,7 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 
 ![Performance Review for "Guess the number game" - Gameplay pane](/assests/images/Lighthouse%20Validation%20MOBILE%20-%20Gameplay.jpg)
 
-![Performance Review for "Guess the number game" - Leaderbaord pane](/assests/images/Lighthouse%20Validation%20MOBILE%20-%20Leaderboard.jpg)
+![Performance Review for "Guess the number game" - leaderboard pane](/assests/images/Lighthouse%20Validation%20MOBILE%20-%20Leaderboard.jpg)
 
 
 ### **5.1.6. Lighthouse Review - PC**
@@ -342,7 +342,7 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
   - Removed horizontal scrolling on Welcome, Gameplay and Leaderboard pages by tightening layout and adding targeted media queries.
   - Adjusted button sizing, spacing and font scaling across multiple breakpoints (phones, tablets, desktops) to avoid oversized or misaligned UI.
   - Fixed the gap at the bottom of the number grid and changed circular buttons into “egg shaped” variants on extreme aspect ratios while keeping them readable.
-  - Improved scaling and alignment of the social media icons and leaderbord footer across devices.
+  - Improved scaling and alignment of the social media icons and leaderboard footer across devices.
 
 - **5.2.4. Navigation & accessibility**
   - Updated links so the Welcome page is the landing page, while the Gameplay page and Leaderboard behave consistently (leaderboard and welcome links open in new tabs where appropriate).
