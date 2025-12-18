@@ -62,7 +62,7 @@ The idea behind this project is to
 ### **1.1. User goal**
 
 Try their luck, have fun, and compete with friends to achieve a higher score.
-Help users make more analytical decisions about probability and whether buying a lottery ticket is worthwhile.
+Help users make more analytical decisions about probability and whether it is worth buying a lottery ticket.
 
 
 ### **1.2. Site owner goal**
@@ -72,8 +72,8 @@ Give people something to play around with to pass the time while seeing how math
 ### **1.3 User Experience**
 
 #### **1.3.1. Targeted group**
-Anyone who wants to try their luck. There are no age limitations/restrictions. The most likely audience consists of very young users or older people.
-It could serve purpose as a competition between friends.
+The game is suitable for anyone who wants to try their luck, with no age restrictions.
+It is most appealing to younger users and casual players, and can also be used as a light-hearted competition between friends.
 
 ### **1.4. User expectation**
 Expectations are intentionally limited. The game serves as a light-hearted demonstration of probability rather than a serious attempt at predicting lottery outcomes.
@@ -221,13 +221,14 @@ This approach keeps the main gameplay uninterrupted, while still making it easy 
 
 ## **4. Gameplay**
 -------------------------------------------
-The idea is that the user has a simple-to-follow UI with a clear description.
-- Numbers presented are described with section title "Pick Your Number"
-- Numbers are easy to see/detect and selectable
-- User is prompted with an Alert message after each selected number
-- Below the number selection area is a clearly labelled button that generates a random number when clicked
-- Description text explains what is selected and what random number was "pulled". Also followed by the result of each gamble round with a win-or-lose message
-- The user can continue playing and view their overall luck score without any additional interaction
+The gameplay is designed to be simple and easy to follow, with clear visual feedback and minimal required interaction.
+
+Players select a number between 1 and 9 and then press the “I feel lucky” button to generate a random result.
+After each roll, the interface displays the outcome, whether the round was a win or a loss, and updates the overall luck index.
+
+The game runs for 10 rounds per session.
+After the final round, the user is prompted to start a new game or view the leaderboard.
+
 
 ### **4.1. User interactions**
 User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled" " That way user can play his/her favourite number several rounds in a row.
