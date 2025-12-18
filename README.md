@@ -61,9 +61,9 @@ The idea behind this project is to
 
 ### **1.1. User goal**
 
-Try out their luck
-Have fun
-Make a competition among friends who will have a better score after a certain number of rounds.
+Try out their luck.
+Have fun.
+Compete with friends to achieve a higher score.
 Help users make more analytical decision is it worth buy lottery ticket
 
 ### **1.2. Site owner goal**
@@ -77,7 +77,7 @@ Anyone who wants to try their luck. There are no age limitations/restrictions. M
 It could serve purpose as a competition between friends.
 
 ### **1.4. User expectation**
-Expectations are limited. It serves more as a tryout before buying a lottery ticket and hoping to become a millionaire who spends hours playing the game.
+Expectations are intentionally limited. The game serves as a light-hearted demonstration of probability rather than a serious attempt at predicting lottery outcomes.
 With a random element involved (the number is randomly generated), the user will not have any real power over the outcome of the game and get a better score (it is just pure luck)
 
 
@@ -183,7 +183,7 @@ Picture is High Res to avoid cropping and blurry images on larger devices.
 
 - From the *Welcome page*, the “Start the Game” button opens the gameplay page in the *same* tab. This encourages users to read the rules before playing.
 - From the *Gameplay page* the “View leaderboard” link opens the leaderboard in a *new tab*. This lets the player keep the current game visible while quickly checking past scores.
-- The leaderboard also contains links back to both the Welcome page and the Gameplay page, which open in new tabs. This allows the player to keep a “good run” on the game screen while refreshing the leaderboard tab to see the score history update.
+- The leaderboard also contains links back to both the Welcome page and the Gameplay page, which open in new tabs. This allows the player to continue an active game while refreshing the leaderboard tab to view updated score history.
 
 This approach keeps the main gameplay uninterrupted, while still making it easy to review rulez and scores at any time.
 
@@ -225,7 +225,7 @@ The idea is that the user has a simple-to-follow UI with a clear description.
 - Numbers presented are described with section title "Pick Your Number"
 - Numbers are easy to see/detect and selectable
 - User is prompted with an Alert message after each selected number
-- Under that number section box is the button that if not clear enough has in brackets description 'Click me' by which a random number is generated
+- Below the number selection area is a clearly labelled button that generates a random number when clicked
 - Description text explains what is selected and what random number was "pulled". Also followed by the result of each gamble round with a win-or-lose message
 - user can keep playing and see the overall lucky score but no further interaction is needed
 
