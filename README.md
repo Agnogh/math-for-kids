@@ -1,4 +1,3 @@
-# math-for-kids 
 
 # Guessing number game
 !["Guess the number game"](/assests/images/Responsivness%20-%20Gameplay%20Page.jpg)
@@ -231,7 +230,7 @@ After the final round, the user is prompted to start a new game or view the lead
 
 
 ### **4.1. User interactions**
-User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled" That way user can play his/her favourite number several rounds in a row.
+User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled". That way user can play his/her favourite number several rounds in a row.
 Another interaction is that each round requires the user to click on the "I feel lucky" button creates a random number which will be compared with number user selected for him/herself.
 
 
@@ -382,7 +381,7 @@ iPhone SE, iPhones 15 Pro, iPad 15
 https://agnogh.github.io/math-for-kids/
 
 *On server*
-3 -m http.server --bind 127.0.0.1
+python3 -m http.server --bind 127.0.0.1
 --> More > More tools > Developer tools > Console and Network
 
 #### **5.3.3. Manual testing**
