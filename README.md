@@ -1,4 +1,4 @@
-"# math-for-kids" 
+# math-for-kids 
 
 # Guessing number game
 !["Guess the number game"](/assests/images/Responsivness%20-%20Gameplay%20Page.jpg)
@@ -17,7 +17,7 @@
     - [2.1.2. Structure](#212-structure)
     - [2.1.3. Background Image](#213-background-image)
     - [2.1.4. Page flow & navigation](#214-page-flow--navigation)
-- [3. Technology and Tools used](#3-Technology-and-tools-used)
+- [3. Technology and Tools used](#3-technology-and-tools-used)
   - [3.1. Languages](#31-languages)
   - [3.2. Tools](#32-tools)
   - [3.3. Additional help](#33-additional-help)
@@ -231,7 +231,7 @@ After the final round, the user is prompted to start a new game or view the lead
 
 
 ### **4.1. User interactions**
-User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled" " That way user can play his/her favourite number several rounds in a row.
+User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled" That way user can play his/her favourite number several rounds in a row.
 Another interaction is that each round requires the user to click on the "I feel lucky" button creates a random number which will be compared with number user selected for him/herself.
 
 
@@ -298,7 +298,6 @@ https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fagnogh.github.io
 
 ### **5.1.4. Accessibility Validator**
 
-*Accessibility shows 1 error, however, this does not cause a real accessibility issue in practice as it is blank button to help alignment when user has top and bottom button where top buttons are 1-5 and bottom 6-9 where unequal alignemtn would show*
 https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 
 ![Accessibility Validator for "Guess the number game" - Welcome pane](/assests/images/Wave%20-%20Welcome%20Page.jpg)
@@ -319,9 +318,9 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 ### **5.1.6. Lighthouse Review - PC**
 ![Performance Review for "Guess the number game - Welcome pane"](/assests/images/Lighthouse%20Validation%20PC%20-%20Welcome%20Page.jpg)
 
-![Performance Review for "Guess the number game - Gameplay pane"](/assests/images/Lighthouse%20Validation%20MOBILE%20-%20Gameplay.jpg)
+![Performance Review for "Guess the number game - Gameplay pane"](/assests/images/Lighthouse%20Validation%20PC%20-%20Gameplay.jpg)
 
-![Performance Review for "Guess the number game - Leaderboard pane"](/assests/images/Lighthouse%20Validation%20MOBILE%20-%20Leaderboard.jpg)
+![Performance Review for "Guess the number game - Leaderboard pane"](/assests/images/Lighthouse%20Validation%20PC%20-%20Leaderboard.jpg)
 
 
 ### **5.2. QA & Bugfixes**
@@ -370,7 +369,7 @@ https://wave.webaim.org/report#/https://agnogh.github.io/math-for-kids/
 -------------------------------------------
 #### **5.3.1. Test environment**
 *Browsers*
-Chrome, Firefo, Edge, Safari
+Chrome, Firefox, Edge, Safari
 
 *HW (devices)*
 Desktop (Windows OS)
@@ -500,6 +499,3 @@ https://github.com/Agnogh/math-for-kids
 
 ## **7. Thanks**
 NA
-
-
-[def]: /assests/images/Responsivness%20-%20Welcome%20Page.jpg
