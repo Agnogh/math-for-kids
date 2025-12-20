@@ -5,7 +5,7 @@
 ## Table of content
 - [1. Project goal](#1-project-goal)
   - [1.1. User goal](#11-user-goal)
-  - [1.2. Site owner goal](#12-site-owner-goal)
+  - [1.2. Site owner's goal](#12-site-owners-goal)
   - [1.3. User Experience](#13-user-experience)
     - [1.3.1. Targeted group](#131-targeted-group)
   - [1.4. User expectation](#14-user-expectation)
@@ -51,7 +51,7 @@
 ## **1. Project goal**
 
 The idea behind this project is to 
-- create a small simple guessing game that will interact with the user based on the outcome
+- create a small, simple guessing game that will interact with the user based on the outcome
 - give the user the ability to keep track of overall score (called luck index)
 - get users an idea about the probability of guessing the number from 1st go
 - make people understand the probability of winning the lottery and returning invested money 
@@ -64,7 +64,7 @@ Try their luck, have fun, and compete with friends to achieve a higher score.
 Help users make more analytical decisions about probability and whether it is worth buying a lottery ticket.
 
 
-### **1.2. Site owner goal**
+### **1.2. Site owner's goal**
 
 Give people something to play around with to pass the time while seeing how mathematical probability works and what are the chances they could get rich playing the lottery.
 
@@ -76,7 +76,7 @@ It is most appealing to younger users and casual players, and can also be used a
 
 ### **1.4. User expectation**
 Expectations are intentionally limited. The game serves as a light-hearted demonstration of probability rather than a serious attempt at predicting lottery outcomes.
-With a random element involved (the number is randomly generated), the user will not have any real power over the outcome of the game and get a better score (it is just pure luck)
+With a random element involved (the number is randomly generated), the user will not have any real power over the outcome of the game, and get a better score (it is just pure luck)
 
 
 ### **1.5. User Stories**
@@ -94,7 +94,7 @@ Design is wrapped around the idea of having a simple, straightforward, approacha
 
 A black background is selected so that Yellow, and red-orange stand out so that black letters are more visible.
 
-The decision was to go with more round shapes instead of crude and sharp edges that would make UI a bit 'old'
+The decision was to go with more round shapes instead of crude and sharp edges that would make UI a bit 'old'.
 
 Shadows are also included for visual effects with mostly green and orange colours to match and contrast at the same time buttons, and background colours.
 
@@ -102,7 +102,7 @@ Shadows are also included for visual effects with mostly green and orange colour
 ### **2.1.1. Color**
 The black background is a good fit for yellow and red with green borders. Green border is perfect for a light transition between the contrast of yellow and orange against black.
 
-Slightly transparent boxes cause that transition in colours to be more distinguished while still slightly transiting from red or yellow to black.
+Slightly transparent boxes cause that transition in colours to be more distinguished while still slightly transitioning from red or yellow to black.
 
 
 ### **2.1.2. Structure**
@@ -174,14 +174,14 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 The background image was picked based on theme, colour and simplicity.
 Black to increase visibility with saturated simple images of digits that do not stand out or interfere with user's focus.
 
-Picture is High Res to avoid cropping and blurry images on larger devices.
+Picture is High-Res to avoid cropping and blurry images on larger devices.
 
 ### **2.1.4. Page flow & navigation**
 
 **Navigation between the three pages is intentionally designed to support how the game is played:**
 
 - From the *Welcome page*, the “Start the Game” button opens the gameplay page in the *same* tab. This encourages users to read the rules before playing.
-- From the *Gameplay page* the “View leaderboard” link opens the leaderboard in a *new tab*. This lets the player keep the current game visible while quickly checking past scores.
+- From the *Gameplay page*, the “View leaderboard” link opens the leaderboard in a *new tab*. This lets the player keep the current game visible while quickly checking past scores.
 - The leaderboard also contains links back to both the Welcome page and the Gameplay page, which open in new tabs. This allows the player to continue an active game while refreshing the leaderboard tab to view updated score history.
 
 This approach keeps the main gameplay uninterrupted, while still making it easy to review rules and scores at any time.
@@ -215,7 +215,7 @@ This approach keeps the main gameplay uninterrupted, while still making it easy 
 - YouTube 
 - Stack Overflow 
 - Slack Community
-- No tutor help was requested as I wanted to pull this as independently as possible
+- No tutor help was requested, as I wanted to pull this as independently as possible
 
 
 ## **4. Gameplay**
@@ -230,13 +230,13 @@ After the final round, the user is prompted to start a new game or view the lead
 
 
 ### **4.1. User interactions**
-User interacts with numbers from 1-9 but can keep a selected number for several rounds with a random number "pulled". That way user can play his/her favourite number several rounds in a row.
+User interacts with numbers from 1-9, but can keep a selected number for several rounds with a random number "pulled". That way user can play his/her favourite number several rounds in a row.
 Another interaction is that each round requires the user to click on the "I feel lucky" button creates a random number which will be compared with number user selected for him/herself.
 
 
 ![User interaction on "Guess the number game"](/assests/images/User%20Interaction.jpg)
 
-No other interaction is needed as text shows up based on either user selection or outcome if the numbers match or not. The calculated success rate (luck factor) is also automatically done and doesn't require input from the user.
+No other interaction is needed as text shows up based on either user selection or outcome, if the numbers match or not. The calculated success rate (luck factor) is also automatically done and doesn't require input from the user.
 
 
 
@@ -419,13 +419,13 @@ The following table outlines key manual test cases performed across all pages.
 
 #### **5.4. Challenges & technical decisions**
 
-During development a few design decisions made the project more complex than a simple one-page game:
+During development, a few design decisions made the project more complex than a simple one-page game:
 
 - Original layout vs. three-page structure – the UI was first designed as a single page. Later requirements added a dedicated Welcome page and a Leaderboard page. Re-using the same CSS across three layouts introduced many alignment and scaling issues. In hindsight, starting a fresh stylesheet for the multi-page version would probably have been faster than continuously “hot-fixing” the original one.
 
 - “One screen” requirement – trying to avoid scrolling on all devices while keeping the game readable was challenging. On some device sizes this is not realistic without hurting accessibility. The final compromise is that small initial scrolling might be needed on some screens, but the game can then be played without further scrolling.
 
-- Responsive typography – early versions relied heavily on fixed px sizes. Over time the project migrated towards rem, clamp() and CSS variables so that changing base font size affects the whole layout more predictably.
+- Responsive typography – early versions relied heavily on fixed px sizes. Over time, the project migrated towards rem, clamp() and CSS variables so that changing base font size affects the whole layout more predictably.
 
 - Aspect-ratio specific fixes – a lot of effort went into handling very tall phones and very wide desktop monitors so that buttons stayed usable and text remained centred. Special media queries for certain aspect ratios were introduced to keep the number grid and footer looking balanced.
 
@@ -466,7 +466,7 @@ These constraints made the project slower to finish, but also provided good prac
 ### **6.2. Deployment**
 
 1. Create a GitHUb repo
-- 1a Create new reposotory on GitHub (math-for-kids)
+- 1a Create a new repository on GitHub (math-for-kids)
 - 1b in VSCode
 
 --> a git init
@@ -480,9 +480,9 @@ These constraints made the project slower to finish, but also provided good prac
 - 2a GitHub > Going to my Repo > Selecting 'math-for-kids' reposotory
 
 --> Settings (far right)
---> Pages (last item under ?code and automation' section)
+--> Pages (last item under 'code and automation' section)
 --> Build and Deployment section (top)
---> Source > Select drop down menu 
+--> Source > Select drop-down menu 
 --> Deploy from a branch
 --> Select 'main' 
 --> Select root
