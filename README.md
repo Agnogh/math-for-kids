@@ -119,14 +119,17 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 
 #### **Welcome page**
 ![Welcome Page Layout](/assests/images/Structure%20-%20Welcome%20pane.jpg)
+
 *Figure: Welcome page layout including rules, call-to-action button and social media footer.*
 
 #### **Gameplay page**
 ![Gameplay Page Layout](/assests/images/Structure%20-%20Gameplay%20pane.jpg)
+
 *Figure: Gameplay page layout showing number selection, game controls and live result feedback.*
 
 #### **Leaderboard page**
 ![Leaderboard Page Layout](/assests/images/Structure%20-%20Leaderboard%20pane.jpg)
+
 *Figure: Leaderboard page layout displaying score table, navigation buttons and empty-state messaging.*
 
 
@@ -134,14 +137,17 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 
 #### Welcome page body
 ![Welcome Page Body](/assests/images/Structure%20of%20body%20-%20Welcome%20pane.jpg)
+
 *Figure: Rules and introductory content displayed on the Welcome page.*
 
 #### Gameplay page body
 ![Gameplay Page Body](/assests/images/Structure%20of%20body%20-%20Gameplay%20pane.jpg)
+
 *Figure: Interactive game area including number grid and action button.*
 
 #### Leaderboard page body
 ![Leaderboard Page Body](/assests/images/Structure%20of%20body%20-%20Leaderboard%20pane.jpg)
+
 *Figure: Score table area showing either empty state or populated leaderboard.*
 
 
@@ -149,14 +155,17 @@ Slightly transparent boxes cause that transition in colours to be more distingui
 
 #### Welcome page footer
 ![Welcome Page Footer](/assests/images/Structure%20of%20footer%20-%20Welcome%20pane.jpg)
+
 *Figure: Social media links displayed in the Welcome page footer.*
 
 #### Gameplay page footer
 ![Gameplay Page Footer](/assests/images/Structure%20of%20footer%20-%20Gameplay%20pane.jpg)
+
 *Figure: Game statistics and live feedback displayed during gameplay.*
 
 #### Leaderboard page footer
 ![Leaderboard Page Footer](/assests/images/Structure%20of%20footer%20-%20Leaderboard%20pane.jpg)
+
 *Figure: Informational footer explaining local score storage.*
 
 
